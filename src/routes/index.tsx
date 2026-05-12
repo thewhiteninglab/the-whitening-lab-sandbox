@@ -11,13 +11,13 @@ import result3 from "@/assets/result-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pearl Lab — A Living Whitening Lab by Licensed Dental Pros" },
+      { title: "The Whitening Lab — A Living Whitening Lab by Licensed Dental Pros" },
       {
         name: "description",
         content:
-          "Pearl Lab is a living whitening lab. Licensed dental pros whitening real teeth every single day — plus a maintenance line to keep the gloss between visits.",
+          "The Whitening Lab is a living whitening lab. Licensed dental pros whitening real teeth every single day — plus a maintenance line to keep the gloss between visits.",
       },
-      { property: "og:title", content: "Pearl Lab — A Living Whitening Lab" },
+      { property: "og:title", content: "The Whitening Lab — A Living Whitening Lab" },
       {
         property: "og:description",
         content:
@@ -68,7 +68,7 @@ function Nav() {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background/80 backdrop-blur-md border-b border-border">
       <Link to="/" className="font-display text-3xl uppercase leading-none">
-        Pearl Lab
+        The Whitening Lab
       </Link>
       <div className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest">
         <a href="#process" className="hover:text-primary transition-colors">The Process</a>
@@ -280,7 +280,7 @@ function Pros() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <img
             src={team}
-            alt="The Pearl Lab clinical team — three licensed dental professionals in black scrubs"
+            alt="The The Whitening Lab clinical team — three licensed dental professionals in black scrubs"
             loading="lazy"
             width={1280}
             height={896}
@@ -317,7 +317,7 @@ function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
           <div>
             <span className="font-display text-4xl uppercase tracking-tighter">
-              Pearl Lab
+              The Whitening Lab
             </span>
             <p className="mt-4 text-stone-400 max-w-[24ch] text-sm">
               The definitive standard in modern whitening. Operated by licensed
@@ -365,7 +365,7 @@ function Footer() {
           </div>
         </div>
         <div className="flex justify-between items-center border-t border-stone-800 pt-8 font-mono text-[10px] text-stone-500 uppercase tracking-widest gap-4 flex-wrap">
-          <span>© 2026 Pearl Lab Clinical LLC</span>
+          <span>© 2026 The Whitening Lab Clinical LLC</span>
           <span>No AI was used in these results</span>
         </div>
       </div>
