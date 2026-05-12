@@ -51,7 +51,7 @@
 
   /* Neon yellow #ebff00 */
   --primary: oklch(0.96 0.21 110);
-  --primary-foreground: oklch(0.984 0.005 95);
+  --primary-foreground: oklch(0.13 0 0);
 
   --secondary: oklch(0.95 0.005 95);
   --secondary-foreground: oklch(0.13 0 0);
