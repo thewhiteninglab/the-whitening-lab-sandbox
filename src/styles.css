@@ -67,7 +67,7 @@
 
   --border: oklch(0.13 0 0 / 8%);
   --input: oklch(0.13 0 0 / 12%);
-  --ring: oklch(0.69 0.22 38);
+  --ring: oklch(0.96 0.21 110);
 }
 
 @layer base {
