@@ -114,6 +114,7 @@ function Nav() {
       </Link>
       <div className="hidden md:flex items-center gap-7 text-[11px] font-mono uppercase tracking-widest font-bold">
         {[
+          { href: "#services", label: "Services" },
           { href: "#results", label: "Results" },
           { href: "#shop", label: "Shop" },
           { href: "#process", label: "Team" },
@@ -202,6 +203,106 @@ function Marquee() {
             <span className="size-3 rounded-full bg-primary" />
           </div>
         ))}
+      </div>
+    </section>
+  );
+}
+
+const services = [
+  {
+    name: "New Patient",
+    price: "$295",
+    duration: "1 hr",
+    desc: "Comprehensive whitening — full assessment, in-lab treatment, and Recovery Serum finish.",
+    featured: true,
+  },
+  {
+    name: "60 Min Touch-Up",
+    price: "$180",
+    duration: "60 min",
+    desc: "Maintain your shade with a focused in-lab session for returning clients.",
+  },
+  {
+    name: "40 Min Touch-Up",
+    price: "$150",
+    duration: "40 min",
+    desc: "Quick brightening boost — perfect between events or before a big day.",
+  },
+  {
+    name: "Bleaching Trays",
+    price: "$275",
+    duration: "Take-Home",
+    desc: "Custom-fit trays for at-home use. Includes one syringe of professional whitening solution.",
+  },
+];
+
+function Services() {
+  return (
+    <section id="services" className="px-6 py-24 md:py-28 border-t border-border">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+              Services / In-Lab Treatments
+            </p>
+            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
+              Pick Your <span className="text-primary">Brightness.</span>
+            </h2>
+          </div>
+          <a
+            href="#book"
+            className="font-mono text-xs uppercase tracking-widest border-b border-foreground pb-1 hover:text-primary hover:border-primary transition-colors"
+          >
+            Book Treatment →
+          </a>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {services.map((s) => (
+            <article
+              key={s.name}
+              className={`group relative flex flex-col justify-between p-6 rounded-sm border transition-all duration-300 hover:-translate-y-1 ${
+                s.featured
+                  ? "bg-foreground text-background border-foreground hover:shadow-[0_20px_60px_-20px_var(--primary)]"
+                  : "bg-card border-border hover:border-primary"
+              }`}
+            >
+              {s.featured && (
+                <span className="absolute -top-2 left-4 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">
+                  Start Here
+                </span>
+              )}
+              <div>
+                <div
+                  className={`font-mono text-[10px] uppercase tracking-widest mb-3 ${
+                    s.featured ? "text-background/60" : "text-muted-foreground"
+                  }`}
+                >
+                  {s.duration}
+                </div>
+                <h3 className="font-display text-2xl uppercase tracking-tighter leading-[0.95] mb-3">
+                  {s.name}
+                </h3>
+                <p
+                  className={`text-sm leading-snug ${
+                    s.featured ? "text-background/80" : "text-muted-foreground"
+                  }`}
+                >
+                  {s.desc}
+                </p>
+              </div>
+              <div className="mt-8 flex items-baseline justify-between border-t pt-4 border-current/20">
+                <span className="font-display text-3xl tracking-tighter">{s.price}</span>
+                <span
+                  className={`font-mono text-[10px] uppercase tracking-widest transition-colors ${
+                    s.featured ? "text-primary" : "group-hover:text-primary"
+                  }`}
+                >
+                  Book →
+                </span>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -707,6 +808,7 @@ function Index() {
       <Nav />
       <Hero />
       <Marquee />
+      <Services />
       <ResultsGrid />
       <NoFiltersGallery />
       <Shop />
