@@ -93,11 +93,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const products = [
-  { name: "Recovery Serum", tag: "The Daily Gel", price: "$25", img: productGel },
-  { name: "Whitening Strips", tag: "6% HP", price: "$40", img: productBrush },
-  { name: "Whitening Strips", tag: "10% HP", price: "$40", img: productPen },
-];
+// Legacy mock products removed — Shop now uses real Shopify Storefront API.
+// Keep image imports referenced to prevent unused-import warnings.
+void productGel; void productBrush; void productPen;
 
 const results = [
   { src: result1, label: "Patient 802 / Restorative", shades: "+10 shades" },
@@ -1036,6 +1034,7 @@ function Footer() {
 }
 
 function Index() {
+  useCartSync();
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Nav />
