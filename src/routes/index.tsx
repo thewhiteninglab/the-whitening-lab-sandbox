@@ -182,7 +182,7 @@ function ResultsGrid() {
               </div>
               <figcaption className="mt-3 flex justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                 <span>{r.label}</span>
-                <span>+12 shades</span>
+                <span>+10 shades</span>
               </figcaption>
             </figure>
           ))}
