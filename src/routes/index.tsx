@@ -194,11 +194,11 @@ function ResultsGrid() {
 
 function Shop() {
   return (
-    <section id="shop" className="px-6 py-24 md:py-32 border-t border-border">
+    <section id="shop" className="px-6 pt-12 pb-24 md:pt-16 md:pb-32 border-t border-border">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-16 gap-6 flex-wrap">
           <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
-            Maintain the Spark
+            Maintain the Shade
           </h2>
           <a
             href="#shop"
