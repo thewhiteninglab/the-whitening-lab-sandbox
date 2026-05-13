@@ -547,7 +547,7 @@ const faqs = [
   },
   {
     q: "How long do results last?",
-    a: "Anywhere from 6 months to 2+ years with proper maintenance. Coffee, wine, and tobacco accelerate fading — our take-home line is built to keep you glossed in between visits.",
+    a: "Anywhere from 6 months to 2+ years with proper maintenance. Coffee, wine, and tobacco accelerate fading — our take-home line is built to keep you on-shade in between visits.",
   },
   {
     q: "Will it hurt or make my teeth sensitive?",
