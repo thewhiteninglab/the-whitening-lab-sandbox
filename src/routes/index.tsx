@@ -234,7 +234,9 @@ function Shop() {
             Maintain the Shade
           </h2>
           <a
-            href="#shop"
+            href="https://the-whitening-lab-2.myshopify.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-mono text-xs uppercase tracking-widest border-b border-foreground pb-1 hover:text-primary hover:border-primary transition-colors"
           >
             View All Products
