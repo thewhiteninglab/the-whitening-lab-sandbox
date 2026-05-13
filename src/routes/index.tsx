@@ -468,8 +468,8 @@ function Footer() {
                 aria-label="Email address"
                 className="bg-transparent w-full text-xs font-mono uppercase outline-none placeholder:text-stone-600"
               />
-              <button className="text-primary font-mono text-xs font-bold tracking-widest">
-                JOIN
+              <button className="text-primary font-mono text-xs font-bold tracking-widest whitespace-nowrap pl-3">
+                COUNT ME IN
               </button>
             </form>
           </div>
