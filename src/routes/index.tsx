@@ -309,7 +309,7 @@ function NoFiltersGallery() {
             rel="noopener noreferrer"
             className="group/ig inline-flex items-center gap-3 bg-primary text-primary-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
           >
-            See Hundreds More on Instagram
+            See the Rest of the Smiles
             <span aria-hidden="true" className="transition-transform group-hover/ig:translate-x-1">→</span>
           </a>
         </div>
