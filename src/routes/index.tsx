@@ -960,6 +960,7 @@ function Footer() {
               <div className="flex items-center gap-3">
                 {[
                   { Icon: Instagram, href: "https://www.instagram.com/thewhiteninglab", label: "Instagram" },
+                  { Icon: TikTokIcon, href: "https://www.tiktok.com/@thewhiteninglab", label: "TikTok" },
                   { Icon: Youtube, href: "https://www.youtube.com/@thewhiteninglab", label: "YouTube" },
                   { Icon: Facebook, href: "https://www.facebook.com/thewhiteninglab", label: "Facebook" },
                 ].map(({ Icon, href, label }) => (
