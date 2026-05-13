@@ -551,7 +551,7 @@ const faqs = [
   },
   {
     q: "Will it hurt or make my teeth sensitive?",
-    a: "Some clients feel mild, short-lived sensitivity for 24–48 hours. Every treatment finishes with our Recovery Serum applied in-chair, and we strongly recommend taking a bottle home — we'll walk you through several options to mitigate sensitivity so you stay comfortable between sessions.",
+    a: "Some clients feel mild, short-lived sensitivity for 24–48 hours. Every treatment finishes with our Recovery Serum brushed on in-chair, and we strongly recommend taking a brush-tip pen home — we'll walk you through several options to mitigate sensitivity so you stay comfortable between sessions.",
   },
   {
     q: "Is it safe if I have crowns, veneers, or fillings?",
