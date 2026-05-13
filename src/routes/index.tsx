@@ -283,10 +283,9 @@ function Hero() {
 
 function TrustStrip() {
   const items = [
-    "Licensed & Certified Pros",
-    "Maine-Based",
-    "5.0 Treatment Rating",
-    "60-Second Booking",
+    "Licensed Pros",
+    "5.0 Rated",
+    "60-Sec Booking",
   ];
   return (
     <section
