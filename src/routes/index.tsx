@@ -719,7 +719,7 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Tap an image to reveal after results.
+            Real patients. Unretouched. No filters, no AI.
           </span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
