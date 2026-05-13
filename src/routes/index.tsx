@@ -284,7 +284,7 @@ function Hero() {
 function TrustStrip() {
   const items = [
     "Licensed & Certified Pros",
-    "Maine-Made",
+    "Maine-Based",
     "5.0 Treatment Rating",
     "Booking Now Open",
   ];
