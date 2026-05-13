@@ -77,7 +77,7 @@ const noFilters = [
     before: before2,
     after: after2,
     patient: "Patient 611",
-    treatment: "Cosmetic Whitening",
+    treatment: "In-Lab Whitening",
     date: "04 / 02 / 2026",
     shades: "+12 shades",
   },
