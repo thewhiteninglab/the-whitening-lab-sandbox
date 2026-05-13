@@ -211,10 +211,27 @@ function Hero() {
               <br />
               as much as you.
             </h1>
-            <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty">
+            <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty mb-8">
               The only dental lab run by actual licensed/certified pros — whitening
               teeth every single day. No AI, no gimmicks, just real results.
             </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#book"
+                className="bg-foreground text-background px-6 py-3 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all rounded-sm"
+              >
+                Book a Treatment
+              </a>
+              <a
+                href="#shop"
+                className="px-6 py-3 text-xs font-mono uppercase tracking-widest font-bold border border-foreground hover:bg-foreground hover:text-background transition-all rounded-sm"
+              >
+                Shop Strips
+              </a>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                Booking in 60 seconds
+              </span>
+            </div>
           </div>
           <div className="lg:col-span-4 animate-reveal [animation-delay:150ms]">
             <img
