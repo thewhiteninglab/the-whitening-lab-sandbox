@@ -79,7 +79,7 @@ export const Route = createFileRoute("/")({
           "@type": "LocalBusiness",
           name: "The Whitening Lab",
           description:
-            "A living whitening lab run by licensed dental pros — whitening real teeth every single day.",
+            "Professional teeth whitening by licensed dental pros — real treatments, real results, every single day.",
           areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
           aggregateRating: {
             "@type": "AggregateRating",
