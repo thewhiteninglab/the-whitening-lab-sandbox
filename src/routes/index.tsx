@@ -390,7 +390,7 @@ function Pros() {
             <div className="space-y-6">
               {pros.map((p) => (
                 <div key={p.name} className="border-b border-border pb-4">
-                  <p className="font-mono text-[10px] text-primary uppercase tracking-widest mb-1">
+                  <p className="inline-block bg-primary text-primary-foreground font-mono text-[10px] font-bold uppercase tracking-widest px-2 py-1 mb-2 rounded-sm">
                     {p.role}
                   </p>
                   <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
