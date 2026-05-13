@@ -328,7 +328,7 @@ function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
-            <p className="inline-block bg-foreground text-background font-mono text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-sm mb-5">
+            <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Services / In-Lab Treatments
             </p>
             <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
