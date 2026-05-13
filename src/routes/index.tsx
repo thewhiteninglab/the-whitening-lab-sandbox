@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
 const products = [
   { name: "Recovery Serum", tag: "The Daily Gel", price: "$25", img: productGel },
   { name: "Whitening Strips", tag: "6% HP", price: "$40", img: productBrush },
-  { name: "Flash Whitener", tag: "The Quick Fix", price: "$35", img: productPen },
+  { name: "Flash Whitener", tag: "10% HP", price: "$35", img: productPen },
 ];
 
 const results = [
