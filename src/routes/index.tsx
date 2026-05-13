@@ -355,7 +355,7 @@ function Services() {
 
 function ResultsGrid() {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 pt-12 pb-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
