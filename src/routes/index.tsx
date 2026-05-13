@@ -381,7 +381,7 @@ function Pros() {
             className="w-full aspect-square object-cover object-top rounded-sm"
           />
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6">
+            <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-primary font-bold mb-6 inline-block border-b-2 border-primary pb-2">
               Meet the team
             </p>
             <h3 className="font-display text-5xl md:text-6xl uppercase tracking-tighter mb-10">
