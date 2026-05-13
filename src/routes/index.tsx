@@ -73,22 +73,6 @@ const beforeAfters = [
     date: "03 / 14 / 2026",
     shades: "+10 shades",
   },
-  {
-    before: before2,
-    after: after2,
-    patient: "Patient 611",
-    treatment: "Cosmetic Whitening",
-    date: "04 / 02 / 2026",
-    shades: "+12 shades",
-  },
-  {
-    before: before3,
-    after: after3,
-    patient: "Patient 904",
-    treatment: "Maintenance Cycle",
-    date: "04 / 28 / 2026",
-    shades: "+4 shades",
-  },
 ];
 
 const pros = [
@@ -241,40 +225,40 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Hover or tap each plate to reveal the after — same lighting, same lens, same day.
+            Hover to reveal the after — same lens, same lighting, same visit.
           </span>
         </div>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="max-w-3xl mx-auto">
           {beforeAfters.map((b) => (
             <figure key={b.patient} className="group">
-              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
+              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[5/4] bg-background/[0.04] p-3 md:p-4">
                 <img
                   src={b.before}
                   alt={`${b.patient} before whitening`}
                   loading="lazy"
-                  width={800}
-                  height={1024}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  width={1000}
+                  height={500}
+                  className="absolute inset-0 w-full h-full object-contain p-3 md:p-4"
                 />
                 <img
                   src={b.after}
                   alt={`${b.patient} after whitening`}
                   loading="lazy"
-                  width={800}
-                  height={1024}
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-700"
+                  width={1000}
+                  height={500}
+                  className="absolute inset-0 w-full h-full object-contain p-3 md:p-4 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-700"
                 />
-                <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest group-hover:opacity-0 transition-opacity">
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-background text-foreground font-mono text-[10px] uppercase tracking-widest group-hover:opacity-0 transition-opacity">
                   Before
                 </span>
-                <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-primary text-primary-foreground font-mono text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                   After
                 </span>
-                <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+                <span className="absolute bottom-3 right-3 px-2.5 py-1 bg-background/95 text-foreground font-mono text-[10px] uppercase tracking-widest">
                   {b.shades}
                 </span>
               </div>
-              <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
+              <figcaption className="mt-4 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3 border-t border-background/15 pt-3">
                 <span className="truncate">
                   {b.patient} / {b.treatment}
                 </span>
