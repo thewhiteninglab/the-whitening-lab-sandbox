@@ -428,9 +428,9 @@ function Footer() {
               Locations
             </h5>
             <ul className="space-y-2 text-sm uppercase font-bold">
-              <li>Lower East Side, NY</li>
-              <li>Shoreditch, LDN</li>
-              <li>Silver Lake, LA</li>
+              <li>Gray, ME</li>
+              <li>Alfred, ME</li>
+              <li>Bar Harbor, ME <span className="text-stone-500 font-mono text-[10px]">/ Affiliate</span></li>
             </ul>
           </div>
           <div>
