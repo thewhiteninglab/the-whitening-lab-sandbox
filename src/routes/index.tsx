@@ -286,7 +286,7 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Documented daily / Same lighting, same lens, same visit.
+            Hover over image to reveal after results.
           </span>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
