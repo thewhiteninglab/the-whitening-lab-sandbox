@@ -555,7 +555,7 @@ const faqs = [
   },
   {
     q: "Is it safe if I have crowns, veneers, or fillings?",
-    a: "Whitening gel only lifts stain on natural enamel — it won't lighten restorations. We'll assess your smile first and recommend the right approach so everything blends.",
+    a: "Absolutely. Whitening gel will lift surface stains from crowns, veneers, and fillings — but it can't change the original shade they were fabricated in. We'll assess your smile first and map out a plan so your natural teeth and restorations finish in harmony.",
   },
 ];
 
