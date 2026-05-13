@@ -1044,9 +1044,9 @@ function Index() {
       <Services />
       <ResultsGrid />
       <NoFiltersGallery />
-      <Shop />
       <Manifesto />
       <Pros />
+      <Shop />
       <Partner />
       <FAQ />
       <Footer />
