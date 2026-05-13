@@ -530,21 +530,38 @@ function ShopProductCard({ product }: { product: ShopifyProduct }) {
   const [adding, setAdding] = useState(false);
 
   const node = product.node;
-  const variant = node.variants.edges[0]?.node;
+  const variants = node.variants.edges.map((e) => e.node);
+
+  // Initialize selected options from the first available variant
+  const initialVariant = variants.find((v) => v.availableForSale) ?? variants[0];
+  const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>(() => {
+    const init: Record<string, string> = {};
+    initialVariant?.selectedOptions?.forEach((o) => {
+      init[o.name] = o.value;
+    });
+    return init;
+  });
+
+  const matchedVariant =
+    variants.find((v) =>
+      v.selectedOptions.every((o) => selectedOptions[o.name] === o.value),
+    ) ?? initialVariant;
+
   const image = node.images.edges[0]?.node;
-  const price = variant?.price ?? node.priceRange.minVariantPrice;
+  const price = matchedVariant?.price ?? node.priceRange.minVariantPrice;
+  const hasOptions = node.options?.some((o) => o.values.length > 1);
 
   const handleAdd = async () => {
-    if (!variant) return;
+    if (!matchedVariant) return;
     setAdding(true);
     try {
       await addItem({
         product,
-        variantId: variant.id,
-        variantTitle: variant.title,
-        price: variant.price,
+        variantId: matchedVariant.id,
+        variantTitle: matchedVariant.title,
+        price: matchedVariant.price,
         quantity: 1,
-        selectedOptions: variant.selectedOptions || [],
+        selectedOptions: matchedVariant.selectedOptions || [],
       });
     } finally {
       setAdding(false);
@@ -573,14 +590,48 @@ function ShopProductCard({ product }: { product: ShopifyProduct }) {
           ${parseFloat(price.amount).toFixed(2)}
         </span>
       </div>
+      {hasOptions && (
+        <div className="space-y-3 mb-4">
+          {node.options
+            .filter((opt) => opt.values.length > 1)
+            .map((opt) => (
+              <div key={opt.name}>
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">
+                  {opt.name}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {opt.values.map((val) => {
+                    const active = selectedOptions[opt.name] === val;
+                    return (
+                      <button
+                        key={val}
+                        type="button"
+                        onClick={() =>
+                          setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
+                        }
+                        className={`min-w-[2.5rem] px-3 py-1.5 border font-mono text-[10px] uppercase tracking-widest rounded-sm transition-colors ${
+                          active
+                            ? "bg-foreground text-background border-foreground"
+                            : "border-border hover:border-foreground"
+                        }`}
+                      >
+                        {val}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+        </div>
+      )}
       <button
         onClick={handleAdd}
-        disabled={!variant?.availableForSale || adding || isLoading}
+        disabled={!matchedVariant?.availableForSale || adding || isLoading}
         className="w-full border border-foreground py-3 font-mono text-[10px] uppercase tracking-widest font-bold hover:bg-foreground hover:text-background active:scale-[0.99] transition-all rounded-sm disabled:opacity-50 inline-flex items-center justify-center gap-2"
       >
         {adding ? (
           <Loader2 className="w-3 h-3 animate-spin" />
-        ) : variant?.availableForSale ? (
+        ) : matchedVariant?.availableForSale ? (
           "Add to Cart"
         ) : (
           "Sold Out"
