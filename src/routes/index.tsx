@@ -354,8 +354,7 @@ function Manifesto() {
           Our Promise
         </div>
         <blockquote className="font-display text-4xl md:text-6xl uppercase leading-[0.95] tracking-tighter mb-12 text-balance">
-          We don't use AI to fake results. We use actual dental licenses to
-          create them.
+          We don't fake results. We create them clinically.
         </blockquote>
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {["No Gimmicks", "Real Humans", "Licensed Pros", "Daily Clinical Practice"].map(
