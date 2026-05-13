@@ -378,7 +378,7 @@ function Pros() {
             loading="lazy"
             width={1280}
             height={896}
-            className="w-full aspect-[4/3] object-cover rounded-sm"
+            className="w-full aspect-square object-cover object-top rounded-sm"
           />
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6">
