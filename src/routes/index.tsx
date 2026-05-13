@@ -53,9 +53,9 @@ const products = [
 ];
 
 const results = [
-  { src: result1, label: "Patient 802 / Restorative" },
-  { src: result2, label: "Patient 611 / Cosmetic" },
-  { src: result3, label: "Patient 904 / Routine" },
+  { src: result1, label: "Patient 802 / Restorative", shades: "+10 shades" },
+  { src: result2, label: "Patient 611 / Cosmetic", shades: "+12 shades" },
+  { src: result3, label: "Patient 904 / Routine", shades: "+10 shades" },
 ];
 
 const pros = [
@@ -182,7 +182,7 @@ function ResultsGrid() {
               </div>
               <figcaption className="mt-3 flex justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                 <span>{r.label}</span>
-                <span>+10 shades</span>
+                <span>{r.shades}</span>
               </figcaption>
             </figure>
           ))}
