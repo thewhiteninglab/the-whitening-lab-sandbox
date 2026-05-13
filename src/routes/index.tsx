@@ -908,9 +908,13 @@ function Pros() {
             <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-foreground font-bold mb-6 inline-block border-b-2 border-foreground pb-2">
               Meet the team
             </p>
-            <h3 className="font-sans text-2xl leading-snug tracking-normal mb-10 text-pretty font-semibold md:text-4xl">
+            <h3 className="font-sans text-2xl leading-snug tracking-normal mb-6 text-pretty font-semibold md:text-4xl">
               At The Whitening Lab, we do one thing and do it best: Teeth Whitening. Our whitening expertise guarantees a safe, precise, and elevated experience.
             </h3>
+            <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
+              Two of us met chairside in a dental practice and kept getting the same question: <em>how do you keep your teeth so white?</em> That lightbulb moment turned a dental lab into <span className="font-semibold text-foreground">The Whitening Lab</span> — a team of licensed dental pros changing the world one smile at a time.
+            </p>
             <div className="space-y-6">
               {pros.map((p) => (
                 <div key={p.name} className="border-b border-border pb-4">
