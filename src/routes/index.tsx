@@ -908,7 +908,7 @@ function Pros() {
               Meet the team
             </p>
             <h3 className="font-sans text-2xl leading-snug tracking-normal mb-6 text-pretty font-semibold md:text-4xl">
-              At The Whitening Lab, we do one thing and do it best: Teeth Whitening. Our whitening expertise guarantees a safe, precise, and elevated experience.
+              At The Whitening Lab, we do one thing and do it best: professional teeth whitening. Our expertise guarantees a safe, precise, and elevated experience.
             </h3>
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
               <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
