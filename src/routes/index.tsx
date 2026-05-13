@@ -392,7 +392,12 @@ function Pros() {
                   <p className="inline-block bg-primary text-primary-foreground font-mono text-[10px] font-bold uppercase tracking-widest px-2 py-1 mb-2 rounded-sm">
                     {p.role}
                   </p>
-                  <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
+                  <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                    <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {p.location}, ME
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
