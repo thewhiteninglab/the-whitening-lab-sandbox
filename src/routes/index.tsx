@@ -725,6 +725,82 @@ function NoFiltersGallery() {
   );
 }
 
+const testimonials = [
+  {
+    quote:
+      "I have extreme sensitivity and was nervous, but I had zero pain during or after. The results blew me away.",
+    stars: 5,
+  },
+  {
+    quote:
+      "Transformative. Hands down the best self-care investment I've made — the space is beautiful and the team is so dialed in.",
+    stars: 5,
+  },
+  {
+    quote:
+      "Quick, painless, and my teeth look incredible. I've tried strips and trays for years — nothing comes close.",
+    stars: 5,
+  },
+  {
+    quote:
+      "I'm a dental professional and I've never had results this good from any whitening treatment. Truly impressed.",
+    stars: 5,
+  },
+];
+
+function Testimonials() {
+  return (
+    <section
+      aria-label="Client reviews"
+      className="px-5 py-16 sm:px-6 sm:py-24 border-t border-border bg-background"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 md:gap-6 mb-10 sm:mb-12">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-3 sm:mb-4">
+              Verified Google Reviews
+            </p>
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl uppercase tracking-tighter">
+              Real words.
+              <br />
+              Real clients.
+            </h2>
+          </div>
+          <a
+            href="https://www.google.com/search?q=the+whitening+lab+maine+reviews"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+          >
+            Read all reviews on Google →
+          </a>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          {testimonials.map((t, i) => (
+            <figure
+              key={i}
+              className="border border-border rounded-sm p-5 sm:p-6 flex flex-col gap-4 bg-card"
+            >
+              <div
+                className="text-primary font-mono text-sm tracking-widest"
+                aria-label={`${t.stars} out of 5 stars`}
+              >
+                {"★".repeat(t.stars)}
+              </div>
+              <blockquote className="text-sm leading-relaxed text-foreground/90">
+                "{t.quote}"
+              </blockquote>
+              <figcaption className="mt-auto font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                Verified · Google
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function NoFilterCard({
   item,
 }: {
@@ -1101,6 +1177,7 @@ function Index() {
       <Marquee />
       <Services />
       <NoFiltersGallery />
+      <Testimonials />
       <Manifesto />
       <Pros />
       <Shop />
