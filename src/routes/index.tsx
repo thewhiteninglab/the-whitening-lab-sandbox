@@ -256,6 +256,30 @@ function Hero() {
   );
 }
 
+function TrustStrip() {
+  const items = [
+    "Licensed & Certified Pros",
+    "Maine-Made",
+    "5.0 Treatment Rating",
+    "Booking Now Open",
+  ];
+  return (
+    <section
+      aria-label="Trust signals"
+      className="border-y border-border px-6 py-4"
+    >
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+        {items.map((t) => (
+          <span key={t} className="flex items-center gap-2">
+            <span className="size-1.5 rounded-full bg-foreground" />
+            {t}
+          </span>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Marquee() {
   const items = [
     "Teeth Whitening",
