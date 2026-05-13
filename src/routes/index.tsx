@@ -397,7 +397,7 @@ function Services() {
               Services / In-Lab Treatments
             </p>
             <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
-              Pick Your <span className="text-primary">Brightness.</span>
+              Pick Your <span className="text-primary">Treatment.</span>
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground max-w-[28ch]">
