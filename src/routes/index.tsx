@@ -247,7 +247,7 @@ function NoFiltersGallery() {
         <div className="grid md:grid-cols-3 gap-4">
           {beforeAfters.map((b) => (
             <figure key={b.patient} className="group">
-              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
+              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[5/4] bg-background/5">
                 <img
                   src={b.before}
                   alt={`${b.patient} before whitening`}
