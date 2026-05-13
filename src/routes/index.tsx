@@ -225,7 +225,7 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Same patient. Same lens. Same lighting. Single visit.
+            Hover to reveal the after — same lens, same lighting, same visit.
           </span>
         </div>
         <div className="max-w-3xl mx-auto">
