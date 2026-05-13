@@ -127,7 +127,7 @@ function Hero() {
 function Marquee() {
   const items = [
     "Teeth Whitening",
-    "Licensed Pros",
+    "No Filters",
     "Real Results",
     "No AI",
     "Daily Clinical Practice",
