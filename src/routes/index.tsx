@@ -225,50 +225,48 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Same patient. Same lens. Same lighting. Single visit.
+            Hover to reveal the after — same lens, same lighting, same visit.
           </span>
         </div>
-        {beforeAfters.map((b) => (
-          <figure key={b.patient} className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 gap-2 md:gap-3">
-              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[5/4] bg-background/5">
+        <div className="max-w-3xl mx-auto">
+          {beforeAfters.map((b) => (
+            <figure key={b.patient} className="group">
+              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[5/4] bg-background/[0.04] p-3 md:p-4">
                 <img
                   src={b.before}
                   alt={`${b.patient} before whitening`}
                   loading="lazy"
                   width={1000}
                   height={500}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain p-3 md:p-4"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-1 bg-background text-foreground font-mono text-[10px] uppercase tracking-widest">
-                  Before
-                </span>
-              </div>
-              <div className="relative overflow-hidden rounded-sm border border-primary/40 aspect-[5/4] bg-background/5">
                 <img
                   src={b.after}
                   alt={`${b.patient} after whitening`}
                   loading="lazy"
                   width={1000}
                   height={500}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain p-3 md:p-4 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-700"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-1 bg-primary text-primary-foreground font-mono text-[10px] uppercase tracking-widest">
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-background text-foreground font-mono text-[10px] uppercase tracking-widest group-hover:opacity-0 transition-opacity">
+                  Before
+                </span>
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-primary text-primary-foreground font-mono text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                   After
                 </span>
                 <span className="absolute bottom-3 right-3 px-2.5 py-1 bg-background/95 text-foreground font-mono text-[10px] uppercase tracking-widest">
                   {b.shades}
                 </span>
               </div>
-            </div>
-            <figcaption className="mt-4 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3 border-t border-background/15 pt-3">
-              <span className="truncate">
-                {b.patient} / {b.treatment}
-              </span>
-              <span className="shrink-0">{b.date}</span>
-            </figcaption>
-          </figure>
-        ))}
+              <figcaption className="mt-4 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3 border-t border-background/15 pt-3">
+                <span className="truncate">
+                  {b.patient} / {b.treatment}
+                </span>
+                <span className="shrink-0">{b.date}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   );
