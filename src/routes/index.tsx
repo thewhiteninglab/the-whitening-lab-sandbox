@@ -170,14 +170,14 @@ function ResultsGrid() {
         <div className="grid md:grid-cols-3 gap-4">
           {results.map((r) => (
             <figure key={r.label} className="group">
-              <div className="overflow-hidden bg-muted rounded-sm">
+              <div className="overflow-hidden bg-muted rounded-sm border border-border p-3">
                 <img
                   src={r.src}
                   alt={r.label}
                   loading="lazy"
                   width={800}
                   height={576}
-                  className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="w-full aspect-[4/5] object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                 />
               </div>
               <figcaption className="mt-3 flex justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
