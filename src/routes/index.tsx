@@ -225,7 +225,7 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Hover or tap each plate to reveal the after — same lighting, same lens, same day.
+            Same patient. Same lens. Same lighting. Single visit.
           </span>
         </div>
         {beforeAfters.map((b) => (
