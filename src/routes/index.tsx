@@ -716,17 +716,9 @@ function Manifesto() {
   return (
     <section
       id="book"
-      className="relative bg-primary text-primary-foreground py-20 md:py-28 px-6 overflow-hidden"
+      className="bg-background px-6 py-16 md:py-24"
     >
-      <div
-        aria-hidden
-        className="absolute inset-x-0 top-0 h-24 md:h-32 bg-gradient-to-b from-background to-transparent pointer-events-none opacity-90"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-x-0 bottom-0 h-24 md:h-32 bg-gradient-to-t from-background to-transparent pointer-events-none opacity-90"
-      />
-      <div className="relative max-w-4xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto bg-primary text-primary-foreground rounded-sm px-6 py-16 md:py-20 text-center">
         <div className="font-mono text-xs uppercase tracking-[0.3em] mb-6">
           Our Promise
         </div>
