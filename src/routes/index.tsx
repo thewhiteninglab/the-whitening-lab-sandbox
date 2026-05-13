@@ -449,9 +449,15 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h5 className="font-mono text-[10px] uppercase tracking-widest text-stone-500 mb-6">
-              Journal
+            <h5 className="font-mono text-[10px] uppercase tracking-widest text-stone-500 mb-3">
+              The List
             </h5>
+            <p className="font-display text-2xl uppercase tracking-tighter leading-[0.95] mb-2">
+              Love Your <span className="text-primary">Teeth?</span>
+            </p>
+            <p className="text-stone-400 text-sm mb-6 max-w-[28ch]">
+              Drops, deals, and shade-keeping tips — straight to your inbox.
+            </p>
             <form
               onSubmit={(e) => e.preventDefault()}
               className="flex border-b border-stone-700 pb-2"
