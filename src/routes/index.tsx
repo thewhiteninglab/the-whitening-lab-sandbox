@@ -541,6 +541,7 @@ function ShopProductCard({ product }: { product: ShopifyProduct }) {
     });
     return init;
   });
+  const [openOptions, setOpenOptions] = useState<Record<string, boolean>>({});
 
   const matchedVariant =
     variants.find((v) =>
@@ -591,37 +592,58 @@ function ShopProductCard({ product }: { product: ShopifyProduct }) {
         </span>
       </div>
       {hasOptions && (
-        <div className="space-y-3 mb-4">
+        <div className="space-y-2 mb-4">
           {node.options
             .filter((opt) => opt.values.length > 1)
-            .map((opt) => (
-              <div key={opt.name}>
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2">
-                  {opt.name}
+            .map((opt) => {
+              const isOpen = openOptions[opt.name] ?? false;
+              const current = selectedOptions[opt.name];
+              return (
+                <div key={opt.name} className="border border-border rounded-sm">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setOpenOptions((prev) => ({ ...prev, [opt.name]: !isOpen }))
+                    }
+                    aria-expanded={isOpen}
+                    className="w-full flex items-center justify-between gap-2 px-3 py-2 font-mono text-[10px] uppercase tracking-widest hover:bg-muted/50 transition-colors"
+                  >
+                    <span className="text-muted-foreground">
+                      {opt.name}: <span className="text-foreground">{current}</span>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+                    >
+                      ▾
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div className="flex flex-wrap gap-2 px-3 pb-3 pt-1">
+                      {opt.values.map((val) => {
+                        const active = selectedOptions[opt.name] === val;
+                        return (
+                          <button
+                            key={val}
+                            type="button"
+                            onClick={() =>
+                              setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
+                            }
+                            className={`min-w-[2.5rem] px-3 py-1.5 border font-mono text-[10px] uppercase tracking-widest rounded-sm transition-colors ${
+                              active
+                                ? "bg-foreground text-background border-foreground"
+                                : "border-border hover:border-foreground"
+                            }`}
+                          >
+                            {val}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {opt.values.map((val) => {
-                    const active = selectedOptions[opt.name] === val;
-                    return (
-                      <button
-                        key={val}
-                        type="button"
-                        onClick={() =>
-                          setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
-                        }
-                        className={`min-w-[2.5rem] px-3 py-1.5 border font-mono text-[10px] uppercase tracking-widest rounded-sm transition-colors ${
-                          active
-                            ? "bg-foreground text-background border-foreground"
-                            : "border-border hover:border-foreground"
-                        }`}
-                      >
-                        {val}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
+              );
+            })}
         </div>
       )}
       <button
