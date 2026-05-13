@@ -384,7 +384,7 @@ function Pros() {
             <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-primary font-bold mb-6 inline-block border-b-2 border-primary pb-2">
               Meet the team
             </p>
-            <h3 className="font-sans text-2xl leading-snug tracking-normal mb-10 text-pretty font-normal md:text-4xl">
+            <h3 className="font-sans text-2xl leading-snug tracking-normal mb-10 text-pretty font-semibold md:text-4xl">
               At The Whitening Lab, we do one thing and do it best: Teeth Whitening. Our whitening expertise guarantees a safe, precise, and elevated experience.
             </h3>
             <div className="space-y-6">
