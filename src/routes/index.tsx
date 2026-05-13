@@ -97,9 +97,8 @@ function Hero() {
               as much as you.
             </h1>
             <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty">
-              The only living lab run by actual licensed dental pros — whitening
-              real teeth every single day. No AI, no gimmicks, just high-gloss
-              results.
+              The only lab run by actual licensed dental pros — whitening real
+              teeth every single day. No AI, no gimmicks, just real results.
             </p>
           </div>
           <div className="lg:col-span-4 animate-reveal [animation-delay:150ms]">
