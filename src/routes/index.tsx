@@ -55,7 +55,7 @@ const products = [
 const results = [
   { src: result1, label: "Patient 802 / Restorative", shades: "+10 shades" },
   { src: result2, label: "Patient 611 / Cosmetic", shades: "+12 shades" },
-  { src: result3, label: "Patient 904 / Routine", shades: "+4 shades" },
+  { src: result3, label: "Patient 904 / Maintenance", shades: "+4 shades" },
 ];
 
 const pros = [
