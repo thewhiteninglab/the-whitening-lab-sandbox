@@ -96,6 +96,7 @@ const pros = [
   { role: "02 / Lead Hygienist · Co-Owner & Founder · RDH", name: "Courtney Carll", location: "Gray" },
   { role: "03 / Lead Assistant · Co-Owner", name: "Molly St. Hilaire", location: "Gray" },
   { role: "04 / Hygienist · RDH", name: "Tamara Sharp", location: "Alfred" },
+  { role: "05 / Affiliate Hygienist · RDH", name: "Britta Griffiths", location: "Bar Harbor" },
 ];
 
 function Nav() {
@@ -427,9 +428,9 @@ function Footer() {
               Locations
             </h5>
             <ul className="space-y-2 text-sm uppercase font-bold">
-              <li>Lower East Side, NY</li>
-              <li>Shoreditch, LDN</li>
-              <li>Silver Lake, LA</li>
+              <li>Gray, ME</li>
+              <li>Alfred, ME</li>
+              <li>Bar Harbor, ME <span className="text-stone-500 font-mono text-[10px]">/ Affiliate</span></li>
             </ul>
           </div>
           <div>
