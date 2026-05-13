@@ -449,7 +449,7 @@ function Services() {
                   <ul className="space-y-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
                     {s.includes.map((inc) => (
                       <li key={inc} className="flex gap-2">
-                        <span className="text-primary">+</span>
+                        <span className="text-muted-foreground">+</span>
                         <span>{inc}</span>
                       </li>
                     ))}
