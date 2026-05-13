@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import heroSmile from "@/assets/hero-smile.jpg";
 import productGel from "@/assets/product-gel.jpg";
 import productBrush from "@/assets/product-brush.jpg";
@@ -7,6 +8,12 @@ import team from "@/assets/team.jpg";
 import result1 from "@/assets/result-1.jpg";
 import result2 from "@/assets/result-2.jpg";
 import result3 from "@/assets/result-3.jpg";
+import before1 from "@/assets/before-1.jpg";
+import before2 from "@/assets/before-2.jpg";
+import before3 from "@/assets/before-3.jpg";
+import after1 from "@/assets/after-1.jpg";
+import after2 from "@/assets/after-2.jpg";
+import after3 from "@/assets/after-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -59,21 +66,24 @@ const results = [
 
 const noFilters = [
   {
-    src: result1,
+    before: before1,
+    after: after1,
     patient: "Patient 802",
     treatment: "In-Studio Whitening",
     date: "03 / 14 / 2026",
     shades: "+10 shades",
   },
   {
-    src: result2,
+    before: before2,
+    after: after2,
     patient: "Patient 611",
     treatment: "Cosmetic Whitening",
     date: "04 / 02 / 2026",
     shades: "+12 shades",
   },
   {
-    src: result3,
+    before: before3,
+    after: after3,
     patient: "Patient 904",
     treatment: "Maintenance Cycle",
     date: "04 / 28 / 2026",
@@ -279,36 +289,95 @@ function NoFiltersGallery() {
             Documented daily / Same lighting, same lens, same visit.
           </span>
         </div>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-6">
           {noFilters.map((n) => (
-            <figure key={n.patient} className="group">
-              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
-                <img
-                  src={n.src}
-                  alt={`${n.patient} ${n.treatment}`}
-                  loading="lazy"
-                  width={800}
-                  height={1024}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
-                <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest">
-                  No Filter
-                </span>
-                <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
-                  {n.shades}
-                </span>
-              </div>
-              <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
-                <span className="truncate">
-                  {n.patient} / {n.treatment}
-                </span>
-                <span className="shrink-0">{n.date}</span>
-              </figcaption>
-            </figure>
+            <NoFilterCard key={n.patient} item={n} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function NoFilterCard({
+  item,
+}: {
+  item: (typeof noFilters)[number];
+}) {
+  const [showAfter, setShowAfter] = useState(false);
+  return (
+    <figure>
+      <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
+        <img
+          src={item.before}
+          alt={`${item.patient} before whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <img
+          src={item.after}
+          alt={`${item.patient} after whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            showAfter ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        <span
+          className={`absolute top-3 left-3 px-2 py-1 font-mono text-[9px] uppercase tracking-widest transition-colors ${
+            showAfter
+              ? "bg-primary text-primary-foreground"
+              : "bg-background text-foreground"
+          }`}
+        >
+          {showAfter ? "After" : "Before"}
+        </span>
+        <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+          {item.shades}
+        </span>
+        <div
+          role="tablist"
+          aria-label={`${item.patient} comparison`}
+          className="absolute bottom-3 left-3 flex bg-background/90 rounded-sm overflow-hidden"
+        >
+          <button
+            type="button"
+            role="tab"
+            aria-selected={!showAfter}
+            onClick={() => setShowAfter(false)}
+            className={`px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest transition-colors ${
+              !showAfter
+                ? "bg-foreground text-background"
+                : "text-foreground hover:bg-background"
+            }`}
+          >
+            Before
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={showAfter}
+            onClick={() => setShowAfter(true)}
+            className={`px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest transition-colors ${
+              showAfter
+                ? "bg-primary text-primary-foreground"
+                : "text-foreground hover:bg-background"
+            }`}
+          >
+            After
+          </button>
+        </div>
+      </div>
+      <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
+        <span className="truncate">
+          {item.patient} / {item.treatment}
+        </span>
+        <span className="shrink-0">{item.date}</span>
+      </figcaption>
+    </figure>
   );
 }
 
