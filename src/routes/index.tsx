@@ -53,7 +53,7 @@ const products = [
 ];
 
 const results = [
-  { src: result1, label: "Patient 802 / Day 14" },
+  { src: result1, label: "Patient 802 / Restorative" },
   { src: result2, label: "Patient 611 / Side Profile" },
   { src: result3, label: "Patient 904 / Routine" },
 ];
