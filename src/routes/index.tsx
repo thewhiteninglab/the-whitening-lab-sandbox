@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Star, Instagram, Youtube, Facebook } from "lucide-react";
+import { Instagram, Youtube, Facebook } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
