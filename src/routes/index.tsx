@@ -92,9 +92,10 @@ const noFilters = [
 ];
 
 const pros = [
-  { role: "01 / Lead Lab Technician · Co-Owner & Founder · LDLT, CDLT", name: "Tabatha Post" },
-  { role: "02 / Lead Hygienist · Co-Owner & Founder · RDH", name: "Courtney Carll" },
-  { role: "03 / Lead Assistant · Co-Owner", name: "Molly St. Hilaire" },
+  { role: "01 / Lead Lab Technician · Co-Owner & Founder · LDLT, CDLT", name: "Tabatha Post", location: "Gray" },
+  { role: "02 / Lead Hygienist · Co-Owner & Founder · RDH", name: "Courtney Carll", location: "Gray" },
+  { role: "03 / Lead Assistant · Co-Owner", name: "Molly St. Hilaire", location: "Gray" },
+  { role: "04 / Hygienist · RDH", name: "Tamara Sharp", location: "Alfred" },
 ];
 
 function Nav() {
@@ -391,7 +392,12 @@ function Pros() {
                   <p className="inline-block bg-primary text-primary-foreground font-mono text-[10px] font-bold uppercase tracking-widest px-2 py-1 mb-2 rounded-sm">
                     {p.role}
                   </p>
-                  <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
+                  <div className="flex items-baseline justify-between gap-3 flex-wrap">
+                    <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {p.location}, ME
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
