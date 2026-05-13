@@ -808,6 +808,7 @@ function Index() {
       <Nav />
       <Hero />
       <Marquee />
+      <Services />
       <ResultsGrid />
       <NoFiltersGallery />
       <Shop />
