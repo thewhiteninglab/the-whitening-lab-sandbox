@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Instagram, Youtube, Facebook } from "lucide-react";
 import {
@@ -113,7 +114,7 @@ const pros = [
 ];
 
 function Nav() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const links = [
     { href: "#services", label: "Services" },
     { href: "#results", label: "Results" },
