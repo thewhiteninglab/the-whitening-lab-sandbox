@@ -147,10 +147,18 @@ function Nav() {
           {links.map((l) => (
             <DropdownMenuItem
               key={l.href}
-              asChild
+              onSelect={(e) => {
+                e.preventDefault();
+                const id = l.href.replace("#", "");
+                const el = document.getElementById(id);
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  history.replaceState(null, "", l.href);
+                }
+              }}
               className="cursor-pointer rounded-sm px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest font-bold focus:bg-primary focus:text-primary-foreground"
             >
-              <a href={l.href}>{l.label}</a>
+              {l.label}
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
