@@ -103,11 +103,7 @@ function Nav() {
       <Link to="/" className="font-display text-3xl uppercase leading-none">
         The Whitening Lab
       </Link>
-      <div className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest">
-        
-        <a href="#shop" className="hover:text-primary transition-colors">Shop</a>
-        <a href="#results" className="hover:text-primary transition-colors">Results</a>
-      </div>
+      <div className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest" />
       <a
         href="#book"
         className="bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
