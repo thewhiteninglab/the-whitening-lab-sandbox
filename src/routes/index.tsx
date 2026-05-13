@@ -555,26 +555,67 @@ function ShopProductCard({ product, index = 0 }: { product: ShopifyProduct; inde
 
   return (
     <div className="group block">
-      <div className="aspect-square bg-card border border-border rounded-sm mb-6 overflow-hidden group-hover:border-foreground transition-colors">
+      <div className="relative aspect-square mb-6 rounded-sm overflow-hidden border border-border group-hover:border-foreground transition-colors bg-[#f5f1ea]">
+        {/* layered backdrop: paper tone + soft radial highlight + grain */}
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(120% 80% at 50% 35%, rgba(255,255,255,0.9) 0%, rgba(245,241,234,0) 60%), linear-gradient(180deg, #f7f3ec 0%, #ece6db 100%)",
+          }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-[0.18] mix-blend-multiply pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
+          }}
+        />
+
+        {/* corner lab labels */}
+        <div className="absolute top-3 left-3 right-3 flex justify-between items-start font-mono text-[9px] uppercase tracking-[0.18em] text-foreground/60 z-10">
+          <span>{refCode}</span>
+          <span>{indexLabel}</span>
+        </div>
+
+        {/* product image, centered with soft floor shadow */}
         {image ? (
-          <img
-            src={image.url}
-            alt={image.altText || node.title}
-            loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
+          <>
+            <img
+              src={image.url}
+              alt={image.altText || node.title}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-contain p-8 sm:p-10 transition-transform duration-700 group-hover:scale-[1.04] drop-shadow-[0_18px_24px_rgba(20,16,10,0.18)]"
+            />
+            {/* floor shadow ellipse */}
+            <div
+              aria-hidden
+              className="absolute left-1/2 -translate-x-1/2 bottom-6 w-[55%] h-3 rounded-full bg-foreground/25 blur-md"
+            />
+          </>
         ) : (
-          <div className="w-full h-full grid place-items-center font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+          <div className="absolute inset-0 grid place-items-center font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
             No Image
           </div>
         )}
+
+        {/* yellow dot accent */}
+        <span
+          aria-hidden
+          className="absolute bottom-3 right-3 w-2.5 h-2.5 rounded-full bg-primary z-10"
+        />
       </div>
-      <div className="flex justify-between items-baseline mb-4">
+      <div className="flex justify-between items-baseline mb-1">
         <h3 className="font-bold uppercase text-sm tracking-wide pr-2">{node.title}</h3>
         <span className="font-mono text-sm shrink-0">
           ${parseFloat(price.amount).toFixed(2)}
         </span>
       </div>
+      <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-4">
+        {refCode} · Lab issue
+      </p>
       <button
         onClick={handleAdd}
         disabled={!variant?.availableForSale || adding || isLoading}
