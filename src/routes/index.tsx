@@ -230,7 +230,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative px-6 pt-12 md:pt-16 pb-20 md:pb-24 overflow-hidden">
+    <section className="relative px-6 pt-10 md:pt-14 pb-12 md:pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
           <div className="lg:col-span-8 animate-reveal">
@@ -389,7 +389,7 @@ const services = [
 
 function Services() {
   return (
-    <section id="services" className="px-6 pt-24 pb-8 md:pt-28 md:pb-10 border-t border-border">
+    <section id="services" className="px-6 pt-14 pb-6 md:pt-16 md:pb-8 border-t border-border">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
@@ -674,7 +674,7 @@ function Shop() {
   });
 
   return (
-    <section id="shop" className="px-6 pt-12 pb-24 md:pt-16 md:pb-32 border-t border-border">
+    <section id="shop" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-16 gap-6 flex-wrap">
           <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
@@ -706,7 +706,7 @@ function Shop() {
 
 function NoFiltersGallery() {
   return (
-    <section id="no-filters" className="px-5 py-16 sm:px-6 sm:py-24 md:py-32 bg-foreground text-background">
+    <section id="no-filters" className="px-5 py-12 sm:px-6 sm:py-16 md:py-20 bg-foreground text-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 gap-4 md:gap-6">
           <div>
@@ -774,7 +774,7 @@ function Testimonials() {
   return (
     <section
       aria-label="Client reviews"
-      className="px-5 py-16 sm:px-6 sm:py-24 border-t border-border bg-background"
+      className="px-5 py-12 sm:px-6 sm:py-16 border-t border-border bg-background"
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 md:gap-6 mb-10 sm:mb-12">
@@ -871,9 +871,9 @@ function Manifesto() {
   return (
     <section
       id="book"
-      className="bg-background px-6 py-16 md:py-24"
+      className="bg-background px-6 py-12 md:py-16"
     >
-      <div className="max-w-5xl mx-auto bg-primary text-primary-foreground rounded-sm px-6 py-16 md:py-20 text-center">
+      <div className="max-w-5xl mx-auto bg-primary text-primary-foreground rounded-sm px-6 py-12 md:py-14 text-center">
         <div className="font-mono text-xs uppercase tracking-[0.3em] mb-6">
           Our Promise
         </div>
@@ -1060,7 +1060,7 @@ const faqs = [
 
 function FAQ() {
   return (
-    <section id="faq" className="px-6 pt-10 pb-20 md:pt-12 md:pb-24 border-t border-border bg-background">
+    <section id="faq" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
@@ -1098,7 +1098,7 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="bg-foreground text-background pt-24 pb-12 px-6">
+    <footer className="bg-foreground text-background pt-16 pb-10 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
           <div>
