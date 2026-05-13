@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+
 import heroSmile from "@/assets/hero-smile.jpg";
 import productGel from "@/assets/product-gel.jpg";
 import productBrush from "@/assets/product-brush.jpg";
@@ -304,7 +304,6 @@ function NoFilterCard({
 }: {
   item: (typeof noFilters)[number];
 }) {
-  const [showAfter, setShowAfter] = useState(false);
   return (
     <figure className="group">
       <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
@@ -322,54 +321,17 @@ function NoFilterCard({
           loading="lazy"
           width={800}
           height={1024}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-100 ${
-            showAfter ? "opacity-100" : "opacity-0"
-          }`}
+          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500"
         />
-        <span
-          className={`absolute top-3 left-3 px-2 py-1 font-mono text-[9px] uppercase tracking-widest transition-colors ${
-            showAfter
-              ? "bg-primary text-primary-foreground"
-              : "bg-background text-foreground"
-          }`}
-        >
-          {showAfter ? "After" : "Before"}
+        <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest group-hover:opacity-0 transition-opacity">
+          Before
+        </span>
+        <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+          After
         </span>
         <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
           {item.shades}
         </span>
-        <div
-          role="tablist"
-          aria-label={`${item.patient} comparison`}
-          className="absolute bottom-3 left-3 flex bg-background/90 rounded-sm overflow-hidden"
-        >
-          <button
-            type="button"
-            role="tab"
-            aria-selected={!showAfter}
-            onClick={() => setShowAfter(false)}
-            className={`px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest transition-colors ${
-              !showAfter
-                ? "bg-foreground text-background"
-                : "text-foreground hover:bg-background"
-            }`}
-          >
-            Before
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={showAfter}
-            onClick={() => setShowAfter(true)}
-            className={`px-2.5 py-1 font-mono text-[9px] uppercase tracking-widest transition-colors ${
-              showAfter
-                ? "bg-primary text-primary-foreground"
-                : "text-foreground hover:bg-background"
-            }`}
-          >
-            After
-          </button>
-        </div>
       </div>
       <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
         <span className="truncate">
