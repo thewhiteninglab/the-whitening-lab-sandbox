@@ -414,6 +414,108 @@ function Pros() {
   );
 }
 
+function Partner() {
+  return (
+    <section id="partner" className="px-6 py-20 md:py-28 border-t border-border bg-background">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+              Partner / Wholesale / Training
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9] mb-6">
+              Partner with <span className="text-primary">The Lab.</span>
+            </h2>
+            <p className="text-base md:text-lg leading-snug text-pretty max-w-[38ch]">
+              The demand for professional teeth whitening has never been higher.
+              Expand your practice, diversify your revenue, or build your own
+              business — with training designed for growth.
+            </p>
+          </div>
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="lg:col-span-7 grid sm:grid-cols-2 gap-4"
+          >
+            <input
+              required
+              type="text"
+              placeholder="Full Name"
+              aria-label="Full name"
+              maxLength={100}
+              className="bg-card border border-border rounded-sm px-4 py-3 text-sm font-mono uppercase tracking-wide outline-none focus:border-primary transition-colors placeholder:text-muted-foreground"
+            />
+            <input
+              required
+              type="text"
+              placeholder="Company / Practice"
+              aria-label="Company or practice"
+              maxLength={150}
+              className="bg-card border border-border rounded-sm px-4 py-3 text-sm font-mono uppercase tracking-wide outline-none focus:border-primary transition-colors placeholder:text-muted-foreground"
+            />
+            <input
+              required
+              type="email"
+              placeholder="Email"
+              aria-label="Email"
+              maxLength={255}
+              className="bg-card border border-border rounded-sm px-4 py-3 text-sm font-mono uppercase tracking-wide outline-none focus:border-primary transition-colors placeholder:text-muted-foreground"
+            />
+            <input
+              type="tel"
+              placeholder="Phone (optional)"
+              aria-label="Phone"
+              maxLength={30}
+              className="bg-card border border-border rounded-sm px-4 py-3 text-sm font-mono uppercase tracking-wide outline-none focus:border-primary transition-colors placeholder:text-muted-foreground"
+            />
+            <input
+              type="text"
+              placeholder="Years of Experience"
+              aria-label="Years of experience"
+              maxLength={50}
+              className="bg-card border border-border rounded-sm px-4 py-3 text-sm font-mono uppercase tracking-wide outline-none focus:border-primary transition-colors placeholder:text-muted-foreground"
+            />
+            <input
+              type="text"
+              placeholder="Location / Where You'd Practice"
+              aria-label="Location"
+              maxLength={150}
+              className="bg-card border border-border rounded-sm px-4 py-3 text-sm font-mono uppercase tracking-wide outline-none focus:border-primary transition-colors placeholder:text-muted-foreground"
+            />
+            <div className="sm:col-span-2 flex flex-wrap gap-x-6 gap-y-2 px-1 py-1 font-mono text-[10px] uppercase tracking-widest">
+              <span className="text-muted-foreground mr-2">Interested in:</span>
+              <label className="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" className="accent-primary" /> Training
+              </label>
+              <label className="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" className="accent-primary" /> Wholesale
+              </label>
+              <label className="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" className="accent-primary" /> In-House Lab
+              </label>
+              <label className="inline-flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" className="accent-primary" /> Affiliate Office
+              </label>
+            </div>
+            <textarea
+              placeholder="Tell us a bit more (optional)"
+              aria-label="Message"
+              rows={3}
+              maxLength={1000}
+              className="sm:col-span-2 bg-card border border-border rounded-sm px-4 py-3 text-sm font-mono uppercase tracking-wide outline-none focus:border-primary transition-colors placeholder:text-muted-foreground resize-none"
+            />
+            <button
+              type="submit"
+              className="sm:col-span-2 bg-primary text-primary-foreground px-6 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-[0.99] transition-all"
+            >
+              Let's Connect
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-foreground text-background pt-24 pb-12 px-6">
