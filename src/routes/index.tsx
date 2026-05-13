@@ -541,6 +541,7 @@ function ShopProductCard({ product }: { product: ShopifyProduct }) {
     });
     return init;
   });
+  const [openOptions, setOpenOptions] = useState<Record<string, boolean>>({});
 
   const matchedVariant =
     variants.find((v) =>
