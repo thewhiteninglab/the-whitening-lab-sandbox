@@ -231,7 +231,7 @@ const services = [
     includes: [
       "Returning-client check-in",
       "60-minute whitening session",
-      "Recovery Serum finish",
+      "Recovery Serum finish in-chair (take-home pen sold separately)",
     ],
     bookHref: "https://book.thewhiteninglab.com/60-min-touchup",
   },
