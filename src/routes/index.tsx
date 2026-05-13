@@ -126,7 +126,7 @@ function Hero() {
 
 function Marquee() {
   const items = [
-    "Real People",
+    "Teeth Whitening",
     "Licensed Pros",
     "Real Results",
     "No AI",
