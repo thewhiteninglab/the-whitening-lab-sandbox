@@ -1,5 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Star, Instagram, Youtube, Facebook } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import heroSmile from "@/assets/hero-smile.jpg";
 import productGel from "@/assets/product-gel.jpg";
