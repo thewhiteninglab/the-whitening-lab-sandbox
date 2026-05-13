@@ -127,7 +127,23 @@ function Nav() {
   const goTo = (href: string) => {
     const id = href.replace("#", "");
     setOpen(false);
-    // Radix locks body scroll while open; wait for unlock, then scroll.
+
+    const smoothScrollTo = (target: number) => {
+      const start = window.scrollY;
+      const distance = target - start;
+      const duration = 650;
+      const startedAt = performance.now();
+
+      const animate = (now: number) => {
+        const progress = Math.min((now - startedAt) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        window.scrollTo(0, start + distance * eased);
+        if (progress < 1) requestAnimationFrame(animate);
+      };
+
+      requestAnimationFrame(animate);
+    };
+
     const tryScroll = (attempt = 0) => {
       const locked = document.body.style.pointerEvents === "none";
       const el = document.getElementById(id);
@@ -136,7 +152,8 @@ function Nav() {
         return;
       }
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        const target = window.scrollY + el.getBoundingClientRect().top;
+        smoothScrollTo(target);
         history.replaceState(null, "", href);
       }
     };
@@ -162,12 +179,16 @@ function Nav() {
         <DropdownMenuContent
           align="end"
           sideOffset={10}
+          onCloseAutoFocus={(event) => event.preventDefault()}
           className="min-w-[220px] rounded-sm border border-border bg-background p-1 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.25)]"
         >
           {links.map((l) => (
             <DropdownMenuItem
               key={l.href}
-              onSelect={() => goTo(l.href)}
+              onSelect={(event) => {
+                event.preventDefault();
+                goTo(l.href);
+              }}
               className="cursor-pointer rounded-sm px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest font-bold focus:bg-primary focus:text-primary-foreground"
             >
               {l.label}
