@@ -337,7 +337,7 @@ function Manifesto() {
   return (
     <section
       id="book"
-      className="bg-primary text-primary-foreground py-28 md:py-40 px-6"
+      className="bg-primary text-primary-foreground pt-16 pb-28 md:pt-20 md:pb-40 px-6"
     >
       <div className="max-w-4xl mx-auto text-center">
         <div className="font-mono text-xs uppercase tracking-[0.3em] mb-8">
