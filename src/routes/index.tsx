@@ -426,7 +426,7 @@ function Services() {
                       {s.name}
                     </h3>
                     {s.featured && (
-                      <span className="hidden sm:inline-block bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm shrink-0">
+                      <span className="hidden sm:inline-block bg-foreground text-background font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm shrink-0">
                         Start Here
                       </span>
                     )}
