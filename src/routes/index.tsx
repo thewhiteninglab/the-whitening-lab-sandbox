@@ -1,5 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Star, Instagram, Youtube, Facebook } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import heroSmile from "@/assets/hero-smile.jpg";
 import productGel from "@/assets/product-gel.jpg";
@@ -530,6 +536,67 @@ function Partner() {
   );
 }
 
+const faqs = [
+  {
+    q: "Does professional whitening damage enamel?",
+    a: "No. Our peroxide-based gels are clinically formulated and applied by licensed pros to lift stains from the surface and within the enamel — without weakening tooth structure. Sensitivity, if any, is temporary.",
+  },
+  {
+    q: "How many shades whiter will I actually get?",
+    a: "Most clients leave 6–12 shades brighter after a single in-lab session. Results depend on your starting shade, diet, and habits. We document every result — no filters, no edits.",
+  },
+  {
+    q: "How long do results last?",
+    a: "Anywhere from 6 months to 2+ years with proper maintenance. Coffee, wine, and tobacco accelerate fading — our take-home line is built to keep you glossed in between visits.",
+  },
+  {
+    q: "Will it hurt or make my teeth sensitive?",
+    a: "Some clients feel mild, short-lived sensitivity for 24–48 hours. We pre-treat with a desensitizing step and finish with a recovery serum to keep things comfortable.",
+  },
+  {
+    q: "Is it safe if I have crowns, veneers, or fillings?",
+    a: "Whitening gel only lifts stain on natural enamel — it won't lighten restorations. We'll assess your smile first and recommend the right approach so everything blends.",
+  },
+];
+
+function FAQ() {
+  return (
+    <section id="faq" className="px-6 py-20 md:py-28 border-t border-border bg-background">
+      <div className="max-w-4xl mx-auto">
+        <div className="mb-12 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+            FAQ / The Real Questions
+          </p>
+          <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
+            Asked. <span className="text-primary">Answered.</span>
+          </h2>
+        </div>
+        <Accordion type="single" collapsible className="w-full">
+          {faqs.map((f, i) => (
+            <AccordionItem
+              key={f.q}
+              value={`item-${i}`}
+              className="border-b border-border"
+            >
+              <AccordionTrigger className="py-6 text-left font-bold uppercase tracking-wide text-base md:text-lg hover:no-underline hover:text-primary">
+                <span className="flex items-baseline gap-4">
+                  <span className="font-mono text-[10px] text-muted-foreground tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {f.q}
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="pb-6 pl-10 text-base text-muted-foreground leading-relaxed">
+                {f.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-foreground text-background pt-24 pb-12 px-6">
@@ -634,6 +701,7 @@ function Index() {
       <Manifesto />
       <Pros />
       <Partner />
+      <FAQ />
       <Footer />
     </main>
   );
