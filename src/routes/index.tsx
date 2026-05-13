@@ -112,7 +112,23 @@ function Nav() {
       <Link to="/" className="font-display text-3xl uppercase leading-none">
         The Whitening Lab
       </Link>
-      <div className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest" />
+      <div className="hidden md:flex items-center gap-7 text-[11px] font-mono uppercase tracking-widest font-bold">
+        {[
+          { href: "#results", label: "Results" },
+          { href: "#shop", label: "Shop" },
+          { href: "#process", label: "Team" },
+          { href: "#faq", label: "FAQ" },
+          { href: "#partner", label: "Partner" },
+        ].map((l) => (
+          <a
+            key={l.href}
+            href={l.href}
+            className="relative hover:text-primary transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+          >
+            {l.label}
+          </a>
+        ))}
+      </div>
       <a
         href="#book"
         className="bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
