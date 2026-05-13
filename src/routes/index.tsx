@@ -128,7 +128,7 @@ function Marquee() {
   const items = [
     "Real People",
     "Licensed Pros",
-    "Whitening Today",
+    "Real Results",
     "No AI",
     "Daily Clinical Practice",
     "Living Lab",
