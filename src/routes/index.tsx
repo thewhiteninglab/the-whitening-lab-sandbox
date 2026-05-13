@@ -73,6 +73,14 @@ const beforeAfters = [
     date: "03 / 14 / 2026",
     shades: "+10 shades",
   },
+  {
+    before: before2,
+    after: after2,
+    patient: "Patient 611",
+    treatment: "Cosmetic Whitening",
+    date: "04 / 02 / 2026",
+    shades: "+12 shades",
+  },
 ];
 
 const pros = [
@@ -228,7 +236,7 @@ function NoFiltersGallery() {
             Hover to reveal the after — same lens, same lighting, same visit.
           </span>
         </div>
-        <div className="max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {beforeAfters.map((b) => (
             <figure key={b.patient} className="group">
               <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[5/4] bg-background/[0.04] p-3 md:p-4">
