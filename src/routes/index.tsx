@@ -292,10 +292,10 @@ function TrustStrip() {
       aria-label="Trust signals"
       className="border-y border-border px-6 py-4"
     >
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
         {items.map((t) => (
           <span key={t} className="flex items-center gap-2">
-            <span className="size-1.5 rounded-full bg-foreground" />
+            <span className="size-1 rounded-full bg-muted-foreground/60" />
             {t}
           </span>
         ))}
