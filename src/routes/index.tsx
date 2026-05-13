@@ -236,7 +236,7 @@ function NoFiltersGallery() {
             Hover to reveal the after — same lens, same lighting, same visit.
           </span>
         </div>
-        <div className="max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {beforeAfters.map((b) => (
             <figure key={b.patient} className="group">
               <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[5/4] bg-background/[0.04] p-3 md:p-4">
