@@ -225,6 +225,7 @@ function Nav() {
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
+      </div>
     </nav>
   );
 }
