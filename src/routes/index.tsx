@@ -286,7 +286,7 @@ function TrustStrip() {
     "Licensed & Certified Pros",
     "Maine-Based",
     "5.0 Treatment Rating",
-    "Booking Now Open",
+    "60-Second Booking",
   ];
   return (
     <section
