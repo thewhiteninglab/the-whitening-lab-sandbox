@@ -91,7 +91,7 @@ function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
           <div className="lg:col-span-8 animate-reveal">
-            <h1 className="font-display uppercase leading-[0.85] tracking-tighter text-balance mb-8 text-[clamp(3.5rem,12vw,11rem)]">
+            <h1 className="font-display uppercase leading-[0.95] tracking-tighter text-balance mb-8 text-[clamp(3.5rem,12vw,11rem)]">
               We Hate <span className="text-primary">Yellow</span>
               <br />
               as much as you.
