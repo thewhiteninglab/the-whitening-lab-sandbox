@@ -142,8 +142,12 @@ function Hero() {
               className="w-full aspect-[16/9] object-cover rounded-sm mb-6"
             />
             <div className="flex justify-between items-center border-t border-foreground pt-4">
-              <span className="font-mono text-[10px] uppercase tracking-widest">
-                4.9 / Treatment Rating
+              <span className="font-mono text-[10px] uppercase tracking-widest inline-flex items-center gap-1.5">
+                <Star
+                  className="size-3 text-primary fill-primary drop-shadow-[0_0_6px_hsl(var(--primary))]"
+                  aria-hidden="true"
+                />
+                5.0 / Treatment Rating
               </span>
               <span className="font-mono text-[10px] uppercase tracking-widest">
                 Gray · Alfred
