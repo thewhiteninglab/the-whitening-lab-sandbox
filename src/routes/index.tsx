@@ -158,7 +158,7 @@ function ResultsGrid() {
     <section className="px-6 py-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
-          <h2 className="font-display text-5xl md:text-7xl uppercase tracking-tighter max-w-3xl">
+          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter whitespace-nowrap">
             Real teeth. Real treatments. Real results.
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
