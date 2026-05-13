@@ -57,6 +57,30 @@ const results = [
   { src: result3, label: "Patient 904 / Maintenance", shades: "+4 shades" },
 ];
 
+const noFilters = [
+  {
+    src: result1,
+    patient: "Patient 802",
+    treatment: "In-Studio Whitening",
+    date: "03 / 14 / 2026",
+    shades: "+10 shades",
+  },
+  {
+    src: result2,
+    patient: "Patient 611",
+    treatment: "Cosmetic Whitening",
+    date: "04 / 02 / 2026",
+    shades: "+12 shades",
+  },
+  {
+    src: result3,
+    patient: "Patient 904",
+    treatment: "Maintenance Cycle",
+    date: "04 / 28 / 2026",
+    shades: "+4 shades",
+  },
+];
+
 const pros = [
   { role: "01 / Clinical Director", name: "Dr. Marcus Vane, DDS" },
   { role: "02 / Lead Hygienist", name: "Sasha K. Chen, RDH" },
@@ -236,6 +260,58 @@ function Shop() {
   );
 }
 
+function NoFiltersGallery() {
+  return (
+    <section id="no-filters" className="px-6 py-24 md:py-32 bg-foreground text-background">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+              No Filters / Lab Archive
+            </p>
+            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
+              Real lab results.
+              <br />
+              No retouching.
+            </h2>
+          </div>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
+            Documented daily / Same lighting, same lens, same visit.
+          </span>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {noFilters.map((n) => (
+            <figure key={n.patient} className="group">
+              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
+                <img
+                  src={n.src}
+                  alt={`${n.patient} ${n.treatment}`}
+                  loading="lazy"
+                  width={800}
+                  height={1024}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+                <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest">
+                  No Filter
+                </span>
+                <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+                  {n.shades}
+                </span>
+              </div>
+              <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
+                <span className="truncate">
+                  {n.patient} / {n.treatment}
+                </span>
+                <span className="shrink-0">{n.date}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Manifesto() {
   return (
     <section
@@ -380,6 +456,7 @@ function Index() {
       <Hero />
       <Marquee />
       <ResultsGrid />
+      <NoFiltersGallery />
       <Shop />
       <Manifesto />
       <Pros />
