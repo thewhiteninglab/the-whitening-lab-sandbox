@@ -105,9 +105,9 @@ function Hero() {
             <img
               src={heroSmile}
               alt="Close-up of a bright, glossy, professionally whitened smile"
-              width={896}
-              height={1120}
-              className="w-full aspect-[4/5] object-cover rounded-sm mb-6"
+              width={1920}
+              height={1036}
+              className="w-full aspect-[16/9] object-cover rounded-sm mb-6"
             />
             <div className="flex justify-between items-center border-t border-foreground pt-4">
               <span className="font-mono text-[10px] uppercase tracking-widest">
