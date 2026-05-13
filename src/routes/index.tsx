@@ -40,17 +40,17 @@ import after3 from "@/assets/after-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Whitening Lab — A Living Whitening Lab by Licensed Dental Pros" },
+      { title: "The Whitening Lab — Professional Teeth Whitening by Licensed Dental Pros" },
       {
         name: "description",
         content:
-          "The Whitening Lab is a living whitening lab. Licensed dental pros whitening real teeth every single day — plus a maintenance line to keep the gloss between visits.",
+          "Professional teeth whitening by licensed dental pros. In-lab treatments, custom take-home trays, and a maintenance line to keep results bright between visits.",
       },
-      { property: "og:title", content: "The Whitening Lab — A Living Whitening Lab" },
+      { property: "og:title", content: "The Whitening Lab — Professional Teeth Whitening" },
       {
         property: "og:description",
         content:
-          "Real treatments. Real licenses. No AI. The only brand actually whitening teeth every day.",
+          "Real treatments. Real licenses. No AI. Professional teeth whitening from the dental pros who do it every single day.",
       },
       { property: "og:image", content: heroSmile },
       { name: "twitter:image", content: heroSmile },
