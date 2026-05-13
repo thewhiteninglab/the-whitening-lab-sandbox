@@ -213,7 +213,14 @@ const services = [
     name: "New Patient",
     price: "$295",
     duration: "1 hr",
-    desc: "Comprehensive whitening — full assessment, in-lab treatment, and Recovery Serum finish.",
+    desc: "Comprehensive whitening — full assessment, in-lab treatment, and Recovery Serum finish. The best place to start.",
+    includes: [
+      "Full shade & smile assessment",
+      "60-minute in-lab whitening session",
+      "Recovery Serum applied in-chair",
+      "Maintenance plan tailored to you",
+    ],
+    bookHref: "https://book.thewhiteninglab.com/new-patient",
     featured: true,
   },
   {
@@ -221,18 +228,37 @@ const services = [
     price: "$180",
     duration: "60 min",
     desc: "Maintain your shade with a focused in-lab session for returning clients.",
+    includes: [
+      "Returning-client check-in",
+      "60-minute whitening session",
+      "Recovery Serum finish",
+    ],
+    bookHref: "https://book.thewhiteninglab.com/60-min-touchup",
   },
   {
     name: "40 Min Touch-Up",
     price: "$150",
     duration: "40 min",
     desc: "Quick brightening boost — perfect between events or before a big day.",
+    includes: [
+      "Express 40-minute whitening session",
+      "Recovery Serum finish",
+      "Ideal pre-event refresh",
+    ],
+    bookHref: "https://book.thewhiteninglab.com/40-min-touchup",
   },
   {
     name: "Bleaching Trays",
     price: "$275",
     duration: "Take-Home",
     desc: "Custom-fit trays for at-home use. Includes one syringe of professional whitening solution.",
+    includes: [
+      "Custom-molded upper & lower trays",
+      "One syringe of professional gel",
+      "At-home use guide",
+      "Refill syringes available",
+    ],
+    bookHref: "https://book.thewhiteninglab.com/bleaching-trays",
   },
 ];
 
@@ -249,64 +275,83 @@ function Services() {
               Pick Your <span className="text-primary">Brightness.</span>
             </h2>
           </div>
-          <a
-            href="#book"
-            className="font-mono text-xs uppercase tracking-widest border-b border-foreground pb-1 hover:text-primary hover:border-primary transition-colors"
-          >
-            Book Treatment →
-          </a>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground max-w-[28ch]">
+            Tap a treatment to see what's included and book.
+          </span>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {services.map((s) => (
-            <article
+        <Accordion
+          type="single"
+          collapsible
+          defaultValue="service-0"
+          className="w-full border-t border-border"
+        >
+          {services.map((s, i) => (
+            <AccordionItem
               key={s.name}
-              className={`group relative flex flex-col justify-between p-6 rounded-sm border transition-all duration-300 hover:-translate-y-1 ${
-                s.featured
-                  ? "bg-foreground text-background border-foreground hover:shadow-[0_20px_60px_-20px_var(--primary)]"
-                  : "bg-card border-border hover:border-primary"
-              }`}
+              value={`service-${i}`}
+              className="border-b border-border"
             >
-              {s.featured && (
-                <span className="absolute -top-2 left-4 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm">
-                  Start Here
-                </span>
-              )}
-              <div>
-                <div
-                  className={`font-mono text-[10px] uppercase tracking-widest mb-3 ${
-                    s.featured ? "text-background/60" : "text-muted-foreground"
-                  }`}
-                >
-                  {s.duration}
+              <AccordionTrigger className="py-6 hover:no-underline group">
+                <div className="flex flex-1 items-center justify-between gap-4 pr-4">
+                  <div className="flex items-baseline gap-4 min-w-0">
+                    <span className="font-mono text-[10px] text-muted-foreground tabular-nums shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-display text-xl sm:text-2xl md:text-3xl uppercase tracking-tighter leading-none truncate group-hover:text-primary transition-colors">
+                      {s.name}
+                    </h3>
+                    {s.featured && (
+                      <span className="hidden sm:inline-block bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm shrink-0">
+                        Start Here
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-baseline gap-4 sm:gap-6 shrink-0">
+                    <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {s.duration}
+                    </span>
+                    <span className="font-display text-xl sm:text-2xl tracking-tighter">
+                      {s.price}
+                    </span>
+                  </div>
                 </div>
-                <h3 className="font-display text-2xl uppercase tracking-tighter leading-[0.95] mb-3">
-                  {s.name}
-                </h3>
-                <p
-                  className={`text-sm leading-snug ${
-                    s.featured ? "text-background/80" : "text-muted-foreground"
-                  }`}
-                >
-                  {s.desc}
-                </p>
-              </div>
-              <div className="mt-8 flex items-baseline justify-between border-t pt-4 border-current/20">
-                <span className="font-display text-3xl tracking-tighter">{s.price}</span>
-                <span
-                  className={`font-mono text-[10px] uppercase tracking-widest transition-colors ${
-                    s.featured ? "text-primary" : "group-hover:text-primary"
-                  }`}
-                >
-                  Book →
-                </span>
-              </div>
-            </article>
+              </AccordionTrigger>
+              <AccordionContent className="pb-8 pl-0 sm:pl-10">
+                <div className="grid md:grid-cols-3 gap-6 md:gap-10 items-start">
+                  <p className="md:col-span-2 text-base md:text-lg leading-snug text-pretty">
+                    {s.desc}
+                  </p>
+                  <ul className="space-y-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
+                    {s.includes.map((inc) => (
+                      <li key={inc} className="flex gap-2">
+                        <span className="text-primary">+</span>
+                        <span>{inc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-6 flex flex-wrap items-center gap-4">
+                  <a
+                    href={s.bookHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
+                  >
+                    Book {s.name} <span aria-hidden="true">→</span>
+                  </a>
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                    {s.duration} · {s.price}
+                  </span>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </div>
     </section>
   );
 }
+
 
 function ResultsGrid() {
   return (
