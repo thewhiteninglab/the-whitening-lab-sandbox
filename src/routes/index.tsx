@@ -64,6 +64,33 @@ const results = [
   { src: result3, label: "Patient 904 / Maintenance", shades: "+4 shades" },
 ];
 
+const beforeAfters = [
+  {
+    before: before1,
+    after: after1,
+    patient: "Patient 802",
+    treatment: "In-Studio Whitening",
+    date: "03 / 14 / 2026",
+    shades: "+10 shades",
+  },
+  {
+    before: before2,
+    after: after2,
+    patient: "Patient 611",
+    treatment: "Cosmetic Whitening",
+    date: "04 / 02 / 2026",
+    shades: "+12 shades",
+  },
+  {
+    before: before3,
+    after: after3,
+    patient: "Patient 904",
+    treatment: "Maintenance Cycle",
+    date: "04 / 28 / 2026",
+    shades: "+4 shades",
+  },
+];
+
 const pros = [
   { role: "01 / Clinical Director", name: "Dr. Marcus Vane, DDS" },
   { role: "02 / Lead Hygienist", name: "Sasha K. Chen, RDH" },
