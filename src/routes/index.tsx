@@ -6,6 +6,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 import heroSmile from "@/assets/hero-smile.jpg";
 import productGel from "@/assets/product-gel.jpg";
@@ -107,35 +113,48 @@ const pros = [
 ];
 
 function Nav() {
+  const links = [
+    { href: "#services", label: "Services" },
+    { href: "#results", label: "Results" },
+    { href: "#shop", label: "Shop" },
+    { href: "#process", label: "Team" },
+    { href: "#faq", label: "FAQ" },
+    { href: "#partner", label: "Partner" },
+    { href: "#book", label: "Book Treatment" },
+  ];
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="flex items-center justify-between px-6 py-4 bg-background border-b border-border">
       <Link to="/" className="font-display text-3xl uppercase leading-none">
         The Whitening Lab
       </Link>
-      <div className="hidden md:flex items-center gap-7 text-[11px] font-mono uppercase tracking-widest font-bold">
-        {[
-          { href: "#services", label: "Services" },
-          { href: "#results", label: "Results" },
-          { href: "#shop", label: "Shop" },
-          { href: "#process", label: "Team" },
-          { href: "#faq", label: "FAQ" },
-          { href: "#partner", label: "Partner" },
-        ].map((l) => (
-          <a
-            key={l.href}
-            href={l.href}
-            className="relative hover:text-primary transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          className="group bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all inline-flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        >
+          Glow Up
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-300 group-data-[state=open]:rotate-180"
           >
-            {l.label}
-          </a>
-        ))}
-      </div>
-      <a
-        href="#book"
-        className="bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
-      >
-        Book Treatment
-      </a>
+            ▾
+          </span>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          align="end"
+          sideOffset={10}
+          className="min-w-[220px] rounded-sm border border-border bg-background p-1 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.25)]"
+        >
+          {links.map((l) => (
+            <DropdownMenuItem
+              key={l.href}
+              asChild
+              className="cursor-pointer rounded-sm px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest font-bold focus:bg-primary focus:text-primary-foreground"
+            >
+              <a href={l.href}>{l.label}</a>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </nav>
   );
 }
