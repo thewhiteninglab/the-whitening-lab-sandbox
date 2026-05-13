@@ -73,22 +73,6 @@ const beforeAfters = [
     date: "03 / 14 / 2026",
     shades: "+10 shades",
   },
-  {
-    before: before2,
-    after: after2,
-    patient: "Patient 611",
-    treatment: "Cosmetic Whitening",
-    date: "04 / 02 / 2026",
-    shades: "+12 shades",
-  },
-  {
-    before: before3,
-    after: after3,
-    patient: "Patient 904",
-    treatment: "Maintenance Cycle",
-    date: "04 / 28 / 2026",
-    shades: "+4 shades",
-  },
 ];
 
 const pros = [
