@@ -114,6 +114,7 @@ function Nav() {
       </Link>
       <div className="hidden md:flex items-center gap-7 text-[11px] font-mono uppercase tracking-widest font-bold">
         {[
+          { href: "#services", label: "Services" },
           { href: "#results", label: "Results" },
           { href: "#shop", label: "Shop" },
           { href: "#process", label: "Team" },
