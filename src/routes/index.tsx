@@ -292,10 +292,10 @@ function TrustStrip() {
       aria-label="Trust signals"
       className="border-y border-border px-6 py-4"
     >
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
         {items.map((t) => (
           <span key={t} className="flex items-center gap-2">
-            <span className="size-1.5 rounded-full bg-foreground" />
+            <span className="size-1 rounded-full bg-muted-foreground/60" />
             {t}
           </span>
         ))}
@@ -426,7 +426,7 @@ function Services() {
                       {s.name}
                     </h3>
                     {s.featured && (
-                      <span className="hidden sm:inline-block bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm shrink-0">
+                      <span className="hidden sm:inline-block bg-foreground text-background font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-sm shrink-0">
                         Start Here
                       </span>
                     )}
@@ -449,7 +449,7 @@ function Services() {
                   <ul className="space-y-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
                     {s.includes.map((inc) => (
                       <li key={inc} className="flex gap-2">
-                        <span className="text-primary">+</span>
+                        <span className="text-muted-foreground">+</span>
                         <span>{inc}</span>
                       </li>
                     ))}
@@ -637,7 +637,7 @@ function NoFiltersGallery() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-4">
               No Filters / Lab Archive
             </p>
             <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
@@ -756,7 +756,7 @@ function Pros() {
             className="w-full aspect-square object-cover object-top rounded-sm"
           />
           <div>
-            <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-primary font-bold mb-6 inline-block border-b-2 border-primary pb-2">
+            <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-foreground font-bold mb-6 inline-block border-b-2 border-foreground pb-2">
               Meet the team
             </p>
             <h3 className="font-sans text-2xl leading-snug tracking-normal mb-10 text-pretty font-semibold md:text-4xl">
@@ -765,7 +765,7 @@ function Pros() {
             <div className="space-y-6">
               {pros.map((p) => (
                 <div key={p.name} className="border-b border-border pb-4">
-                  <p className="inline-block bg-primary text-primary-foreground font-mono text-[10px] font-bold uppercase tracking-widest px-2 py-1 mb-2 rounded-sm">
+                  <p className="inline-block bg-foreground text-background font-mono text-[10px] font-bold uppercase tracking-widest px-2 py-1 mb-2 rounded-sm">
                     {p.role}
                   </p>
                   <div className="flex items-baseline justify-between gap-3 flex-wrap">
@@ -914,7 +914,7 @@ function FAQ() {
     <section id="faq" className="px-6 pt-10 pb-20 md:pt-12 md:pb-24 border-t border-border bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             FAQ / The Real Questions
           </p>
           <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
@@ -1049,7 +1049,6 @@ function Index() {
       <TrustStrip />
       <Marquee />
       <Services />
-      <ResultsGrid />
       <NoFiltersGallery />
       <Manifesto />
       <Pros />
