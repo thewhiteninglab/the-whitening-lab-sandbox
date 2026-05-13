@@ -1101,6 +1101,7 @@ function Index() {
       <Marquee />
       <Services />
       <NoFiltersGallery />
+      <Testimonials />
       <Manifesto />
       <Pros />
       <Shop />
