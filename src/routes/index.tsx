@@ -171,7 +171,7 @@ function Hero() {
               as much as you.
             </h1>
             <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty">
-              The only dental lab run by actual licensed pros — whitening
+              The only dental lab run by actual licensed/certified pros — whitening
               teeth every single day. No AI, no gimmicks, just real results.
             </p>
           </div>
