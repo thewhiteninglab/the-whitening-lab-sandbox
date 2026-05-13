@@ -382,7 +382,7 @@ function Pros() {
           />
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6">
-              Meet the licenses
+              Meet the team
             </p>
             <h3 className="font-display text-5xl md:text-6xl uppercase tracking-tighter mb-10">
               Cool. Hip. Credentialed.
