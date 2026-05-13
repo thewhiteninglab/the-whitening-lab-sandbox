@@ -62,6 +62,24 @@ export const Route = createFileRoute("/")({
         href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "The Whitening Lab",
+          description:
+            "A living whitening lab run by licensed dental pros — whitening real teeth every single day.",
+          areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "100",
+          },
+        }),
+      },
+    ],
   }),
   component: Index,
 });
@@ -211,10 +229,27 @@ function Hero() {
               <br />
               as much as you.
             </h1>
-            <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty">
+            <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty mb-8">
               The only dental lab run by actual licensed/certified pros — whitening
               teeth every single day. No AI, no gimmicks, just real results.
             </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#book"
+                className="bg-foreground text-background px-6 py-3 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all rounded-sm"
+              >
+                Book a Treatment
+              </a>
+              <a
+                href="#shop"
+                className="px-6 py-3 text-xs font-mono uppercase tracking-widest font-bold border border-foreground hover:bg-foreground hover:text-background transition-all rounded-sm"
+              >
+                Shop Strips
+              </a>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                Booking in 60 seconds
+              </span>
+            </div>
           </div>
           <div className="lg:col-span-4 animate-reveal [animation-delay:150ms]">
             <img
@@ -234,6 +269,30 @@ function Hero() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function TrustStrip() {
+  const items = [
+    "Licensed & Certified Pros",
+    "Maine-Made",
+    "5.0 Treatment Rating",
+    "Booking Now Open",
+  ];
+  return (
+    <section
+      aria-label="Trust signals"
+      className="border-y border-border px-6 py-4"
+    >
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+        {items.map((t) => (
+          <span key={t} className="flex items-center gap-2">
+            <span className="size-1.5 rounded-full bg-foreground" />
+            {t}
+          </span>
+        ))}
       </div>
     </section>
   );
@@ -912,6 +971,7 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       <Nav />
       <Hero />
+      <TrustStrip />
       <Marquee />
       <Services />
       <ResultsGrid />
