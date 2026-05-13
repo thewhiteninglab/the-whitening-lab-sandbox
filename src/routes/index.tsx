@@ -217,7 +217,7 @@ const services = [
     includes: [
       "Full shade & smile assessment",
       "60-minute in-lab whitening session",
-      "Recovery Serum applied in-chair",
+      "Recovery Serum applied in-chair (take-home pen sold separately)",
       "Maintenance plan tailored to you",
     ],
     bookHref: "https://book.thewhiteninglab.com/new-patient",
