@@ -62,6 +62,24 @@ export const Route = createFileRoute("/")({
         href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "The Whitening Lab",
+          description:
+            "A living whitening lab run by licensed dental pros — whitening real teeth every single day.",
+          areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "100",
+          },
+        }),
+      },
+    ],
   }),
   component: Index,
 });
