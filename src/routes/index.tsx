@@ -244,7 +244,7 @@ function Shop() {
         </div>
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           {products.map((p) => (
-            <a key={p.name} href="#shop" className="group cursor-pointer block">
+            <a key={p.name} href="https://the-whitening-lab-2.myshopify.com" target="_blank" rel="noopener noreferrer" className="group cursor-pointer block">
               <div className="aspect-square bg-card border border-border rounded-sm grid place-items-center mb-6 overflow-hidden group-hover:border-primary transition-colors">
                 <img
                   src={p.img}
