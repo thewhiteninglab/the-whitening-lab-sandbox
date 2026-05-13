@@ -524,7 +524,7 @@ function ResultsGrid() {
   );
 }
 
-function ShopProductCard({ product }: { product: ShopifyProduct }) {
+function ShopProductCard({ product, index = 0 }: { product: ShopifyProduct; index?: number }) {
   const addItem = useCartStore((s) => s.addItem);
   const isLoading = useCartStore((s) => s.isLoading);
   const [adding, setAdding] = useState(false);
@@ -533,6 +533,8 @@ function ShopProductCard({ product }: { product: ShopifyProduct }) {
   const variant = node.variants.edges[0]?.node;
   const image = node.images.edges[0]?.node;
   const price = variant?.price ?? node.priceRange.minVariantPrice;
+  const refCode = `TWL—${String(index + 1).padStart(2, "0")}`;
+  const indexLabel = `${String(index + 1).padStart(2, "0")} / ${String(3).padStart(2, "0")}`;
 
   const handleAdd = async () => {
     if (!variant) return;
