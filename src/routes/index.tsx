@@ -543,7 +543,7 @@ const faqs = [
   },
   {
     q: "How many shades whiter will I actually get?",
-    a: "Most clients leave 6–12 shades brighter after a single in-lab session. Results depend on your starting shade, diet, and habits. We document every result — no filters, no edits.",
+    a: "Most clients leave 5–12 shades brighter after a single in-lab session. Results depend on your starting shade, diet, and habits. We document every result — no filters, no edits.",
   },
   {
     q: "How long do results last?",
