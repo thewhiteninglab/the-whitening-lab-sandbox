@@ -420,7 +420,7 @@ function Partner() {
       <div className="max-w-5xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-5">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+            <p className="inline-block bg-primary text-primary-foreground font-mono text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-sm mb-5">
               Partner / Wholesale / Training
             </p>
             <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9] mb-6">
