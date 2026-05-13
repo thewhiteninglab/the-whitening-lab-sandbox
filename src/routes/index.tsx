@@ -40,17 +40,17 @@ import after3 from "@/assets/after-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Whitening Lab — A Living Whitening Lab by Licensed Dental Pros" },
+      { title: "The Whitening Lab — Professional Teeth Whitening by Licensed Dental Pros" },
       {
         name: "description",
         content:
-          "The Whitening Lab is a living whitening lab. Licensed dental pros whitening real teeth every single day — plus a maintenance line to keep the gloss between visits.",
+          "Professional teeth whitening by licensed dental pros. In-lab treatments, custom take-home trays, and a maintenance line to keep results bright between visits.",
       },
-      { property: "og:title", content: "The Whitening Lab — A Living Whitening Lab" },
+      { property: "og:title", content: "The Whitening Lab — Professional Teeth Whitening" },
       {
         property: "og:description",
         content:
-          "Real treatments. Real licenses. No AI. The only brand actually whitening teeth every day.",
+          "Real treatments. Real licenses. No AI. Professional teeth whitening from the dental pros who do it every single day.",
       },
       { property: "og:image", content: heroSmile },
       { name: "twitter:image", content: heroSmile },
@@ -79,7 +79,7 @@ export const Route = createFileRoute("/")({
           "@type": "LocalBusiness",
           name: "The Whitening Lab",
           description:
-            "A living whitening lab run by licensed dental pros — whitening real teeth every single day.",
+            "Professional teeth whitening by licensed dental pros — real treatments, real results, every single day.",
           areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
           aggregateRating: {
             "@type": "AggregateRating",
@@ -240,8 +240,7 @@ function Hero() {
               as much as you.
             </h1>
             <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty mb-8">
-              The only dental lab run by actual licensed/certified pros — whitening
-              teeth every single day. No AI, no gimmicks, just real results.
+              Professional teeth whitening by actual licensed and certified dental pros — done right, every single day. No AI, no gimmicks, just real results.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
@@ -909,7 +908,7 @@ function Pros() {
               Meet the team
             </p>
             <h3 className="font-sans text-2xl leading-snug tracking-normal mb-6 text-pretty font-semibold md:text-4xl">
-              At The Whitening Lab, we do one thing and do it best: Teeth Whitening. Our whitening expertise guarantees a safe, precise, and elevated experience.
+              At The Whitening Lab, we do one thing and do it best: professional teeth whitening. Our expertise guarantees a safe, precise, and elevated experience.
             </h3>
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
               <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
@@ -1110,7 +1109,7 @@ function Footer() {
               The Whitening Lab
             </span>
             <p className="mt-4 text-stone-400 max-w-[24ch] text-sm">
-              The definitive standard in modern whitening. Operated by licensed
+              The definitive standard in modern teeth whitening. Operated by licensed
               dental pros.
             </p>
             <div className="mt-6">
