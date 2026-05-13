@@ -765,7 +765,7 @@ function Pros() {
             <div className="space-y-6">
               {pros.map((p) => (
                 <div key={p.name} className="border-b border-border pb-4">
-                  <p className="inline-block bg-primary text-primary-foreground font-mono text-[10px] font-bold uppercase tracking-widest px-2 py-1 mb-2 rounded-sm">
+                  <p className="inline-block bg-foreground text-background font-mono text-[10px] font-bold uppercase tracking-widest px-2 py-1 mb-2 rounded-sm">
                     {p.role}
                   </p>
                   <div className="flex items-baseline justify-between gap-3 flex-wrap">
