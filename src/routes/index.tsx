@@ -96,7 +96,7 @@ const pros = [
   { role: "02 / Lead Hygienist · Co-Owner & Founder · RDH", name: "Courtney Carll", location: "Gray" },
   { role: "03 / Lead Assistant · Co-Owner", name: "Molly St. Hilaire", location: "Gray" },
   { role: "04 / Hygienist · RDH", name: "Tamara Sharp", location: "Alfred" },
-  { role: "05 / Affiliate Hygienist · RDH", name: "Britta Griffiths", location: "Bar Harbor" },
+  { role: "05 / Hygienist · RDH · Affiliate Office", name: "Britta Griffiths", location: "Bar Harbor" },
 ];
 
 function Nav() {
