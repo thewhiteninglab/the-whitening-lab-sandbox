@@ -286,7 +286,7 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Documented daily / Same lighting, same lens, same visit.
+            Hover over image to reveal after results.
           </span>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -306,7 +306,7 @@ function NoFilterCard({
 }) {
   const [showAfter, setShowAfter] = useState(false);
   return (
-    <figure>
+    <figure className="group">
       <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
         <img
           src={item.before}
@@ -322,7 +322,7 @@ function NoFilterCard({
           loading="lazy"
           width={800}
           height={1024}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-100 ${
             showAfter ? "opacity-100" : "opacity-0"
           }`}
         />
