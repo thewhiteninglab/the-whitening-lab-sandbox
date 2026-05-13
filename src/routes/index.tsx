@@ -477,6 +477,7 @@ function Index() {
       <Hero />
       <Marquee />
       <ResultsGrid />
+      <NoFiltersGallery />
       <Shop />
       <Manifesto />
       <Pros />
