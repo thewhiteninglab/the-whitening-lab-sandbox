@@ -284,7 +284,7 @@ function Hero() {
 function TrustStrip() {
   const items = [
     "Licensed Pros",
-    "5.0 Rated",
+    "Teeth Whitening",
     "60-Sec Booking",
   ];
   return (
