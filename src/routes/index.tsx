@@ -92,7 +92,7 @@ const noFilters = [
 ];
 
 const pros = [
-  { role: "01 / Clinical Director", name: "Dr. Marcus Vane, DDS" },
+  { role: "01 / Co-Owner & Founder / LDLT, CDLT", name: "Tabatha Post" },
   { role: "02 / Lead Hygienist", name: "Sasha K. Chen, RDH" },
   { role: "03 / Lab Specialist", name: "Dr. Julian Moore, DMD" },
 ];
