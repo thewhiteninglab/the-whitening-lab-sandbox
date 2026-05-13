@@ -613,7 +613,7 @@ function Pros() {
 
 function Partner() {
   return (
-    <section id="partner" className="px-6 pt-4 pb-20 md:pt-6 md:pb-28 bg-background">
+    <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
       <div className="max-w-5xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-5">
@@ -738,7 +738,7 @@ const faqs = [
 
 function FAQ() {
   return (
-    <section id="faq" className="px-6 py-20 md:py-28 border-t border-border bg-background">
+    <section id="faq" className="px-6 pt-10 pb-20 md:pt-12 md:pb-24 border-t border-border bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
