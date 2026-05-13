@@ -1049,7 +1049,6 @@ function Index() {
       <TrustStrip />
       <Marquee />
       <Services />
-      <ResultsGrid />
       <NoFiltersGallery />
       <Manifesto />
       <Pros />
