@@ -637,7 +637,7 @@ function NoFiltersGallery() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-4">
               No Filters / Lab Archive
             </p>
             <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
