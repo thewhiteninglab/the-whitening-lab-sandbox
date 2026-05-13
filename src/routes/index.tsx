@@ -54,7 +54,7 @@ const products = [
 
 const results = [
   { src: result1, label: "Patient 802 / Restorative" },
-  { src: result2, label: "Patient 611 / Side Profile" },
+  { src: result2, label: "Patient 611 / Cosmetic" },
   { src: result3, label: "Patient 904 / Routine" },
 ];
 
