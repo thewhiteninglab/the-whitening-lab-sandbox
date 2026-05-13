@@ -543,6 +543,29 @@ function Footer() {
               The definitive standard in modern whitening. Operated by licensed
               dental pros.
             </p>
+            <div className="mt-6">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-stone-500 mb-3">
+                Follow the Lab
+              </p>
+              <div className="flex items-center gap-3">
+                {[
+                  { Icon: Instagram, href: "https://www.instagram.com/thewhiteninglab", label: "Instagram" },
+                  { Icon: Youtube, href: "https://www.youtube.com/@thewhiteninglab", label: "YouTube" },
+                  { Icon: Facebook, href: "https://www.facebook.com/thewhiteninglab", label: "Facebook" },
+                ].map(({ Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="group relative grid place-items-center size-11 rounded-sm border border-stone-700 hover:border-primary hover:bg-primary hover:text-primary-foreground hover:-translate-y-0.5 hover:shadow-[0_0_24px_-4px_var(--primary)] transition-all duration-300"
+                  >
+                    <Icon className="size-5" strokeWidth={1.75} />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
           <div>
             <h5 className="font-mono text-[10px] uppercase tracking-widest text-stone-500 mb-6">
