@@ -347,27 +347,15 @@ function Manifesto() {
   return (
     <section
       id="book"
-      className="bg-primary text-primary-foreground py-28 md:py-40 px-6"
+      className="bg-primary text-primary-foreground py-16 md:py-20 px-6"
     >
       <div className="max-w-4xl mx-auto text-center">
-        <div className="font-mono text-xs uppercase tracking-[0.3em] mb-8">
+        <div className="font-mono text-xs uppercase tracking-[0.3em] mb-6">
           Our Promise
         </div>
-        <blockquote className="font-display text-4xl md:text-6xl uppercase leading-[0.95] tracking-tighter mb-12 text-balance">
+        <blockquote className="font-display text-3xl md:text-5xl uppercase leading-[0.95] tracking-tighter mb-8 text-balance">
           We don't fake results. We create them clinically.
         </blockquote>
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {["No Gimmicks", "Real Humans", "Licensed Pros", "Daily Clinical Practice"].map(
-            (t) => (
-              <span
-                key={t}
-                className="px-4 py-2 border border-primary-foreground/30 font-mono text-[10px] uppercase tracking-widest"
-              >
-                {t}
-              </span>
-            ),
-          )}
-        </div>
         <a
           href="#book"
           className="inline-block bg-foreground text-background px-8 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
