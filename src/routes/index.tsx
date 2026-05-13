@@ -633,29 +633,29 @@ function Shop() {
 
 function NoFiltersGallery() {
   return (
-    <section id="no-filters" className="px-6 py-24 md:py-32 bg-foreground text-background">
+    <section id="no-filters" className="px-5 py-16 sm:px-6 sm:py-24 md:py-32 bg-foreground text-background">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 gap-4 md:gap-6">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-4">
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
               No Filters / Lab Archive
             </p>
-            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-6xl md:text-7xl uppercase tracking-tighter">
               Real lab results.
               <br />
               No retouching.
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Hover over image to reveal after results.
+            Tap an image to reveal after results.
           </span>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {noFilters.map((n) => (
             <NoFilterCard key={n.patient} item={n} />
           ))}
         </div>
-        <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-background/15 pt-8">
+        <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-4 border-t border-background/15 pt-8">
           <p className="font-display text-2xl sm:text-3xl uppercase tracking-tighter leading-[0.95] max-w-[24ch]">
             This is just a <span className="text-primary">taste.</span>
           </p>
