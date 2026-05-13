@@ -477,6 +477,13 @@ function Services() {
   );
 }
 
+function TikTokIcon({ className, strokeWidth: _sw }: { className?: string; strokeWidth?: number }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M16.5 3a5.5 5.5 0 0 0 4.5 4.5v3a8.5 8.5 0 0 1-4.5-1.34v6.59a6.25 6.25 0 1 1-6.25-6.25c.26 0 .51.02.75.06v3.13a3.13 3.13 0 1 0 2.13 2.96V3h3.37z" />
+    </svg>
+  );
+}
 
 function ResultsGrid() {
   return (
@@ -960,6 +967,7 @@ function Footer() {
               <div className="flex items-center gap-3">
                 {[
                   { Icon: Instagram, href: "https://www.instagram.com/thewhiteninglab", label: "Instagram" },
+                  { Icon: TikTokIcon, href: "https://www.tiktok.com/@thewhiteninglab", label: "TikTok" },
                   { Icon: Youtube, href: "https://www.youtube.com/@thewhiteninglab", label: "YouTube" },
                   { Icon: Facebook, href: "https://www.facebook.com/thewhiteninglab", label: "Facebook" },
                 ].map(({ Icon, href, label }) => (
