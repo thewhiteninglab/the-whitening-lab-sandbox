@@ -264,7 +264,7 @@ const services = [
 
 function Services() {
   return (
-    <section id="services" className="px-6 py-24 md:py-28 border-t border-border">
+    <section id="services" className="px-6 pt-24 pb-8 md:pt-28 md:pb-10 border-t border-border">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
