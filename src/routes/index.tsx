@@ -246,9 +246,6 @@ function Hero() {
               >
                 Shop Strips
               </a>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                Booking in 60 seconds
-              </span>
             </div>
           </div>
           <div className="lg:col-span-4 animate-reveal [animation-delay:150ms]">
