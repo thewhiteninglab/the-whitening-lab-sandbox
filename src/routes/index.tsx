@@ -191,7 +191,9 @@ function Nav() {
       <Link to="/" className="font-display text-3xl uppercase leading-none">
         The Whitening Lab
       </Link>
-      <DropdownMenu open={open} onOpenChange={setOpen}>
+      <div className="flex items-center gap-3">
+        <CartDrawer />
+        <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger
           className="group bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all inline-flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         >
