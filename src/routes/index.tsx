@@ -913,7 +913,7 @@ function Pros() {
             </h3>
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
               <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
-              Built by dental pros, for the smile-obsessed. A lab tech and a hygienist — chairside, same question on repeat: <em>how are your teeth so white?</em> So we rewrote the playbook. The dental lab became <span className="font-semibold text-foreground">The Whitening Lab</span> — the new standard in professional whitening, changing the world one smile at a time.
+              Built by dental pros, for the smile-obsessed. A lab tech and a hygienist — same question on repeat: <em>how are your teeth so white?</em> So we rewrote the playbook. The dental lab became <span className="font-semibold text-foreground">The Whitening Lab</span> — the new standard in professional whitening, changing the world one smile at a time.
             </p>
             <div className="space-y-6">
               {pros.map((p) => (
