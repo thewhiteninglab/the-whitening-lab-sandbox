@@ -113,6 +113,7 @@ const pros = [
 ];
 
 function Nav() {
+  const [open, setOpen] = React.useState(false);
   const links = [
     { href: "#services", label: "Services" },
     { href: "#results", label: "Results" },
@@ -122,12 +123,24 @@ function Nav() {
     { href: "#partner", label: "Partner" },
     { href: "#book", label: "Book Treatment" },
   ];
+  const goTo = (href: string) => {
+    setOpen(false);
+    const id = href.replace("#", "");
+    // Wait for Radix to release body locks before scrolling.
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", href);
+      }
+    }, 80);
+  };
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-background border-b border-border">
       <Link to="/" className="font-display text-3xl uppercase leading-none">
         The Whitening Lab
       </Link>
-      <DropdownMenu>
+      <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger
           className="group bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all inline-flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         >
@@ -147,15 +160,7 @@ function Nav() {
           {links.map((l) => (
             <DropdownMenuItem
               key={l.href}
-              onSelect={(e) => {
-                e.preventDefault();
-                const id = l.href.replace("#", "");
-                const el = document.getElementById(id);
-                if (el) {
-                  el.scrollIntoView({ behavior: "smooth", block: "start" });
-                  history.replaceState(null, "", l.href);
-                }
-              }}
+              onSelect={() => goTo(l.href)}
               className="cursor-pointer rounded-sm px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest font-bold focus:bg-primary focus:text-primary-foreground"
             >
               {l.label}
