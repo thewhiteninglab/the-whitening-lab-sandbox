@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Instagram, Youtube, Facebook } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { Instagram, Youtube, Facebook, Loader2 } from "lucide-react";
+import { CartDrawer } from "@/components/CartDrawer";
+import { useCartStore } from "@/stores/cartStore";
+import { useCartSync } from "@/hooks/useCartSync";
+import {
+  STOREFRONT_PRODUCTS_QUERY,
+  storefrontApiRequest,
+  type ShopifyProduct,
+} from "@/lib/shopify";
 import {
   Accordion,
   AccordionContent,
@@ -84,11 +93,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const products = [
-  { name: "Recovery Serum", tag: "The Daily Gel", price: "$25", img: productGel },
-  { name: "Whitening Strips", tag: "6% HP", price: "$40", img: productBrush },
-  { name: "Whitening Strips", tag: "10% HP", price: "$40", img: productPen },
-];
+// Legacy mock products removed — Shop now uses real Shopify Storefront API.
+// Keep image imports referenced to prevent unused-import warnings.
+void productGel; void productBrush; void productPen;
 
 const results = [
   { src: result1, label: "Patient 802 / Restorative", shades: "+10 shades" },
@@ -182,7 +189,9 @@ function Nav() {
       <Link to="/" className="font-display text-3xl uppercase leading-none">
         The Whitening Lab
       </Link>
-      <DropdownMenu open={open} onOpenChange={setOpen}>
+      <div className="flex items-center gap-3">
+        <CartDrawer />
+        <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger
           className="group bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all inline-flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         >
@@ -214,6 +223,7 @@ function Nav() {
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
+      </div>
     </nav>
   );
 }
@@ -508,7 +518,82 @@ function ResultsGrid() {
   );
 }
 
+function ShopProductCard({ product }: { product: ShopifyProduct }) {
+  const addItem = useCartStore((s) => s.addItem);
+  const isLoading = useCartStore((s) => s.isLoading);
+  const [adding, setAdding] = useState(false);
+
+  const node = product.node;
+  const variant = node.variants.edges[0]?.node;
+  const image = node.images.edges[0]?.node;
+  const price = variant?.price ?? node.priceRange.minVariantPrice;
+
+  const handleAdd = async () => {
+    if (!variant) return;
+    setAdding(true);
+    try {
+      await addItem({
+        product,
+        variantId: variant.id,
+        variantTitle: variant.title,
+        price: variant.price,
+        quantity: 1,
+        selectedOptions: variant.selectedOptions || [],
+      });
+    } finally {
+      setAdding(false);
+    }
+  };
+
+  return (
+    <div className="group block">
+      <div className="aspect-square bg-card border border-border rounded-sm mb-6 overflow-hidden group-hover:border-foreground transition-colors">
+        {image ? (
+          <img
+            src={image.url}
+            alt={image.altText || node.title}
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-full grid place-items-center font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            No Image
+          </div>
+        )}
+      </div>
+      <div className="flex justify-between items-baseline mb-4">
+        <h3 className="font-bold uppercase text-sm tracking-wide pr-2">{node.title}</h3>
+        <span className="font-mono text-sm shrink-0">
+          ${parseFloat(price.amount).toFixed(2)}
+        </span>
+      </div>
+      <button
+        onClick={handleAdd}
+        disabled={!variant?.availableForSale || adding || isLoading}
+        className="w-full border border-foreground py-3 font-mono text-[10px] uppercase tracking-widest font-bold hover:bg-foreground hover:text-background active:scale-[0.99] transition-all rounded-sm disabled:opacity-50 inline-flex items-center justify-center gap-2"
+      >
+        {adding ? (
+          <Loader2 className="w-3 h-3 animate-spin" />
+        ) : variant?.availableForSale ? (
+          "Add to Cart"
+        ) : (
+          "Sold Out"
+        )}
+      </button>
+    </div>
+  );
+}
+
 function Shop() {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["shopify-products"],
+    queryFn: async () => {
+      const res = await storefrontApiRequest(STOREFRONT_PRODUCTS_QUERY, { first: 12, query: null });
+      return (res?.data?.products?.edges || []) as ShopifyProduct[];
+    },
+    staleTime: 60_000,
+  });
+
   return (
     <section id="shop" className="px-6 pt-12 pb-24 md:pt-16 md:pb-32 border-t border-border">
       <div className="max-w-7xl mx-auto">
@@ -516,40 +601,25 @@ function Shop() {
           <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
             Maintain the Shade
           </h2>
-          <a
-            href="https://the-whitening-lab-2.myshopify.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-xs uppercase tracking-widest border-b border-foreground pb-1 hover:text-primary hover:border-primary transition-colors"
-          >
-            View All Products
-          </a>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            Ships from the lab
+          </span>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-          {products.map((p) => (
-            <a key={`${p.name}-${p.tag}`} href="https://the-whitening-lab-2.myshopify.com" target="_blank" rel="noopener noreferrer" className="group cursor-pointer block">
-              <div className="aspect-square bg-card border border-border rounded-sm grid place-items-center mb-6 overflow-hidden group-hover:border-primary transition-colors">
-                <img
-                  src={p.img}
-                  alt={p.name}
-                  loading="lazy"
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex justify-between items-baseline">
-                <div>
-                  <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-1">
-                    {p.tag}
-                  </p>
-                  <h3 className="font-bold uppercase text-sm tracking-wide">{p.name}</h3>
-                </div>
-                <span className="font-mono text-sm">{p.price}</span>
-              </div>
-            </a>
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="py-24 grid place-items-center">
+            <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
+          </div>
+        ) : isError || !data || data.length === 0 ? (
+          <div className="py-24 grid place-items-center font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            No products found
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {data.map((p) => (
+              <ShopProductCard key={p.node.id} product={p} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -964,6 +1034,7 @@ function Footer() {
 }
 
 function Index() {
+  useCartSync();
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Nav />
