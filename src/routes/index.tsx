@@ -159,7 +159,7 @@ function ResultsGrid() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <h2 className="font-display text-5xl md:text-7xl uppercase tracking-tighter max-w-3xl">
-            Real chairs. Real teeth. Real receipts.
+            Real teeth. Real treatments. Real results.
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
             Documented daily / Lab archive
