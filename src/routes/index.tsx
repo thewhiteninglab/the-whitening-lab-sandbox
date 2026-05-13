@@ -701,6 +701,7 @@ function Index() {
       <Manifesto />
       <Pros />
       <Partner />
+      <FAQ />
       <Footer />
     </main>
   );
