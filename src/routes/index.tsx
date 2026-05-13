@@ -94,7 +94,7 @@ const noFilters = [
 const pros = [
   { role: "01 / Lead Lab Technician · Co-Owner & Founder · LDLT, CDLT", name: "Tabatha Post" },
   { role: "02 / Lead Hygienist · Co-Owner & Founder · RDH", name: "Courtney Carll" },
-  { role: "03 / Lead Assistant · Co-Owner & Founder", name: "Molly St. Hilaire" },
+  { role: "03 / Lead Assistant · Co-Owner", name: "Molly St. Hilaire" },
 ];
 
 function Nav() {
