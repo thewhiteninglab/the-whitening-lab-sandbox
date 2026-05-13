@@ -621,8 +621,8 @@ function Shop() {
           </div>
         ) : (
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-            {data.map((p, i) => (
-              <ShopProductCard key={p.node.id} product={p} index={i} />
+            {data.map((p) => (
+              <ShopProductCard key={p.node.id} product={p} />
             ))}
           </div>
         )}
