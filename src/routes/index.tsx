@@ -131,7 +131,7 @@ function Nav() {
         <DropdownMenuTrigger
           className="group bg-primary text-primary-foreground px-5 py-2.5 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all inline-flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         >
-          Glow Up
+          More to Smile About
           <span
             aria-hidden="true"
             className="transition-transform duration-300 group-data-[state=open]:rotate-180"
