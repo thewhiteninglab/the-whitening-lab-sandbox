@@ -719,7 +719,7 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Real patients. Unretouched. No filters, no AI.
+            Tap an image to reveal after results.
           </span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -827,39 +827,40 @@ function NoFilterCard({
 }: {
   item: (typeof noFilters)[number];
 }) {
+  const [showAfter, setShowAfter] = useState(false);
   return (
     <figure className="group">
-      <div className="grid grid-cols-2 gap-1">
-        <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
-          <img
-            src={item.before}
-            alt={`${item.patient} before whitening — unretouched`}
-            loading="lazy"
-            width={800}
-            height={1024}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <span className="absolute top-2 left-2 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest">
-            Before
-          </span>
-        </div>
-        <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
-          <img
-            src={item.after}
-            alt={`${item.patient} after whitening — unretouched`}
-            loading="lazy"
-            width={800}
-            height={1024}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <span className="absolute top-2 left-2 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest">
-            After
-          </span>
-          <span className="absolute bottom-2 right-2 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
-            {item.shades}
-          </span>
-        </div>
-      </div>
+      <button
+        type="button"
+        onClick={() => setShowAfter((v) => !v)}
+        onMouseEnter={() => setShowAfter(true)}
+        onMouseLeave={() => setShowAfter(false)}
+        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5 cursor-pointer"
+        aria-label={`Toggle before/after for ${item.patient}`}
+      >
+        <img
+          src={item.before}
+          alt={`${item.patient} before whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <img
+          src={item.after}
+          alt={`${item.patient} after whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"}`}
+        />
+        <span className={`absolute top-3 left-3 px-2 py-1 font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "bg-primary text-primary-foreground" : "bg-background text-foreground"}`}>
+          {showAfter ? "After" : "Before"}
+        </span>
+        <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+          {item.shades}
+        </span>
+      </button>
       <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
         <span className="truncate">
           {item.patient} / {item.treatment}
