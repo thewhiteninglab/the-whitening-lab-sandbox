@@ -104,7 +104,7 @@ function Nav() {
         The Whitening Lab
       </Link>
       <div className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest">
-        <a href="#process" className="hover:text-primary transition-colors">The Process</a>
+        
         <a href="#shop" className="hover:text-primary transition-colors">Shop</a>
         <a href="#results" className="hover:text-primary transition-colors">Results</a>
       </div>
