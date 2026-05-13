@@ -299,6 +299,20 @@ function NoFiltersGallery() {
             <NoFilterCard key={n.patient} item={n} />
           ))}
         </div>
+        <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-background/15 pt-8">
+          <p className="font-display text-2xl sm:text-3xl uppercase tracking-tighter leading-[0.95] max-w-[24ch]">
+            This is just a <span className="text-primary">taste.</span>
+          </p>
+          <a
+            href="https://www.instagram.com/thewhiteninglab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/ig inline-flex items-center gap-3 bg-primary text-primary-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
+          >
+            See Hundreds More on Instagram
+            <span aria-hidden="true" className="transition-transform group-hover/ig:translate-x-1">→</span>
+          </a>
+        </div>
       </div>
     </section>
   );
