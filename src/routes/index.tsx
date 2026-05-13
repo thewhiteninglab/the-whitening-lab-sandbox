@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Instagram, Youtube, Facebook } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { Instagram, Youtube, Facebook, Loader2 } from "lucide-react";
+import { CartDrawer } from "@/components/CartDrawer";
+import { useCartStore } from "@/stores/cartStore";
+import { useCartSync } from "@/hooks/useCartSync";
+import {
+  STOREFRONT_PRODUCTS_QUERY,
+  storefrontApiRequest,
+  type ShopifyProduct,
+} from "@/lib/shopify";
 import {
   Accordion,
   AccordionContent,
