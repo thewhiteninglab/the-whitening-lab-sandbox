@@ -225,6 +225,69 @@ function ResultsGrid() {
   );
 }
 
+function NoFiltersGallery() {
+  return (
+    <section id="no-filters" className="px-6 py-24 md:py-32 bg-foreground text-background">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+              No Filters / Lab Archive
+            </p>
+            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
+              Before. After.
+              <br />
+              No retouching.
+            </h2>
+          </div>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
+            Hover or tap each plate to reveal the after — same lighting, same lens, same day.
+          </span>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {beforeAfters.map((b) => (
+            <figure key={b.patient} className="group">
+              <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
+                <img
+                  src={b.before}
+                  alt={`${b.patient} before whitening`}
+                  loading="lazy"
+                  width={800}
+                  height={1024}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <img
+                  src={b.after}
+                  alt={`${b.patient} after whitening`}
+                  loading="lazy"
+                  width={800}
+                  height={1024}
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-700"
+                />
+                <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest group-hover:opacity-0 transition-opacity">
+                  Before
+                </span>
+                <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                  After
+                </span>
+                <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+                  {b.shades}
+                </span>
+              </div>
+              <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
+                <span className="truncate">
+                  {b.patient} / {b.treatment}
+                </span>
+                <span className="shrink-0">{b.date}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Shop() {
   return (
     <section id="shop" className="px-6 pt-12 pb-24 md:pt-16 md:pb-32 border-t border-border">
