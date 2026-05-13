@@ -914,7 +914,7 @@ function FAQ() {
     <section id="faq" className="px-6 pt-10 pb-20 md:pt-12 md:pb-24 border-t border-border bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
+          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             FAQ / The Real Questions
           </p>
           <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
