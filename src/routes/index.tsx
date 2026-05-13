@@ -596,6 +596,7 @@ function Index() {
       <Shop />
       <Manifesto />
       <Pros />
+      <Partner />
       <Footer />
     </main>
   );
