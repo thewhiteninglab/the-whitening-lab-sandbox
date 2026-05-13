@@ -738,7 +738,7 @@ const faqs = [
 
 function FAQ() {
   return (
-    <section id="faq" className="px-6 py-20 md:py-28 border-t border-border bg-background">
+    <section id="faq" className="px-6 pt-10 pb-20 md:pt-12 md:pb-24 border-t border-border bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary mb-4">
