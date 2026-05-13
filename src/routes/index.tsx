@@ -114,7 +114,7 @@ function Hero() {
                 4.9 / Treatment Rating
               </span>
               <span className="font-mono text-[10px] uppercase tracking-widest">
-                NY · LDN · LA
+                Gray · Alfred
               </span>
             </div>
           </div>
