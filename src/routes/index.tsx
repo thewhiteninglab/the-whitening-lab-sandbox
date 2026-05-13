@@ -125,16 +125,22 @@ function Nav() {
     { href: "#book", label: "Book Treatment" },
   ];
   const goTo = (href: string) => {
-    setOpen(false);
     const id = href.replace("#", "");
-    // Wait for Radix to release body locks before scrolling.
-    setTimeout(() => {
+    setOpen(false);
+    // Radix locks body scroll while open; wait for unlock, then scroll.
+    const tryScroll = (attempt = 0) => {
+      const locked = document.body.style.pointerEvents === "none";
       const el = document.getElementById(id);
+      if ((locked || !el) && attempt < 20) {
+        setTimeout(() => tryScroll(attempt + 1), 30);
+        return;
+      }
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
         history.replaceState(null, "", href);
       }
-    }, 80);
+    };
+    requestAnimationFrame(() => tryScroll());
   };
   return (
     <nav className="flex items-center justify-between px-6 py-4 bg-background border-b border-border">
