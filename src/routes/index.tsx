@@ -217,7 +217,7 @@ const services = [
     includes: [
       "Full shade & smile assessment",
       "60-minute in-lab whitening session",
-      "Recovery Serum applied in-chair",
+      "Recovery Serum applied in-chair (take-home pen sold separately)",
       "Maintenance plan tailored to you",
     ],
     bookHref: "https://book.thewhiteninglab.com/new-patient",
@@ -231,7 +231,7 @@ const services = [
     includes: [
       "Returning-client check-in",
       "60-minute whitening session",
-      "Recovery Serum finish",
+      "Recovery Serum finish in-chair (take-home pen sold separately)",
     ],
     bookHref: "https://book.thewhiteninglab.com/60-min-touchup",
   },
@@ -242,7 +242,7 @@ const services = [
     desc: "Quick brightening boost — perfect between events or before a big day.",
     includes: [
       "Express 40-minute whitening session",
-      "Recovery Serum finish",
+      "Recovery Serum finish in-chair (take-home pen sold separately)",
       "Ideal pre-event refresh",
     ],
     bookHref: "https://book.thewhiteninglab.com/40-min-touchup",
