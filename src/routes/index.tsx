@@ -7,6 +7,12 @@ import team from "@/assets/team.jpg";
 import result1 from "@/assets/result-1.jpg";
 import result2 from "@/assets/result-2.jpg";
 import result3 from "@/assets/result-3.jpg";
+import before1 from "@/assets/before-1.jpg";
+import before2 from "@/assets/before-2.jpg";
+import before3 from "@/assets/before-3.jpg";
+import after1 from "@/assets/after-1.jpg";
+import after2 from "@/assets/after-2.jpg";
+import after3 from "@/assets/after-3.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
