@@ -827,9 +827,18 @@ function NoFilterCard({
 }: {
   item: (typeof noFilters)[number];
 }) {
+  const [showAfter, setShowAfter] = useState(false);
   return (
     <figure className="group">
-      <div className="relative overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5">
+      <button
+        type="button"
+        onClick={() => setShowAfter((v) => !v)}
+        onMouseEnter={() => setShowAfter(true)}
+        onMouseLeave={() => setShowAfter(false)}
+        aria-label={`Toggle before and after for ${item.patient}`}
+        aria-pressed={showAfter}
+        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+      >
         <img
           src={item.before}
           alt={`${item.patient} before whitening`}
@@ -844,18 +853,18 @@ function NoFilterCard({
           loading="lazy"
           width={800}
           height={1024}
-          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"}`}
         />
-        <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest group-hover:opacity-0 transition-opacity">
+        <span className={`absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "opacity-0" : "opacity-100"}`}>
           Before
         </span>
-        <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+        <span className={`absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "opacity-100" : "opacity-0"}`}>
           After
         </span>
         <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
           {item.shades}
         </span>
-      </div>
+      </button>
       <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
         <span className="truncate">
           {item.patient} / {item.treatment}
