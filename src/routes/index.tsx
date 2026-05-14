@@ -864,7 +864,7 @@ function NoFilterCard({
         <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
           {item.shades}
         </span>
-      </div>
+      </button>
       <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
         <span className="truncate">
           {item.patient} / {item.treatment}
