@@ -115,7 +115,7 @@ export const Route = createFileRoute("/")({
 void productGel; void productBrush; void productPen;
 
 const results = [
-  { src: result1, label: "Patient 802 / Restorative", shades: "+10 shades" },
+  { src: result1, label: "Patient 802 / Restorative", shades: "+8 shades" },
   { src: result2, label: "Patient 611 / Cosmetic", shades: "+12 shades" },
   { src: result3, label: "Patient 904 / Maintenance", shades: "+4 shades" },
 ];
@@ -127,7 +127,7 @@ const noFilters = [
     patient: "Patient 802",
     treatment: "In-Lab Cases",
     date: "03 / 14 / 2026",
-    shades: "+10 shades",
+    shades: "+8 shades",
   },
   {
     before: before2,
