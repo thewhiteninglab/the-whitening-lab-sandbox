@@ -19,7 +19,7 @@ export function LegalLayout({
           ← The Whitening Lab
         </Link>
         <a
-          href="https://book.thewhiteninglab.com/new-patient"
+          href="https://msha.ke/thewhiteninglab"
           className="font-mono text-xs uppercase tracking-widest hover:opacity-70 transition-opacity"
         >
           Book Now
