@@ -1194,6 +1194,11 @@ function Footer() {
         </div>
         <div className="flex justify-between items-center border-t border-stone-800 pt-8 font-mono text-[10px] text-stone-500 uppercase tracking-widest gap-4 flex-wrap">
           <span>© 2026 The Whitening Lab Clinical LLC</span>
+          <div className="flex items-center gap-5">
+            <a href="/privacy" className="hover:text-background transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-background transition-colors">Terms</a>
+            <a href="/accessibility" className="hover:text-background transition-colors">Accessibility</a>
+          </div>
           <span>No AI was used in these results</span>
         </div>
       </div>
@@ -1218,6 +1223,12 @@ function Index() {
       <Partner />
       <FAQ />
       <Footer />
+      <a
+        href="https://book.thewhiteninglab.com/new-patient"
+        className="md:hidden fixed bottom-4 inset-x-4 z-40 text-center px-5 py-4 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-widest shadow-2xl rounded-sm hover:opacity-90 transition-opacity"
+      >
+        Book Now →
+      </a>
     </main>
   );
 }
