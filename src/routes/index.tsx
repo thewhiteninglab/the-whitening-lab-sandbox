@@ -92,7 +92,7 @@ export const Route = createFileRoute("/")({
           },
           areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
           sameAs: [
-            "https://share.google/X9Frh3YZueiPaza2Q",
+            "https://share.google/53AdeOYKXHHpam0yK",
             "https://www.instagram.com/thewhiteninglabco",
             "https://www.tiktok.com/@thewhiteninglabco",
             "https://www.youtube.com/@TheWhiteningLabCo",
@@ -1162,7 +1162,7 @@ function Footer() {
                 ))}
               </div>
               <a
-                href="https://share.google/X9Frh3YZueiPaza2Q"
+                href="https://share.google/53AdeOYKXHHpam0yK"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.3em] text-stone-400 hover:text-primary transition-colors"
