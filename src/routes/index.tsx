@@ -94,7 +94,7 @@ export const Route = createFileRoute("/")({
           sameAs: [
             "https://share.google/X9Frh3YZueiPaza2Q",
             "https://www.instagram.com/thewhiteninglabco",
-            "https://www.tiktok.com/@thewhiteninglab",
+            "https://www.tiktok.com/@thewhiteninglabco",
             "https://www.youtube.com/@thewhiteninglab",
             "https://www.facebook.com/thewhiteninglab",
           ],
@@ -1145,7 +1145,7 @@ function Footer() {
               <div className="flex items-center gap-3">
                 {[
                   { Icon: Instagram, href: "https://www.instagram.com/thewhiteninglabco", label: "Instagram" },
-                  { Icon: TikTokIcon, href: "https://www.tiktok.com/@thewhiteninglab", label: "TikTok" },
+                  { Icon: TikTokIcon, href: "https://www.tiktok.com/@thewhiteninglabco", label: "TikTok" },
                   { Icon: Youtube, href: "https://www.youtube.com/@thewhiteninglab", label: "YouTube" },
                   { Icon: Facebook, href: "https://www.facebook.com/thewhiteninglab", label: "Facebook" },
                 ].map(({ Icon, href, label }) => (
