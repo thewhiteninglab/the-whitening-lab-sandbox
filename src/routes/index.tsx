@@ -854,7 +854,7 @@ function NoFilterCard({
         onPointerLeave={(e) => { if (e.pointerType === "mouse") setShowAfter(false); }}
         aria-label={`Toggle before and after for ${item.patient}`}
         aria-pressed={showAfter}
-        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-black outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
       >
         <img
           src={item.before}
@@ -862,7 +862,7 @@ function NoFilterCard({
           loading="lazy"
           width={800}
           height={1024}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain"
         />
         <img
           src={item.after}
@@ -870,7 +870,7 @@ function NoFilterCard({
           loading="lazy"
           width={800}
           height={1024}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"}`}
         />
         <span className={`absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "opacity-0" : "opacity-100"}`}>
           Before
