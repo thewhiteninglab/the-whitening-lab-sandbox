@@ -850,8 +850,8 @@ function NoFilterCard({
       <button
         type="button"
         onClick={() => setShowAfter((v) => !v)}
-        onMouseEnter={() => setShowAfter(true)}
-        onMouseLeave={() => setShowAfter(false)}
+        onPointerEnter={(e) => { if (e.pointerType === "mouse") setShowAfter(true); }}
+        onPointerLeave={(e) => { if (e.pointerType === "mouse") setShowAfter(false); }}
         aria-label={`Toggle before and after for ${item.patient}`}
         aria-pressed={showAfter}
         className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-background/5 outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
