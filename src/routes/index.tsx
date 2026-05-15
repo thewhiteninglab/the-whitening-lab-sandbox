@@ -1196,6 +1196,7 @@ function Footer() {
           <span>© 2026 The Whitening Lab Clinical LLC</span>
           <div className="flex items-center gap-5 flex-wrap">
             <a href="tel:+12076502622" className="hover:text-background transition-colors">207-650-2622</a>
+            <a href="mailto:thewhiteninglabco@gmail.com" className="hover:text-background transition-colors normal-case tracking-normal">thewhiteninglabco@gmail.com</a>
             <a href="/privacy" className="hover:text-background transition-colors">Privacy</a>
             <a href="/terms" className="hover:text-background transition-colors">Terms</a>
             <a href="/accessibility" className="hover:text-background transition-colors">Accessibility</a>
