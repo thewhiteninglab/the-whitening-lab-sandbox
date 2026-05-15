@@ -361,7 +361,7 @@ const services = [
       "Recovery Serum applied in-chair (take-home pen sold separately)",
       "Maintenance plan tailored to you",
     ],
-    bookHref: "https://book.thewhiteninglab.com/new-patient",
+    bookHref: "https://msha.ke/thewhiteninglab",
     featured: true,
   },
   {
@@ -374,7 +374,7 @@ const services = [
       "60-minute whitening session",
       "Recovery Serum finish in-chair (take-home pen sold separately)",
     ],
-    bookHref: "https://book.thewhiteninglab.com/60-min-touchup",
+    bookHref: "https://msha.ke/thewhiteninglab",
   },
   {
     name: "40 Min Touch-Up",
@@ -386,7 +386,7 @@ const services = [
       "Recovery Serum finish in-chair (take-home pen sold separately)",
       "Ideal pre-event refresh",
     ],
-    bookHref: "https://book.thewhiteninglab.com/40-min-touchup",
+    bookHref: "https://msha.ke/thewhiteninglab",
   },
   {
     name: "Bleaching Trays",
@@ -399,7 +399,7 @@ const services = [
       "At-home use guide",
       "Refill syringes available",
     ],
-    bookHref: "https://book.thewhiteninglab.com/bleaching-trays",
+    bookHref: "https://msha.ke/thewhiteninglab",
   },
 ];
 
@@ -1255,7 +1255,7 @@ function Index() {
       <FAQ />
       <Footer />
       <a
-        href="https://book.thewhiteninglab.com/new-patient"
+        href="https://msha.ke/thewhiteninglab"
         className="md:hidden fixed bottom-4 inset-x-4 z-40 text-center px-5 py-4 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-widest shadow-2xl rounded-sm hover:opacity-90 transition-opacity"
       >
         Book Now →
