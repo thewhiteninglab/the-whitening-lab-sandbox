@@ -54,7 +54,7 @@ export function SassyPopup() {
           Still rocking yellow teeth?
         </h2>
         <p className="text-sm text-foreground/70 mb-6 leading-relaxed">
-          Coffee, wine, and life happen. Book a session and walk out up to 8 shades whiter — no sensitivity, no gimmicks.
+          Coffee, wine, and life happen. Book a session and walk out up to 12 shades whiter — no AI, no gimmicks.
         </p>
         <div className="flex flex-col sm:flex-row gap-2">
           <a
