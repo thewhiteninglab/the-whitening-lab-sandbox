@@ -80,7 +80,24 @@ export const Route = createFileRoute("/")({
           name: "The Whitening Lab",
           description:
             "Professional teeth whitening by licensed dental pros — real treatments, real results, every single day.",
+          telephone: "+1-207-650-2622",
+          email: "thewhiteninglabco@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "15 Main St. Suite 107",
+            addressLocality: "Gray",
+            addressRegion: "ME",
+            postalCode: "04039",
+            addressCountry: "US",
+          },
           areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
+          sameAs: [
+            "https://share.google/X9Frh3YZueiPaza2Q",
+            "https://www.instagram.com/thewhiteninglab",
+            "https://www.tiktok.com/@thewhiteninglab",
+            "https://www.youtube.com/@thewhiteninglab",
+            "https://www.facebook.com/thewhiteninglab",
+          ],
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "5.0",
@@ -1144,6 +1161,15 @@ function Footer() {
                   </a>
                 ))}
               </div>
+              <a
+                href="https://share.google/X9Frh3YZueiPaza2Q"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.3em] text-stone-400 hover:text-primary transition-colors"
+              >
+                <span aria-hidden className="grid place-items-center size-5 rounded-full bg-primary text-primary-foreground font-bold text-[11px]">G</span>
+                Reviews on Google →
+              </a>
             </div>
           </div>
           <div>
