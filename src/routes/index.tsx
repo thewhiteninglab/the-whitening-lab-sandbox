@@ -1194,7 +1194,8 @@ function Footer() {
         </div>
         <div className="flex justify-between items-center border-t border-stone-800 pt-8 font-mono text-[10px] text-stone-500 uppercase tracking-widest gap-4 flex-wrap">
           <span>© 2026 The Whitening Lab Clinical LLC</span>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 flex-wrap">
+            <a href="tel:+12076502622" className="hover:text-background transition-colors">207-650-2622</a>
             <a href="/privacy" className="hover:text-background transition-colors">Privacy</a>
             <a href="/terms" className="hover:text-background transition-colors">Terms</a>
             <a href="/accessibility" className="hover:text-background transition-colors">Accessibility</a>
