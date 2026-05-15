@@ -93,7 +93,7 @@ export const Route = createFileRoute("/")({
           areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
           sameAs: [
             "https://share.google/X9Frh3YZueiPaza2Q",
-            "https://www.instagram.com/thewhiteninglab",
+            "https://www.instagram.com/thewhiteninglabco",
             "https://www.tiktok.com/@thewhiteninglab",
             "https://www.youtube.com/@thewhiteninglab",
             "https://www.facebook.com/thewhiteninglab",
@@ -749,7 +749,7 @@ function NoFiltersGallery() {
             This is just a <span className="text-primary">taste.</span>
           </p>
           <a
-            href="https://www.instagram.com/thewhiteninglab"
+            href="https://www.instagram.com/thewhiteninglabco"
             target="_blank"
             rel="noopener noreferrer"
             className="group/ig inline-flex items-center gap-3 bg-primary text-primary-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
@@ -1144,7 +1144,7 @@ function Footer() {
               </p>
               <div className="flex items-center gap-3">
                 {[
-                  { Icon: Instagram, href: "https://www.instagram.com/thewhiteninglab", label: "Instagram" },
+                  { Icon: Instagram, href: "https://www.instagram.com/thewhiteninglabco", label: "Instagram" },
                   { Icon: TikTokIcon, href: "https://www.tiktok.com/@thewhiteninglab", label: "TikTok" },
                   { Icon: Youtube, href: "https://www.youtube.com/@thewhiteninglab", label: "YouTube" },
                   { Icon: Facebook, href: "https://www.facebook.com/thewhiteninglab", label: "Facebook" },
