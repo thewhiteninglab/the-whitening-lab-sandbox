@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { Instagram, Youtube, Facebook, Loader2 } from "lucide-react";
@@ -828,12 +828,30 @@ function NoFilterCard({
   item: (typeof noFilters)[number];
 }) {
   const [showAfter, setShowAfter] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const clearRevert = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
+  const scheduleRevert = () => {
+    clearRevert();
+    timeoutRef.current = setTimeout(() => setShowAfter(false), 5000);
+  };
+  useEffect(() => () => clearRevert(), []);
   return (
     <figure className="group">
       <button
         type="button"
-        onClick={() => setShowAfter((v) => !v)}
-        onMouseEnter={() => setShowAfter(true)}
+        onClick={() => {
+          setShowAfter(true);
+          scheduleRevert();
+        }}
+        onMouseEnter={() => {
+          clearRevert();
+          setShowAfter(true);
+        }}
         onMouseLeave={() => setShowAfter(false)}
         aria-label={`Toggle before and after for ${item.patient}`}
         aria-pressed={showAfter}
