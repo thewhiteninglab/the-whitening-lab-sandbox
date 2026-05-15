@@ -1161,6 +1161,15 @@ function Footer() {
                   </a>
                 ))}
               </div>
+              <a
+                href="https://share.google/X9Frh3YZueiPaza2Q"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.3em] text-stone-400 hover:text-primary transition-colors"
+              >
+                <span aria-hidden className="grid place-items-center size-5 rounded-full bg-primary text-primary-foreground font-bold text-[11px]">G</span>
+                Reviews on Google →
+              </a>
             </div>
           </div>
           <div>
