@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { Toaster } from "@/components/ui/sonner";
+import { SassyPopup } from "@/components/SassyPopup";
 
 import appCss from "../styles.css?url";
 
@@ -115,6 +116,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <SassyPopup />
       <Toaster />
     </QueryClientProvider>
   );
