@@ -95,7 +95,7 @@ export const Route = createFileRoute("/")({
             "https://share.google/X9Frh3YZueiPaza2Q",
             "https://www.instagram.com/thewhiteninglabco",
             "https://www.tiktok.com/@thewhiteninglabco",
-            "https://www.youtube.com/@thewhiteninglab",
+            "https://www.youtube.com/@TheWhiteningLabCo",
             "https://www.facebook.com/share/1BC3zFw8g4/?mibextid=wwXIfr",
           ],
           aggregateRating: {
@@ -1146,7 +1146,7 @@ function Footer() {
                 {[
                   { Icon: Instagram, href: "https://www.instagram.com/thewhiteninglabco", label: "Instagram" },
                   { Icon: TikTokIcon, href: "https://www.tiktok.com/@thewhiteninglabco", label: "TikTok" },
-                  { Icon: Youtube, href: "https://www.youtube.com/@thewhiteninglab", label: "YouTube" },
+                  { Icon: Youtube, href: "https://www.youtube.com/@TheWhiteningLabCo", label: "YouTube" },
                   { Icon: Facebook, href: "https://www.facebook.com/share/1BC3zFw8g4/?mibextid=wwXIfr", label: "Facebook" },
                 ].map(({ Icon, href, label }) => (
                   <a
