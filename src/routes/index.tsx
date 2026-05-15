@@ -1193,7 +1193,10 @@ function Footer() {
           </div>
         </div>
         <div className="flex justify-between items-center border-t border-stone-800 pt-8 font-mono text-[10px] text-stone-500 uppercase tracking-widest gap-4 flex-wrap">
-          <span>© 2026 The Whitening Lab Clinical LLC</span>
+          <div className="flex flex-col gap-1">
+            <span>© 2026 The Whitening Lab Clinical LLC</span>
+            <a href="https://maps.google.com/?q=15+Main+St+Gray+Maine+04039" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">15 Main St. Gray, Maine 04039</a>
+          </div>
           <div className="flex items-center gap-5 flex-wrap">
             <a href="tel:+12076502622" className="hover:text-background transition-colors">207-650-2622</a>
             <a href="mailto:thewhiteninglabco@gmail.com" className="hover:text-background transition-colors normal-case tracking-normal">thewhiteninglabco@gmail.com</a>
