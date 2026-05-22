@@ -1300,10 +1300,13 @@ function Index() {
       <Footer />
       <a
         href="https://msha.ke/thewhiteninglab"
+        target="_blank"
+        rel="noopener noreferrer"
         className="md:hidden fixed bottom-4 inset-x-4 z-40 text-center px-5 py-4 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-widest shadow-2xl rounded-sm hover:opacity-90 transition-opacity"
       >
         Book Now →
       </a>
+
     </main>
   );
 }

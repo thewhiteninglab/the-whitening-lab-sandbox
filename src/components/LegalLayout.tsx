@@ -20,10 +20,13 @@ export function LegalLayout({
         </Link>
         <a
           href="https://msha.ke/thewhiteninglab"
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-mono text-xs uppercase tracking-widest hover:opacity-70 transition-opacity"
         >
           Book Now
         </a>
+
       </nav>
 
       <article className="max-w-3xl mx-auto px-6 py-16 sm:py-24">
