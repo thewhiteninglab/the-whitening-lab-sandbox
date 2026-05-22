@@ -120,6 +120,20 @@ export const Route = createFileRoute("/")({
             latitude: 43.8884,
             longitude: -70.3328,
           },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "09:00",
+              closes: "17:00",
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: "Saturday",
+              opens: "10:00",
+              closes: "15:00",
+            },
+          ],
           areaServed: [
             { "@type": "City", name: "Gray, ME" },
             { "@type": "City", name: "Portland, ME" },
@@ -134,6 +148,36 @@ export const Route = createFileRoute("/")({
             "Custom Bleaching Trays",
             "Whitening Maintenance",
           ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Teeth Whitening Services",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "In-Lab Teeth Whitening Session",
+                  description: "Professional in-lab teeth whitening performed by licensed dental hygienists in Gray, Maine.",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Custom Bleaching Trays",
+                  description: "Custom-fit take-home bleaching trays made by licensed dental lab technicians.",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Whitening Maintenance",
+                  description: "Ongoing professional whitening maintenance to keep your smile bright.",
+                },
+              },
+            ],
+          },
           sameAs: [
             "https://share.google/53AdeOYKXHHpam0yK",
             "https://www.instagram.com/thewhiteninglabco",
@@ -146,6 +190,62 @@ export const Route = createFileRoute("/")({
             ratingValue: "5.0",
             reviewCount: "100",
           },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Is teeth whitening at The Whitening Lab safe?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. All treatments are performed by licensed dental lab technicians and registered dental hygienists using professional-grade products in our Gray, Maine lab.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How many shades whiter will my teeth get?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Most clients see between 4 and 12 shades whiter after a single in-lab session, depending on starting shade and treatment plan.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Where is The Whitening Lab located?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "We are at 15 Main St. Suite 107, Gray, Maine 04039, serving Portland, Alfred, Bar Harbor, and all of Maine.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "How do I book a teeth whitening appointment?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Book directly through our booking link at https://msha.ke/thewhiteninglab or call (207) 650-2622.",
+              },
+            },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://thewhiteninglab.com/",
+            },
+          ],
         }),
       },
     ],
