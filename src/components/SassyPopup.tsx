@@ -59,11 +59,14 @@ export function SassyPopup() {
         <div className="flex flex-col sm:flex-row gap-2">
           <a
             href="https://msha.ke/thewhiteninglab"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={dismiss}
             className="flex-1 text-center px-5 py-3 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-widest hover:opacity-90 transition-opacity"
           >
             Fix it → Book now
           </a>
+
           <button
             type="button"
             onClick={dismiss}
