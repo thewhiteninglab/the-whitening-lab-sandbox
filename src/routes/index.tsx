@@ -96,12 +96,12 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
-          "@id": "https://thewhiteninglab.com/#business",
+          "@id": "https://thewhiteninglab.co/#business",
           name: "The Whitening Lab",
           alternateName: "The Whitening Lab Co",
           description:
             "Professional teeth whitening in Gray, Maine by licensed dental lab technicians and hygienists. In-lab whitening sessions, custom bleaching trays, and maintenance products.",
-          url: "https://thewhiteninglab.com",
+          url: "https://thewhiteninglab.co",
           image: heroSmile,
           logo: heroSmile,
           telephone: "+1-207-650-2622",
@@ -243,7 +243,7 @@ export const Route = createFileRoute("/")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://thewhiteninglab.com/",
+              item: "https://thewhiteninglab.co/",
             },
           ],
         }),

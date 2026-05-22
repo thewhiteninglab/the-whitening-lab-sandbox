@@ -17,7 +17,7 @@ function TermsPage() {
   return (
     <LegalLayout eyebrow="Legal" title="Terms of Service" updated="May 2026">
       <p>
-        By using thewhiteninglab.com, booking an appointment, or buying a product from us, you
+        By using thewhiteninglab.co, booking an appointment, or buying a product from us, you
         agree to these terms. If you do not agree, please do not use the site or our services.
       </p>
 
