@@ -40,23 +40,42 @@ import after3 from "@/assets/after-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Whitening Lab — Professional Teeth Whitening by Licensed Dental Pros" },
+      { title: "Teeth Whitening Gray, Maine | The Whitening Lab — Dental Pros" },
       {
         name: "description",
         content:
-          "Professional teeth whitening by licensed dental pros. In-lab treatments, custom take-home trays, and a maintenance line to keep results bright between visits.",
+          "Professional teeth whitening in Gray, Maine by licensed dental lab pros. In-lab treatments, custom take-home bleaching trays, and maintenance products. Up to 12 shades whiter. Book at The Whitening Lab.",
       },
-      { property: "og:title", content: "The Whitening Lab — Professional Teeth Whitening" },
+      {
+        name: "keywords",
+        content:
+          "teeth whitening, teeth whitening Gray Maine, teeth whitening Maine, dental lab Gray Maine, The Whitening Lab, professional teeth whitening, cosmetic teeth whitening, bleaching trays, in-lab whitening, dental hygienist whitening, Portland Maine teeth whitening, Alfred Maine, Bar Harbor Maine",
+      },
+      { name: "author", content: "The Whitening Lab" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "geo.region", content: "US-ME" },
+      { name: "geo.placename", content: "Gray, Maine" },
+      { name: "geo.position", content: "43.8884;-70.3328" },
+      { name: "ICBM", content: "43.8884, -70.3328" },
+      { property: "og:title", content: "Teeth Whitening Gray, Maine | The Whitening Lab" },
       {
         property: "og:description",
         content:
-          "Real treatments. Real licenses. No AI. Professional teeth whitening from the dental pros who do it every single day.",
+          "Professional teeth whitening from licensed dental pros in Gray, Maine. Real treatments. Real licenses. Up to 12 shades whiter.",
       },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { property: "og:site_name", content: "The Whitening Lab" },
+      { property: "og:locale", content: "en_US" },
       { property: "og:image", content: heroSmile },
+      { property: "og:image:alt", content: "Professional teeth whitening results at The Whitening Lab in Gray, Maine" },
       { name: "twitter:image", content: heroSmile },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Teeth Whitening Gray, Maine | The Whitening Lab" },
+      { name: "twitter:description", content: "Professional teeth whitening by licensed dental pros in Gray, Maine." },
     ],
     links: [
+      { rel: "canonical", href: "/" },
       {
         rel: "preconnect",
         href: "https://fonts.googleapis.com",
@@ -76,12 +95,18 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
+          "@id": "https://thewhiteninglab.com/#business",
           name: "The Whitening Lab",
+          alternateName: "The Whitening Lab Co",
           description:
-            "Professional teeth whitening by licensed dental pros — real treatments, real results, every single day.",
+            "Professional teeth whitening in Gray, Maine by licensed dental lab technicians and hygienists. In-lab whitening sessions, custom bleaching trays, and maintenance products.",
+          url: "https://thewhiteninglab.com",
+          image: heroSmile,
+          logo: heroSmile,
           telephone: "+1-207-650-2622",
           email: "thewhiteninglabco@gmail.com",
+          priceRange: "$$",
           address: {
             "@type": "PostalAddress",
             streetAddress: "15 Main St. Suite 107",
@@ -90,7 +115,25 @@ export const Route = createFileRoute("/")({
             postalCode: "04039",
             addressCountry: "US",
           },
-          areaServed: ["Gray, ME", "Alfred, ME", "Bar Harbor, ME"],
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 43.8884,
+            longitude: -70.3328,
+          },
+          areaServed: [
+            { "@type": "City", name: "Gray, ME" },
+            { "@type": "City", name: "Portland, ME" },
+            { "@type": "City", name: "Alfred, ME" },
+            { "@type": "City", name: "Bar Harbor, ME" },
+            { "@type": "State", name: "Maine" },
+          ],
+          serviceType: [
+            "Teeth Whitening",
+            "Cosmetic Teeth Whitening",
+            "In-Lab Whitening Treatment",
+            "Custom Bleaching Trays",
+            "Whitening Maintenance",
+          ],
           sameAs: [
             "https://share.google/53AdeOYKXHHpam0yK",
             "https://www.instagram.com/thewhiteninglabco",
@@ -107,6 +150,7 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
+
   component: Index,
 });
 
