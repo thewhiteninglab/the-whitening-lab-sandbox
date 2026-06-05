@@ -303,15 +303,19 @@ function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
     { href: "#services", label: "Services" },
-    { href: "#results", label: "Results" },
+    { href: "/our-results", label: "Results" },
     { href: "#shop", label: "Shop" },
     { href: "#faq", label: "FAQ" },
     { href: "#partner", label: "Partner" },
     { href: "#book", label: "BOOK NOW" },
   ];
   const goTo = (href: string) => {
-    const id = href.replace("#", "");
     setOpen(false);
+    if (href.startsWith("/")) {
+      window.location.href = href;
+      return;
+    }
+    const id = href.replace("#", "");
 
     const smoothScrollTo = (target: number) => {
       const start = window.scrollY;
