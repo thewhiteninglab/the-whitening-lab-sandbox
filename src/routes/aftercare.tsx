@@ -100,13 +100,13 @@ function AftercarePage() {
 
         <div className="grid gap-6 md:grid-cols-2 pt-2">
           <div className="border border-border rounded-sm p-5 bg-background">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-3">Avoid</p>
+            <p className="mb-3"><span className="label-pill font-mono text-[10px] uppercase tracking-[0.3em] font-bold">Avoid</span></p>
             <ul className="space-y-1.5 text-sm">
               {avoid48.map((i) => <li key={i}>{i}</li>)}
             </ul>
           </div>
           <div className="border border-border rounded-sm p-5 bg-background">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-3">Safe</p>
+            <p className="mb-3"><span className="label-pill font-mono text-[10px] uppercase tracking-[0.3em] font-bold">Safe</span></p>
             <ul className="space-y-1.5 text-sm">
               {safe48.map((i) => <li key={i}>{i}</li>)}
             </ul>
