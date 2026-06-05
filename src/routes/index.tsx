@@ -1247,9 +1247,10 @@ function Partner() {
             />
             <button
               type="submit"
-              className="sm:col-span-2 bg-primary text-primary-foreground px-6 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-[0.99] transition-all"
+              disabled={submitting}
+              className="sm:col-span-2 bg-primary text-primary-foreground px-6 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Let's Connect
+              {submitting ? "Sending…" : "Let's Connect"}
             </button>
           </form>
         </div>
