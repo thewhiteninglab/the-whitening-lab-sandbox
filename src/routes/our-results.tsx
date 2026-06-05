@@ -60,7 +60,7 @@ function OurResultsPage() {
                 <p className="font-bold uppercase text-sm">{c.patient}</p>
                 <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">{c.treatment}</p>
               </div>
-              <span className="font-mono text-[11px] uppercase tracking-widest text-primary font-bold">{c.shades}</span>
+              <span className="label-pill font-mono text-[11px] uppercase tracking-widest font-bold">{c.shades}</span>
             </div>
           </article>
         ))}
