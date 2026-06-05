@@ -8,13 +8,13 @@ export const Route = createFileRoute("/book-an-appointment")({
       {
         name: "description",
         content:
-          "Book clinically guided teeth whitening at The Whitening Lab. Licensed dental professionals deliver safe, dental lab–level oral care. Schedule today!",
+          "Book clinically guided teeth whitening at The Whitening Lab. Licensed / certified dental professionals deliver safe, dental lab–level oral care. Schedule today!",
       },
       { property: "og:title", content: "Book an Appointment | The Whitening Lab" },
       {
         property: "og:description",
         content:
-          "Pick your location and book clinically guided teeth whitening with licensed dental pros.",
+          "Pick your location and book clinically guided teeth whitening with licensed / certified dental pros.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.thewhiteninglab.co/book-an-appointment" },
@@ -46,7 +46,7 @@ function BookPage() {
     <SubPageLayout
       eyebrow="Schedule"
       title={<>Select Your Whitening Lab <span className="text-primary">Location</span></>}
-      intro="Book a clinically guided whitening session at the studio closest to you. Every appointment is delivered by licensed dental professionals."
+      intro="Book a clinically guided whitening session at the studio closest to you. Every appointment is delivered by licensed / certified dental professionals."
     >
       <div className="grid gap-6 md:grid-cols-2">
         {locations.map((loc) => (

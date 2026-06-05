@@ -8,13 +8,13 @@ export const Route = createFileRoute("/greater-portland-location")({
       {
         name: "description",
         content:
-          "Get clinically guided teeth whitening and professional oral care from licensed dental professionals at The Whitening Lab. Safe, dental lab–level results.",
+          "Get clinically guided teeth whitening and professional oral care from licensed / certified dental professionals at The Whitening Lab. Safe, dental lab–level results.",
       },
       { property: "og:title", content: "Greater Portland Location | The Whitening Lab" },
       {
         property: "og:description",
         content:
-          "Clinically guided teeth whitening in Gray, Maine — minutes from Portland. Delivered by licensed dental professionals.",
+          "Clinically guided teeth whitening in Gray, Maine — minutes from Portland. Delivered by licensed / certified dental professionals.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.thewhiteninglab.co/greater-portland-location" },
@@ -31,7 +31,7 @@ function GreaterPortlandPage() {
     <SubPageLayout
       eyebrow="Location / Gray, ME"
       title={<>Greater Portland <span className="text-primary">Location</span></>}
-      intro="Our flagship studio in Gray, Maine — minutes from Portland — delivers clinically guided whitening and professional oral care from licensed dental professionals using dental lab–level protocols."
+      intro="Our flagship studio in Gray, Maine — minutes from Portland — delivers clinically guided whitening and professional oral care from licensed / certified dental professionals using dental lab–level protocols."
     >
       <SubSection eyebrow="Address" heading="Find the Gray Studio">
         <p className="font-bold uppercase">15 Main St. Suite 107</p>

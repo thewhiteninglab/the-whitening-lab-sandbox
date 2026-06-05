@@ -8,13 +8,13 @@ export const Route = createFileRoute("/southern-maine-location")({
       {
         name: "description",
         content:
-          "Get clinically guided teeth whitening from licensed dental professionals at The Whitening Lab. Safe, dental lab–level oral care with personalized treatment. Book today!",
+          "Get clinically guided teeth whitening from licensed / certified dental professionals at The Whitening Lab. Safe, dental lab–level oral care with personalized treatment. Book today!",
       },
       { property: "og:title", content: "Southern Maine Location | The Whitening Lab" },
       {
         property: "og:description",
         content:
-          "Clinically guided teeth whitening in Alfred, Maine from licensed dental professionals. Dental lab–level oral care. Book today!",
+          "Clinically guided teeth whitening in Alfred, Maine from licensed / certified dental professionals. Dental lab–level oral care. Book today!",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.thewhiteninglab.co/southern-maine-location" },
@@ -31,7 +31,7 @@ function SouthernMainePage() {
     <SubPageLayout
       eyebrow="Location / Alfred, ME"
       title={<>Southern Maine <span className="text-primary">Location</span></>}
-      intro="Clinically guided teeth whitening in Alfred, Maine — delivered by licensed dental professionals using dental lab–level protocols. Personalized treatment for the Southern Maine community."
+      intro="Clinically guided teeth whitening in Alfred, Maine — delivered by licensed / certified dental professionals using dental lab–level protocols. Personalized treatment for the Southern Maine community."
     >
       <SubSection eyebrow="Address" heading="Find the Alfred Studio">
         <p className="font-bold uppercase">12 Waterboro Rd</p>
@@ -76,7 +76,7 @@ function SouthernMainePage() {
           <li>In-lab professional teeth whitening</li>
           <li>Custom take-home bleaching trays</li>
           <li>Whitening maintenance & touch-ups</li>
-          <li>Aftercare guidance from licensed dental professionals</li>
+          <li>Aftercare guidance from licensed / certified dental professionals</li>
         </ul>
       </SubSection>
 
