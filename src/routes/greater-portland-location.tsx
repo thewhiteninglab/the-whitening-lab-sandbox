@@ -55,11 +55,11 @@ function GreaterPortlandPage() {
 
       <SubSection eyebrow="Hours" heading="When We're Open">
         <ul className="space-y-1">
-          <li><span className="font-bold uppercase">Mon – Fri:</span> 9:00 AM – 5:00 PM</li>
-          <li><span className="font-bold uppercase">Saturday:</span> 10:00 AM – 3:00 PM</li>
-          <li><span className="font-bold uppercase">Sunday:</span> Closed</li>
+          <li><span className="font-bold uppercase">Mon, Tue, Wed, Fri:</span> 9:00 AM – 5:00 PM</li>
+          <li><span className="font-bold uppercase">Thursday:</span> Closed</li>
+          <li><span className="font-bold uppercase">Sat & Sun:</span> Closed</li>
         </ul>
-        <p className="text-sm text-muted-foreground">[CONFIRM: exact Gray location hours]</p>
+        <p className="text-sm text-muted-foreground">Occasional Saturday openings by special arrangement only.</p>
       </SubSection>
 
       <SubSection eyebrow="Local Team" heading="Who You'll See in Gray">

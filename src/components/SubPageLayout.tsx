@@ -89,7 +89,16 @@ export function SubPageLayout({
           </div>
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-stone-500 mb-3">Alfred, ME</p>
-            <p className="text-sm font-bold uppercase">[CONFIRM: Alfred street address]</p>
+            <a
+              href="https://maps.google.com/?q=12+Waterboro+Rd+Alfred+Maine+04002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-sm font-bold uppercase hover:text-primary transition-colors"
+            >
+              12 Waterboro Rd
+              <br />
+              Alfred, ME 04002
+            </a>
           </div>
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-stone-500 mb-3">Contact</p>

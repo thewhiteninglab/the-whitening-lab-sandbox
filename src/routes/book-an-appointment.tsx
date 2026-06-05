@@ -36,7 +36,7 @@ const locations = [
   {
     name: "Southern Maine",
     city: "Alfred, ME",
-    address: "[CONFIRM: Alfred street address]",
+    address: "12 Waterboro Rd, Alfred, ME 04002",
     bookUrl: "https://msha.ke/thewhiteninglab",
   },
 ];
@@ -69,9 +69,6 @@ function BookPage() {
           </article>
         ))}
       </div>
-      <p className="text-sm text-muted-foreground pt-4">
-        [CONFIRM: booking links per location — both currently point to the shared msha.ke booking page]
-      </p>
     </SubPageLayout>
   );
 }

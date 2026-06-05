@@ -13,7 +13,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/greater-portland-location", changefreq: "monthly", priority: "0.9" },
           { path: "/southern-maine-location", changefreq: "monthly", priority: "0.9" },
           { path: "/our-results", changefreq: "monthly", priority: "0.8" },
-          { path: "/striplikeapro", changefreq: "monthly", priority: "0.7" },
+          
           { path: "/book-an-appointment", changefreq: "monthly", priority: "0.9" },
           { path: "/contact-us", changefreq: "monthly", priority: "0.8" },
           { path: "/referrals", changefreq: "monthly", priority: "0.6" },

@@ -34,17 +34,27 @@ function SouthernMainePage() {
       intro="Clinically guided teeth whitening in Alfred, Maine — delivered by licensed dental professionals using dental lab–level protocols. Personalized treatment for the Southern Maine community."
     >
       <SubSection eyebrow="Address" heading="Find the Alfred Studio">
-        <p className="font-bold uppercase">[CONFIRM: Alfred street address & suite]</p>
-        <p>Alfred, ME [CONFIRM: ZIP]</p>
+        <p className="font-bold uppercase">12 Waterboro Rd</p>
+        <p>Alfred, ME 04002</p>
         <p>
-          <a href="tel:+12076502622" className="underline underline-offset-4 hover:text-primary">207-650-2622</a>
+          <a href="tel:+12074940333" className="underline underline-offset-4 hover:text-primary">207-494-0333</a>
           {" · "}
           <a href="mailto:thewhiteninglabco@gmail.com" className="underline underline-offset-4 hover:text-primary">thewhiteninglabco@gmail.com</a>
+        </p>
+        <p>
+          <a
+            href="https://maps.google.com/?q=12+Waterboro+Rd+Alfred+Maine+04002"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs uppercase tracking-widest text-primary hover:underline"
+          >
+            Open in Google Maps →
+          </a>
         </p>
       </SubSection>
 
       <SubSection eyebrow="Hours" heading="When We're Open">
-        <p>[CONFIRM: Alfred location hours — weekday and weekend availability]</p>
+        <p className="font-bold uppercase">By appointment only</p>
       </SubSection>
 
       <SubSection eyebrow="Local Team" heading="Who You'll See in Alfred">
