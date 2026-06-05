@@ -44,7 +44,7 @@ export function SassyPopup() {
         >
           <X className="w-4 h-4" />
         </button>
-        <p className="font-mono text-[10px] uppercase tracking-widest text-primary mb-3">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-primary no-text-outline mb-3">
           Real Talk
         </p>
         <h2
