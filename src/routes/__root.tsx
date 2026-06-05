@@ -74,13 +74,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "The Whitening Lab — Clinical Teeth Whitening in Gray, Maine" },
-      { name: "description", content: "Professional cosmetic teeth whitening in Gray, Maine. Book your session at The Whitening Lab." },
-      { property: "og:title", content: "The Whitening Lab" },
-      { property: "og:description", content: "Clinical teeth whitening in Gray, Maine." },
+      { title: "The Whitening Lab - Oral Care Provider - Gray & Alfred, ME" },
+      { name: "description", content: "The Whitening Lab is an oral care provider in Gray & Alfred, ME offering clinically guided teeth whitening by licensed dental care with 32+ years experience." },
+      { property: "og:title", content: "The Whitening Lab - Oral Care Provider - Gray & Alfred, ME" },
+      { property: "og:description", content: "The Whitening Lab is an oral care provider in Gray & Alfred, ME offering clinically guided teeth whitening by licensed dental care with 32+ years experience." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "The Whitening Lab" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "The Whitening Lab - Oral Care Provider - Gray & Alfred, ME" },
+      { name: "twitter:description", content: "The Whitening Lab is an oral care provider in Gray & Alfred, ME offering clinically guided teeth whitening by licensed dental care with 32+ years experience." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/44a56b79-f6a1-465b-adf7-b40382764975/id-preview-b235042a--f228deb5-584e-4533-9008-f377a42bd6c1.lovable.app-1780664298981.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/44a56b79-f6a1-465b-adf7-b40382764975/id-preview-b235042a--f228deb5-584e-4533-9008-f377a42bd6c1.lovable.app-1780664298981.png" },
     ],
 
 
