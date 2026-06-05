@@ -161,7 +161,7 @@ function AftercarePage() {
             </div>
           </div>
           <div className="border border-border rounded-sm p-5 bg-background">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-4">Avoid for 3–5 Days</p>
+            <p className="mb-4"><span className="label-pill font-mono text-[10px] uppercase tracking-[0.3em] font-bold">Avoid for 3–5 Days</span></p>
             <div className="space-y-4">
               {avoid35.map((m) => (
                 <div key={m.h}>
