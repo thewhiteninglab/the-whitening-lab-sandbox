@@ -964,7 +964,7 @@ function Testimonials() {
               className="border border-border rounded-sm p-5 sm:p-6 flex flex-col gap-4 bg-card"
             >
               <div
-                className="text-primary no-text-outline font-mono text-sm tracking-widest"
+                className="text-black no-text-outline font-mono text-sm tracking-widest"
                 aria-label={`${t.stars} out of 5 stars`}
               >
                 {"★".repeat(t.stars)}
