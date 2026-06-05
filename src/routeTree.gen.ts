@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WholesaleRouteImport } from './routes/wholesale'
 import { Route as WelcomePacketRouteImport } from './routes/welcome-packet'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as StriplikeaproRouteImport } from './routes/striplikeapro'
@@ -16,7 +17,10 @@ import { Route as SouthernMaineLocationRouteImport } from './routes/southern-mai
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ReferralsRouteImport } from './routes/referrals'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PartnershipOpportunitiesRouteImport } from './routes/partnership-opportunities'
 import { Route as OurResultsRouteImport } from './routes/our-results'
+import { Route as NewFormRouteImport } from './routes/new-form'
+import { Route as LiveTrainingCoursesRouteImport } from './routes/live-training-courses'
 import { Route as GreaterPortlandLocationRouteImport } from './routes/greater-portland-location'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as CancellationPolicyRouteImport } from './routes/cancellation-policy'
@@ -25,6 +29,11 @@ import { Route as AftercareRouteImport } from './routes/aftercare'
 import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WholesaleRoute = WholesaleRouteImport.update({
+  id: '/wholesale',
+  path: '/wholesale',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WelcomePacketRoute = WelcomePacketRouteImport.update({
   id: '/welcome-packet',
   path: '/welcome-packet',
@@ -60,9 +69,25 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartnershipOpportunitiesRoute =
+  PartnershipOpportunitiesRouteImport.update({
+    id: '/partnership-opportunities',
+    path: '/partnership-opportunities',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const OurResultsRoute = OurResultsRouteImport.update({
   id: '/our-results',
   path: '/our-results',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewFormRoute = NewFormRouteImport.update({
+  id: '/new-form',
+  path: '/new-form',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LiveTrainingCoursesRoute = LiveTrainingCoursesRouteImport.update({
+  id: '/live-training-courses',
+  path: '/live-training-courses',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GreaterPortlandLocationRoute = GreaterPortlandLocationRouteImport.update({
@@ -109,7 +134,10 @@ export interface FileRoutesByFullPath {
   '/cancellation-policy': typeof CancellationPolicyRoute
   '/contact-us': typeof ContactUsRoute
   '/greater-portland-location': typeof GreaterPortlandLocationRoute
+  '/live-training-courses': typeof LiveTrainingCoursesRoute
+  '/new-form': typeof NewFormRoute
   '/our-results': typeof OurResultsRoute
+  '/partnership-opportunities': typeof PartnershipOpportunitiesRoute
   '/privacy': typeof PrivacyRoute
   '/referrals': typeof ReferralsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -117,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/striplikeapro': typeof StriplikeaproRoute
   '/terms': typeof TermsRoute
   '/welcome-packet': typeof WelcomePacketRoute
+  '/wholesale': typeof WholesaleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -126,7 +155,10 @@ export interface FileRoutesByTo {
   '/cancellation-policy': typeof CancellationPolicyRoute
   '/contact-us': typeof ContactUsRoute
   '/greater-portland-location': typeof GreaterPortlandLocationRoute
+  '/live-training-courses': typeof LiveTrainingCoursesRoute
+  '/new-form': typeof NewFormRoute
   '/our-results': typeof OurResultsRoute
+  '/partnership-opportunities': typeof PartnershipOpportunitiesRoute
   '/privacy': typeof PrivacyRoute
   '/referrals': typeof ReferralsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -134,6 +166,7 @@ export interface FileRoutesByTo {
   '/striplikeapro': typeof StriplikeaproRoute
   '/terms': typeof TermsRoute
   '/welcome-packet': typeof WelcomePacketRoute
+  '/wholesale': typeof WholesaleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -144,7 +177,10 @@ export interface FileRoutesById {
   '/cancellation-policy': typeof CancellationPolicyRoute
   '/contact-us': typeof ContactUsRoute
   '/greater-portland-location': typeof GreaterPortlandLocationRoute
+  '/live-training-courses': typeof LiveTrainingCoursesRoute
+  '/new-form': typeof NewFormRoute
   '/our-results': typeof OurResultsRoute
+  '/partnership-opportunities': typeof PartnershipOpportunitiesRoute
   '/privacy': typeof PrivacyRoute
   '/referrals': typeof ReferralsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -152,6 +188,7 @@ export interface FileRoutesById {
   '/striplikeapro': typeof StriplikeaproRoute
   '/terms': typeof TermsRoute
   '/welcome-packet': typeof WelcomePacketRoute
+  '/wholesale': typeof WholesaleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -163,7 +200,10 @@ export interface FileRouteTypes {
     | '/cancellation-policy'
     | '/contact-us'
     | '/greater-portland-location'
+    | '/live-training-courses'
+    | '/new-form'
     | '/our-results'
+    | '/partnership-opportunities'
     | '/privacy'
     | '/referrals'
     | '/sitemap.xml'
@@ -171,6 +211,7 @@ export interface FileRouteTypes {
     | '/striplikeapro'
     | '/terms'
     | '/welcome-packet'
+    | '/wholesale'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -180,7 +221,10 @@ export interface FileRouteTypes {
     | '/cancellation-policy'
     | '/contact-us'
     | '/greater-portland-location'
+    | '/live-training-courses'
+    | '/new-form'
     | '/our-results'
+    | '/partnership-opportunities'
     | '/privacy'
     | '/referrals'
     | '/sitemap.xml'
@@ -188,6 +232,7 @@ export interface FileRouteTypes {
     | '/striplikeapro'
     | '/terms'
     | '/welcome-packet'
+    | '/wholesale'
   id:
     | '__root__'
     | '/'
@@ -197,7 +242,10 @@ export interface FileRouteTypes {
     | '/cancellation-policy'
     | '/contact-us'
     | '/greater-portland-location'
+    | '/live-training-courses'
+    | '/new-form'
     | '/our-results'
+    | '/partnership-opportunities'
     | '/privacy'
     | '/referrals'
     | '/sitemap.xml'
@@ -205,6 +253,7 @@ export interface FileRouteTypes {
     | '/striplikeapro'
     | '/terms'
     | '/welcome-packet'
+    | '/wholesale'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -215,7 +264,10 @@ export interface RootRouteChildren {
   CancellationPolicyRoute: typeof CancellationPolicyRoute
   ContactUsRoute: typeof ContactUsRoute
   GreaterPortlandLocationRoute: typeof GreaterPortlandLocationRoute
+  LiveTrainingCoursesRoute: typeof LiveTrainingCoursesRoute
+  NewFormRoute: typeof NewFormRoute
   OurResultsRoute: typeof OurResultsRoute
+  PartnershipOpportunitiesRoute: typeof PartnershipOpportunitiesRoute
   PrivacyRoute: typeof PrivacyRoute
   ReferralsRoute: typeof ReferralsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -223,10 +275,18 @@ export interface RootRouteChildren {
   StriplikeaproRoute: typeof StriplikeaproRoute
   TermsRoute: typeof TermsRoute
   WelcomePacketRoute: typeof WelcomePacketRoute
+  WholesaleRoute: typeof WholesaleRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/wholesale': {
+      id: '/wholesale'
+      path: '/wholesale'
+      fullPath: '/wholesale'
+      preLoaderRoute: typeof WholesaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/welcome-packet': {
       id: '/welcome-packet'
       path: '/welcome-packet'
@@ -276,11 +336,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/partnership-opportunities': {
+      id: '/partnership-opportunities'
+      path: '/partnership-opportunities'
+      fullPath: '/partnership-opportunities'
+      preLoaderRoute: typeof PartnershipOpportunitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/our-results': {
       id: '/our-results'
       path: '/our-results'
       fullPath: '/our-results'
       preLoaderRoute: typeof OurResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/new-form': {
+      id: '/new-form'
+      path: '/new-form'
+      fullPath: '/new-form'
+      preLoaderRoute: typeof NewFormRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/live-training-courses': {
+      id: '/live-training-courses'
+      path: '/live-training-courses'
+      fullPath: '/live-training-courses'
+      preLoaderRoute: typeof LiveTrainingCoursesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/greater-portland-location': {
@@ -343,7 +424,10 @@ const rootRouteChildren: RootRouteChildren = {
   CancellationPolicyRoute: CancellationPolicyRoute,
   ContactUsRoute: ContactUsRoute,
   GreaterPortlandLocationRoute: GreaterPortlandLocationRoute,
+  LiveTrainingCoursesRoute: LiveTrainingCoursesRoute,
+  NewFormRoute: NewFormRoute,
   OurResultsRoute: OurResultsRoute,
+  PartnershipOpportunitiesRoute: PartnershipOpportunitiesRoute,
   PrivacyRoute: PrivacyRoute,
   ReferralsRoute: ReferralsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -351,6 +435,7 @@ const rootRouteChildren: RootRouteChildren = {
   StriplikeaproRoute: StriplikeaproRoute,
   TermsRoute: TermsRoute,
   WelcomePacketRoute: WelcomePacketRoute,
+  WholesaleRoute: WholesaleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
