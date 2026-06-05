@@ -8,7 +8,7 @@ export const Route = createFileRoute("/new-form")({
       {
         name: "description",
         content:
-          "New client intake for The Whitening Lab Co — clinically guided teeth whitening by licensed dental professionals in Gray & Alfred, ME.",
+          "New client intake for The Whitening Lab Co — clinically guided teeth whitening by licensed / certified dental professionals in Gray & Alfred, ME.",
       },
       { property: "og:title", content: "New Client Form | The Whitening Lab" },
       {

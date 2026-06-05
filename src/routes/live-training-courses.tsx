@@ -8,13 +8,13 @@ export const Route = createFileRoute("/live-training-courses")({
       {
         name: "description",
         content:
-          "Live whitening training from The Whitening Lab Co — a leading oral care provider in Gray & Alfred, ME, specializing in clinically guided teeth whitening by licensed dental professionals.",
+          "Live whitening training from The Whitening Lab Co — a leading oral care provider in Gray & Alfred, ME, specializing in clinically guided teeth whitening by licensed / certified dental professionals.",
       },
       { property: "og:title", content: "Live Training Courses | The Whitening Lab" },
       {
         property: "og:description",
         content:
-          "Hands-on whitening training led by licensed dental professionals.",
+          "Hands-on whitening training led by licensed / certified dental professionals.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.thewhiteninglab.co/live-training-courses" },
@@ -29,7 +29,7 @@ function TrainingPage() {
     <SubPageLayout
       eyebrow="Hands-On Education"
       title={<>Live Training <span className="text-primary">Courses.</span></>}
-      intro="Learn clinically guided whitening protocols directly from licensed dental professionals with 32+ years of experience — dental lab–level technique, taught live."
+      intro="Learn clinically guided whitening protocols directly from licensed / certified dental professionals with 32+ years of experience — dental lab–level technique, taught live."
     >
       <SubSection eyebrow="What You'll Learn" heading="Course Curriculum">
         <ul className="space-y-3 list-disc pl-5">

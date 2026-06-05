@@ -8,7 +8,7 @@ export const Route = createFileRoute("/aftercare")({
       {
         name: "description",
         content:
-          "Aftercare from The Whitening Lab — the first 48 hours, ongoing maintenance, and what to do if you feel sensitivity. Guidance from licensed dental pros.",
+          "Aftercare from The Whitening Lab — the first 48 hours, ongoing maintenance, and what to do if you feel sensitivity. Guidance from licensed / certified dental pros.",
       },
       { property: "og:title", content: "Aftercare & Maintenance | The Whitening Lab" },
       {
@@ -81,7 +81,7 @@ const faqs = [
   { q: "How long will it last?", a: "Most patients touch up every 6 months to 2 years." },
   { q: "What about veneers or crowns?", a: "We can lift stains off veneers, crowns, and artificial restorations. We can't change the fabricated color." },
   { q: "Can I whiten again?", a: "Yes. Touch up when your shade tells you to." },
-  { q: "Is it safe for enamel?", a: "Yes. Our gel is enamel-safe and performed by licensed pros." },
+  { q: "Is it safe for enamel?", a: "Yes. Our gel is enamel-safe and performed by licensed / certified pros." },
 ];
 
 function AftercarePage() {

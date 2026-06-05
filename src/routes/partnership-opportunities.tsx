@@ -8,7 +8,7 @@ export const Route = createFileRoute("/partnership-opportunities")({
       {
         name: "description",
         content:
-          "Explore partnerships in clinical whitening and professional oral care. Join training led by licensed dental professionals and access dental lab–level wholesale solutions. Contact us!",
+          "Explore partnerships in clinical whitening and professional oral care. Join training led by licensed / certified dental professionals and access dental lab–level wholesale solutions. Contact us!",
       },
       { property: "og:title", content: "Partnership Opportunities | The Whitening Lab" },
       {
@@ -36,7 +36,7 @@ function PartnershipPage() {
       <SubSection eyebrow="What We Offer" heading="Three Ways to Partner">
         <ul className="space-y-3 list-disc pl-5">
           <li><strong>Wholesale:</strong> Stock our clinically formulated whitening products in your practice or storefront.</li>
-          <li><strong>Live Training:</strong> Hands-on courses led by licensed dental professionals with 32+ years of experience.</li>
+          <li><strong>Live Training:</strong> Hands-on courses led by licensed / certified dental professionals with 32+ years of experience.</li>
           <li><strong>Referral Network:</strong> Co-treat patients and deliver predictable, safe whitening outcomes.</li>
         </ul>
       </SubSection>

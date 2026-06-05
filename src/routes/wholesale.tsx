@@ -8,7 +8,7 @@ export const Route = createFileRoute("/wholesale")({
       {
         name: "description",
         content:
-          "Wholesale whitening from The Whitening Lab Co — a leading oral care provider in Gray & Alfred, ME, specializing in clinically guided teeth whitening by licensed dental professionals.",
+          "Wholesale whitening from The Whitening Lab Co — a leading oral care provider in Gray & Alfred, ME, specializing in clinically guided teeth whitening by licensed / certified dental professionals.",
       },
       { property: "og:title", content: "Wholesale | The Whitening Lab" },
       {
@@ -33,7 +33,7 @@ function WholesalePage() {
     >
       <SubSection eyebrow="Why Our Products" heading="Built In A Dental Lab — Not A Beauty Lab">
         <ul className="space-y-3 list-disc pl-5">
-          <li>Formulated by licensed dental professionals with 32+ years of clinical experience.</li>
+          <li>Formulated by licensed / certified dental professionals with 32+ years of clinical experience.</li>
           <li>Safe, predictable lift on deep-set stains.</li>
           <li>Designed for in-practice use and at-home maintenance.</li>
         </ul>

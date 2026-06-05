@@ -8,13 +8,13 @@ export const Route = createFileRoute("/contact-us")({
       {
         name: "description",
         content:
-          "Contact The Whitening Lab for clinically guided whitening and professional oral care. Connect with licensed dental professionals via call, email, or form. We look forward to assisting you!",
+          "Contact The Whitening Lab for clinically guided whitening and professional oral care. Connect with licensed / certified dental professionals via call, email, or form. We look forward to assisting you!",
       },
       { property: "og:title", content: "Contact Us | The Whitening Lab" },
       {
         property: "og:description",
         content:
-          "Call, email, or message The Whitening Lab in Gray & Alfred, Maine. Licensed dental professionals ready to help.",
+          "Call, email, or message The Whitening Lab in Gray & Alfred, Maine. Licensed / certified dental professionals ready to help.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.thewhiteninglab.co/contact-us" },

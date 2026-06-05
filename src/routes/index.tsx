@@ -63,7 +63,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Professional teeth whitening from licensed dental pros in Gray, Maine. Real treatments. Real licenses. Up to 12 shades whiter.",
+          "Professional teeth whitening from licensed / certified dental pros in Gray, Maine. Real treatments. Real licenses. Up to 12 shades whiter.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -74,7 +74,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: heroSmile },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Teeth Whitening Gray, Maine | The Whitening Lab" },
-      { name: "twitter:description", content: "Professional teeth whitening by licensed dental pros in Gray, Maine." },
+      { name: "twitter:description", content: "Professional teeth whitening by licensed / certified dental pros in Gray, Maine." },
     ],
     links: [
       { rel: "canonical", href: "/" },
@@ -418,7 +418,7 @@ function Hero() {
               as much as you.
             </h1>
             <p className="max-w-[45ch] text-lg md:text-xl font-medium leading-snug text-pretty mb-8">
-              Professional teeth whitening by actual licensed and certified dental pros — clinically delivered, every single day. No AI, no gimmicks, just real results.
+              Professional teeth whitening by actual licensed / certified dental pros — clinically delivered, every single day. No AI, no gimmicks, just real results.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
@@ -460,7 +460,7 @@ function Hero() {
 
 function TrustStrip() {
   const items = [
-    "Licensed Pros",
+    "Licensed / Certified Pros",
     "Teeth Whitening",
     "60-Sec Booking",
   ];
@@ -1084,7 +1084,7 @@ function Pros() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <img
             src={team}
-            alt="The The Whitening Lab clinical team — three licensed dental professionals in black scrubs"
+            alt="The The Whitening Lab clinical team — three licensed / certified dental professionals in black scrubs"
             loading="lazy"
             width={1280}
             height={896}
@@ -1262,7 +1262,7 @@ function Partner() {
 const faqs = [
   {
     q: "Does professional whitening damage enamel?",
-    a: "No. Our peroxide-based gels are clinically formulated and applied by licensed pros to lift stains from the surface and within the enamel — without weakening tooth structure. Sensitivity, if any, is temporary.",
+    a: "No. Our peroxide-based gels are clinically formulated and applied by licensed / certified pros to lift stains from the surface and within the enamel — without weakening tooth structure. Sensitivity, if any, is temporary.",
   },
   {
     q: "How many shades whiter will I actually get?",

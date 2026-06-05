@@ -17,13 +17,13 @@ export const Route = createFileRoute("/our-results")({
       {
         name: "description",
         content:
-          "See results from our clinically guided whitening and professional oral care services. Provided by licensed dental professionals using dental lab–level protocols. Book today!",
+          "See results from our clinically guided whitening and professional oral care services. Provided by licensed / certified dental professionals using dental lab–level protocols. Book today!",
       },
       { property: "og:title", content: "Our Results | The Whitening Lab" },
       {
         property: "og:description",
         content:
-          "Real before-and-after teeth whitening results from licensed dental professionals at The Whitening Lab.",
+          "Real before-and-after teeth whitening results from licensed / certified dental professionals at The Whitening Lab.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://www.thewhiteninglab.co/our-results" },
@@ -40,7 +40,7 @@ function OurResultsPage() {
     <SubPageLayout
       eyebrow="Before / After"
       title={<>Our <span className="text-primary">Results</span></>}
-      intro="No filters. No edits. Every result documented in-studio under the same lighting, by licensed dental professionals using dental lab–level whitening protocols."
+      intro="No filters. No edits. Every result documented in-studio under the same lighting, by licensed / certified dental professionals using dental lab–level whitening protocols."
     >
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {cases.map((c) => (

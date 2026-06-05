@@ -40,7 +40,7 @@ const chairSide = [
   "Calibrated exposure, monitored every minute",
   "Whitens three layers deep into the enamel",
   "Whitest shade we can get in one hour",
-  "Performed by licensed clinical pros",
+  "Performed by licensed / certified clinical pros",
 ];
 
 const steps = [
@@ -127,7 +127,7 @@ function WelcomePacketPage() {
 
       <SubSection eyebrow="Chapter Three" heading="Who We Are">
         <p>
-          We're the only brand actually whitening teeth. Performed by licensed clinical pros.
+          We're the only brand actually whitening teeth. Performed by licensed / certified clinical pros.
           Proprietary formulas. Calibrated protocols. Safety-first, then results-driven, in that
           order, always. We're not a spa. We're a lab.
         </p>
