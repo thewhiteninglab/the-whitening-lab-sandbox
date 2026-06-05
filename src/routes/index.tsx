@@ -2,6 +2,8 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { Instagram, Youtube, Facebook, Loader2 } from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import { CartDrawer } from "@/components/CartDrawer";
 import { useCartStore } from "@/stores/cartStore";
 import { useCartSync } from "@/hooks/useCartSync";
@@ -1122,6 +1124,7 @@ function Pros() {
 }
 
 function Partner() {
+  const [submitting, setSubmitting] = useState(false);
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
       <div className="max-w-5xl mx-auto">
@@ -1140,25 +1143,31 @@ function Partner() {
             </p>
           </div>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              const fd = new FormData(e.currentTarget);
+              if (submitting) return;
+              const form = e.currentTarget;
+              const fd = new FormData(form);
               const get = (k: string) => String(fd.get(k) ?? "").trim();
-              const interests = fd.getAll("interest").join(", ") || "—";
-              const subject = `Partner Inquiry — ${get("name") || "New Lead"}`;
-              const body = [
-                `Name: ${get("name")}`,
-                `Company / Practice: ${get("company")}`,
-                `Email: ${get("email")}`,
-                `Phone: ${get("phone") || "—"}`,
-                `Years of Experience: ${get("experience") || "—"}`,
-                `Location: ${get("location") || "—"}`,
-                `Interested in: ${interests}`,
-                ``,
-                `Message:`,
-                `${get("message") || "—"}`,
-              ].join("\n");
-              window.location.href = `mailto:thewhiteninglabco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              const interests = fd.getAll("interest").map(String);
+              setSubmitting(true);
+              const { error } = await supabase.from("partner_inquiries").insert({
+                full_name: get("name"),
+                company: get("company"),
+                email: get("email"),
+                phone: get("phone") || null,
+                experience: get("experience") || null,
+                location: get("location") || null,
+                interests,
+                message: get("message") || null,
+              });
+              setSubmitting(false);
+              if (error) {
+                toast.error("Something went wrong. Please try again.");
+                return;
+              }
+              toast.success("Thanks! We'll be in touch soon.");
+              form.reset();
             }}
             className="lg:col-span-7 grid sm:grid-cols-2 gap-4"
           >
@@ -1238,9 +1247,10 @@ function Partner() {
             />
             <button
               type="submit"
-              className="sm:col-span-2 bg-primary text-primary-foreground px-6 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-[0.99] transition-all"
+              disabled={submitting}
+              className="sm:col-span-2 bg-primary text-primary-foreground px-6 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Let's Connect
+              {submitting ? "Sending…" : "Let's Connect"}
             </button>
           </form>
         </div>

@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      partner_inquiries: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          experience: string | null
+          full_name: string
+          id: string
+          interests: string[]
+          location: string | null
+          message: string | null
+          phone: string | null
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          experience?: string | null
+          full_name: string
+          id?: string
+          interests?: string[]
+          location?: string | null
+          message?: string | null
+          phone?: string | null
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          experience?: string | null
+          full_name?: string
+          id?: string
+          interests?: string[]
+          location?: string | null
+          message?: string | null
+          phone?: string | null
+        }
+        Relationships: []
+      }
       referrals: {
         Row: {
           created_at: string
