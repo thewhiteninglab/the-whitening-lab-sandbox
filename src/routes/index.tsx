@@ -305,10 +305,9 @@ function Nav() {
     { href: "#services", label: "Services" },
     { href: "#results", label: "Results" },
     { href: "#shop", label: "Shop" },
-    { href: "#process", label: "Team" },
     { href: "#faq", label: "FAQ" },
     { href: "#partner", label: "Partner" },
-    { href: "#book", label: "Book Treatment" },
+    { href: "#book", label: "BOOK NOW" },
   ];
   const goTo = (href: string) => {
     const id = href.replace("#", "");
