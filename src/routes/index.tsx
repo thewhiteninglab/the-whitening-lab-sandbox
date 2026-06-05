@@ -1124,6 +1124,7 @@ function Pros() {
 }
 
 function Partner() {
+  const [submitting, setSubmitting] = useState(false);
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
       <div className="max-w-5xl mx-auto">
