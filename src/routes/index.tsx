@@ -1143,25 +1143,31 @@ function Partner() {
             </p>
           </div>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              const fd = new FormData(e.currentTarget);
+              if (submitting) return;
+              const form = e.currentTarget;
+              const fd = new FormData(form);
               const get = (k: string) => String(fd.get(k) ?? "").trim();
-              const interests = fd.getAll("interest").join(", ") || "—";
-              const subject = `Partner Inquiry — ${get("name") || "New Lead"}`;
-              const body = [
-                `Name: ${get("name")}`,
-                `Company / Practice: ${get("company")}`,
-                `Email: ${get("email")}`,
-                `Phone: ${get("phone") || "—"}`,
-                `Years of Experience: ${get("experience") || "—"}`,
-                `Location: ${get("location") || "—"}`,
-                `Interested in: ${interests}`,
-                ``,
-                `Message:`,
-                `${get("message") || "—"}`,
-              ].join("\n");
-              window.location.href = `mailto:thewhiteninglabco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              const interests = fd.getAll("interest").map(String);
+              setSubmitting(true);
+              const { error } = await supabase.from("partner_inquiries").insert({
+                full_name: get("name"),
+                company: get("company"),
+                email: get("email"),
+                phone: get("phone") || null,
+                experience: get("experience") || null,
+                location: get("location") || null,
+                interests,
+                message: get("message") || null,
+              });
+              setSubmitting(false);
+              if (error) {
+                toast.error("Something went wrong. Please try again.");
+                return;
+              }
+              toast.success("Thanks! We'll be in touch soon.");
+              form.reset();
             }}
             className="lg:col-span-7 grid sm:grid-cols-2 gap-4"
           >
