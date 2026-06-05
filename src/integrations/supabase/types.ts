@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      referrals: {
+        Row: {
+          created_at: string
+          date_of_referral: string
+          id: string
+          notes: string | null
+          patient_name: string
+          phone_number: string
+          practice_office: string
+          reason_for_referral: string
+          referring_provider: string
+        }
+        Insert: {
+          created_at?: string
+          date_of_referral: string
+          id?: string
+          notes?: string | null
+          patient_name: string
+          phone_number: string
+          practice_office: string
+          reason_for_referral: string
+          referring_provider: string
+        }
+        Update: {
+          created_at?: string
+          date_of_referral?: string
+          id?: string
+          notes?: string | null
+          patient_name?: string
+          phone_number?: string
+          practice_office?: string
+          reason_for_referral?: string
+          referring_provider?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
