@@ -46,7 +46,7 @@ function SouthernMainePage() {
             href="https://maps.google.com/?q=12+Waterboro+Rd+Alfred+Maine+04002"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-xs uppercase tracking-widest text-primary hover:underline"
+            className="label-pill font-mono text-xs uppercase tracking-widest hover:brightness-110"
           >
             Open in Google Maps →
           </a>

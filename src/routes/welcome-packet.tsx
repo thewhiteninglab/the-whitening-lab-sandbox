@@ -85,7 +85,7 @@ function WelcomePacketPage() {
             </ul>
           </div>
           <div className="border border-primary rounded-sm p-5 bg-primary/5">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-3">Chair-side / The Whitening Lab</p>
+            <p className="mb-3"><span className="label-pill font-mono text-[10px] uppercase tracking-[0.3em] font-bold">Chair-side / The Whitening Lab</span></p>
             <ul className="space-y-1.5 text-sm">
               {chairSide.map((i) => <li key={i}>{i}</li>)}
             </ul>
@@ -101,7 +101,7 @@ function WelcomePacketPage() {
         <div className="grid gap-4 md:grid-cols-2">
           {steps.map((s) => (
             <div key={s.n} className="border border-border rounded-sm p-5 bg-background">
-              <p className="font-mono text-xs text-primary font-bold mb-2">{s.n}</p>
+              <p className="mb-2"><span className="label-pill font-mono text-xs font-bold">{s.n}</span></p>
               <p className="font-bold uppercase text-base mb-2">{s.h}</p>
               <p className="text-sm text-foreground/80">{s.t}</p>
             </div>

@@ -118,11 +118,29 @@
   }
 }
 
-/* Black outline on yellow text for readability against light backgrounds */
-.text-primary:not(.no-text-outline) {
+/* Black outline on yellow text — ONLY for large display headlines.
+   Scoped to h1, h2, and elements inside a .font-display container so
+   small/medium yellow text (labels, captions, inline spans) stays clean
+   and readable instead of looking patchy from the thick stroke. */
+h1 .text-primary:not(.no-text-outline),
+h2 .text-primary:not(.no-text-outline),
+.font-display.text-primary:not(.no-text-outline),
+.font-display .text-primary:not(.no-text-outline) {
   text-shadow:
     -1px -1px 0 oklch(0.13 0 0),
     1px -1px 0 oklch(0.13 0 0),
     -1px 1px 0 oklch(0.13 0 0),
     1px 1px 0 oklch(0.13 0 0);
+}
+
+/* Yellow-on-black pill label — replaces stroked yellow text on
+   small/medium labels (e.g. "AVOID" / "SAFE" lists, chapter numbers,
+   shade tags). Sits cleanly on the cream background. */
+.label-pill {
+  display: inline-block;
+  background-color: var(--foreground);
+  color: var(--primary);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  line-height: 1.2;
 }
