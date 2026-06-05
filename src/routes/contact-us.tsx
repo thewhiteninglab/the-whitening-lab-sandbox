@@ -42,11 +42,12 @@ function ContactUsPage() {
           </p>
         </SubSection>
         <SubSection eyebrow="Alfred, ME" heading="Southern Maine Studio">
-          <p className="font-bold uppercase">[CONFIRM: Alfred street address]</p>
-          <p>Alfred, ME [CONFIRM: ZIP]</p>
+          <p className="font-bold uppercase">12 Waterboro Rd</p>
+          <p>Alfred, ME 04002</p>
           <p>
-            <a href="tel:+12076502622" className="underline underline-offset-4 hover:text-primary">207-650-2622</a>
+            <a href="tel:+12074940333" className="underline underline-offset-4 hover:text-primary">207-494-0333</a>
           </p>
+          <p className="text-sm text-muted-foreground">By appointment only</p>
         </SubSection>
       </div>
 

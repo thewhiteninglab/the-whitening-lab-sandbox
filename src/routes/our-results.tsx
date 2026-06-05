@@ -1,14 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SubPageLayout, SubSection } from "@/components/SubPageLayout";
-import before1 from "@/assets/before-1.jpg";
 import before2 from "@/assets/before-2.jpg";
 import before3 from "@/assets/before-3.jpg";
-import after1 from "@/assets/after-1.jpg";
 import after2 from "@/assets/after-2.jpg";
 import after3 from "@/assets/after-3.jpg";
 
 const cases = [
-  { before: before1, after: after1, patient: "Patient 802", shades: "+8 shades", treatment: "In-Lab Whitening" },
   { before: before2, after: after2, patient: "Patient 611", shades: "+12 shades", treatment: "In-Lab Whitening" },
   { before: before3, after: after3, patient: "Patient 904", shades: "+4 shades", treatment: "Maintenance Cycle" },
 ];
