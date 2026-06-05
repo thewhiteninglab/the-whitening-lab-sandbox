@@ -72,7 +72,7 @@ function OurResultsPage() {
           treatment plan, and aftercare habits all factor into the final result — and we walk you
           through every step.
         </p>
-        <p className="text-sm text-muted-foreground">[CONFIRM: any additional case studies, testimonials, or shade data from current site]</p>
+        
       </SubSection>
 
       <div className="pt-2">
