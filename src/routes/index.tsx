@@ -599,7 +599,7 @@ function Services() {
                     <span className="font-mono text-[10px] text-muted-foreground tabular-nums shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="font-display text-xl sm:text-2xl md:text-3xl uppercase tracking-tighter leading-none truncate group-hover:text-primary transition-colors">
+                    <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-tighter leading-none truncate group-hover:text-primary transition-colors">
                       {s.name}
                     </h3>
                     {s.featured && (
@@ -612,7 +612,7 @@ function Services() {
                     <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                       {s.duration}
                     </span>
-                    <span className="font-display text-xl sm:text-2xl tracking-tighter">
+                    <span className="font-display text-xl sm:text-2xl lg:text-3xl tracking-tighter">
                       {s.price}
                     </span>
                   </div>
@@ -620,10 +620,10 @@ function Services() {
               </AccordionTrigger>
               <AccordionContent className="pb-8 pl-0 sm:pl-10">
                 <div className="grid md:grid-cols-3 gap-6 md:gap-10 items-start">
-                  <p className="md:col-span-2 text-base md:text-lg leading-snug text-pretty">
+                  <p className="md:col-span-2 text-base md:text-lg lg:text-xl leading-snug text-pretty">
                     {s.desc}
                   </p>
-                  <ul className="space-y-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
+                  <ul className="space-y-2 font-mono text-[11px] lg:text-[13px] uppercase tracking-wide text-muted-foreground">
                     {s.includes.map((inc) => (
                       <li key={inc} className="flex gap-2">
                         <span className="text-muted-foreground">+</span>
@@ -986,7 +986,7 @@ function Testimonials() {
               >
                 {"★".repeat(t.stars)}
               </div>
-              <blockquote className="text-sm leading-relaxed text-foreground/90">
+              <blockquote className="text-sm lg:text-base xl:text-lg leading-relaxed text-foreground/90">
                 "{t.quote}"
               </blockquote>
               <figcaption className="mt-auto font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -1094,10 +1094,10 @@ function Pros() {
             <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-foreground font-bold mb-6 inline-block border-b-2 border-foreground pb-2">
               Meet the team
             </p>
-            <h3 className="font-sans text-2xl leading-snug tracking-normal mb-6 text-pretty font-semibold md:text-4xl">
+            <h3 className="font-sans text-2xl leading-snug tracking-normal mb-6 text-pretty font-semibold md:text-4xl lg:text-5xl">
               At The Whitening Lab, we do one thing and do it best: professional teeth whitening. Our expertise guarantees a safe, precise, and elevated experience.
             </h3>
-            <p className="text-base md:text-lg leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
               <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
               Built by dental pros, for the smile-obsessed. A dental lab tech and a hygienist — same question on repeat: <em>how are your teeth so white?</em> So we rewrote the playbook. The dental lab became <span className="font-semibold text-foreground">The Whitening Lab</span> — the new standard in professional teeth whitening, changing the world one smile at a time.
             </p>
@@ -1108,7 +1108,7 @@ function Pros() {
                     {p.role}
                   </p>
                   <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                    <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
+                    <h4 className="text-xl lg:text-2xl font-bold uppercase tracking-wide">{p.name}</h4>
                     <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                       {p.location}, ME
                     </span>
@@ -1136,7 +1136,7 @@ function Partner() {
             <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9] mb-6">
               Partner with <span className="text-primary">The Lab.</span>
             </h2>
-            <p className="text-base md:text-lg leading-snug text-pretty max-w-[38ch]">
+            <p className="text-base md:text-lg lg:text-xl leading-snug text-pretty max-w-[38ch]">
               The demand for professional teeth whitening has never been higher.
               Expand your practice, diversify your revenue, or build your own
               business — with training designed for growth.
