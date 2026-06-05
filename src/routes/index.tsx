@@ -864,7 +864,7 @@ function Shop() {
             No products found
           </div>
         ) : (
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 min-[600px]:grid-cols-3 gap-8 md:gap-12">
             {data.map((p) => (
               <ShopProductCard key={p.node.id} product={p} />
             ))}
