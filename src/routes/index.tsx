@@ -1140,12 +1140,32 @@ function Partner() {
             </p>
           </div>
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              const fd = new FormData(e.currentTarget);
+              const get = (k: string) => String(fd.get(k) ?? "").trim();
+              const interests = fd.getAll("interest").join(", ") || "—";
+              const subject = `Partner Inquiry — ${get("name") || "New Lead"}`;
+              const body = [
+                `Name: ${get("name")}`,
+                `Company / Practice: ${get("company")}`,
+                `Email: ${get("email")}`,
+                `Phone: ${get("phone") || "—"}`,
+                `Years of Experience: ${get("experience") || "—"}`,
+                `Location: ${get("location") || "—"}`,
+                `Interested in: ${interests}`,
+                ``,
+                `Message:`,
+                `${get("message") || "—"}`,
+              ].join("\n");
+              window.location.href = `mailto:thewhiteninglabco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            }}
             className="lg:col-span-7 grid sm:grid-cols-2 gap-4"
           >
             <input
               required
               type="text"
+              name="name"
               placeholder="Full Name"
               aria-label="Full name"
               maxLength={100}
@@ -1154,6 +1174,7 @@ function Partner() {
             <input
               required
               type="text"
+              name="company"
               placeholder="Company / Practice"
               aria-label="Company or practice"
               maxLength={150}
@@ -1162,6 +1183,7 @@ function Partner() {
             <input
               required
               type="email"
+              name="email"
               placeholder="Email"
               aria-label="Email"
               maxLength={255}
@@ -1169,6 +1191,7 @@ function Partner() {
             />
             <input
               type="tel"
+              name="phone"
               placeholder="Phone (optional)"
               aria-label="Phone"
               maxLength={30}
@@ -1176,6 +1199,7 @@ function Partner() {
             />
             <input
               type="text"
+              name="experience"
               placeholder="Years of Experience"
               aria-label="Years of experience"
               maxLength={50}
@@ -1183,6 +1207,7 @@ function Partner() {
             />
             <input
               type="text"
+              name="location"
               placeholder="Location / Where You'd Practice"
               aria-label="Location"
               maxLength={150}
@@ -1191,19 +1216,20 @@ function Partner() {
             <div className="sm:col-span-2 flex flex-wrap gap-x-6 gap-y-2 px-1 py-1 font-mono text-[10px] uppercase tracking-widest">
               <span className="text-muted-foreground mr-2">Interested in:</span>
               <label className="inline-flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" className="accent-primary" /> Training
+                <input type="checkbox" name="interest" value="Training" className="accent-primary" /> Training
               </label>
               <label className="inline-flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" className="accent-primary" /> Wholesale
+                <input type="checkbox" name="interest" value="Wholesale" className="accent-primary" /> Wholesale
               </label>
               <label className="inline-flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" className="accent-primary" /> In-House Lab
+                <input type="checkbox" name="interest" value="In-House Lab" className="accent-primary" /> In-House Lab
               </label>
               <label className="inline-flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" className="accent-primary" /> Affiliate Office
+                <input type="checkbox" name="interest" value="Affiliate Office" className="accent-primary" /> Affiliate Office
               </label>
             </div>
             <textarea
+              name="message"
               placeholder="Tell us a bit more (optional)"
               aria-label="Message"
               rows={3}
