@@ -26,39 +26,68 @@ export const Route = createFileRoute("/cancellation-policy")({
   component: CancellationPolicyPage,
 });
 
+const policyItems = [
+  {
+    n: "01",
+    eyebrow: "Inside 48 Hours",
+    heading: "Cancellations or reschedules made within 48 hours of your appointment are charged 50% of the service total.",
+    body: "At that window we cannot realistically rebook the chair.",
+  },
+  {
+    n: "02",
+    eyebrow: "Inside 24 Hours, No-Show, No-Call",
+    heading: "Cancellations inside the 24-hour window, no-shows, and no-calls are charged 100% of the service total.",
+    body: "A $75 rescheduling fee applies to book your next appointment.",
+  },
+  {
+    n: "03",
+    eyebrow: "At Our Discretion",
+    heading: "Life happens.",
+    body: "The $75 rescheduling fee may be waived at the studio's discretion. Reach out, be straight with us, and we'll do our best to work with you.",
+  },
+  {
+    n: "04",
+    eyebrow: "Running Late",
+    heading: "A 15-minute grace period applies.",
+    body: "Past that, we may need to shorten or reschedule your treatment so the next patient isn't pushed back.",
+  },
+  {
+    n: "05",
+    eyebrow: "How to Cancel or Reschedule",
+    heading: "Use the link in your confirmation email, or email the studio directly at thewhiteninglabco@gmail.com.",
+    body: "A voicemail counts only if left before the window closes.",
+  },
+];
+
 function CancellationPolicyPage() {
   return (
     <SubPageLayout
       eyebrow="Studio Policy"
       title={<>Cancellation <span className="text-primary">Policy</span></>}
-      intro="Every appointment at The Whitening Lab is reserved exclusively for you and prepped by a licensed dental professional. Please review our notice requirements below."
+      intro="A note before you book. Your chair is held for you. Please give it the same courtesy."
     >
-      <SubSection eyebrow="48-Hour Notice" heading="Rescheduling & Cancellations">
-        <p>
-          We require a minimum of <span className="font-bold">48 hours' notice</span> to reschedule
-          or cancel any clinically guided whitening appointment. This window allows us to offer the
-          slot to another client and ensures our licensed dental team is prepared for every session.
-        </p>
-      </SubSection>
+      <div className="grid gap-4 md:grid-cols-2">
+        {policyItems.map((item) => (
+          <div key={item.n} className="border border-border rounded-sm p-5 bg-background">
+            <p className="font-mono text-xs text-primary font-bold mb-2">{item.n}</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-2">
+              {item.eyebrow}
+            </p>
+            <p className="font-bold uppercase text-sm mb-2">{item.heading}</p>
+            <p className="text-sm text-foreground/80">{item.body}</p>
+          </div>
+        ))}
+      </div>
 
-      <SubSection eyebrow="Late Notice & No-Shows" heading="What Happens If You Miss the Window">
-        <p>[CONFIRM: exact late-cancel / no-show fee or policy from current site]</p>
-      </SubSection>
-
-      <SubSection eyebrow="How to Cancel" heading="Contact the Studio">
-        <p>
-          Call{" "}
-          <a href="tel:+12076502622" className="underline underline-offset-4 hover:text-primary">207-650-2622</a>
-          {" "}or email{" "}
-          <a href="mailto:thewhiteninglabco@gmail.com" className="underline underline-offset-4 hover:text-primary">
-            thewhiteninglabco@gmail.com
-          </a>
-          {" "}as soon as you know you need to reschedule. We'll find a time that works.
+      <div className="border border-primary rounded-sm p-6 md:p-8 bg-primary/5">
+        <p className="font-display text-2xl md:text-4xl uppercase tracking-tighter leading-[0.95]">
+          "Hold the time, keep the time. Simple as that."{" "}
+          <span className="text-primary">— House Rule</span>
         </p>
-      </SubSection>
+      </div>
 
       <p className="text-sm text-muted-foreground">
-        [CONFIRM: full cancellation policy wording from current site, including any deposit, late-fee, or rebooking terms]
+        Policy effective 2026. Subject to update at the studio's discretion.
       </p>
     </SubPageLayout>
   );
