@@ -69,7 +69,7 @@ function CancellationPolicyPage() {
       <div className="grid gap-4 md:grid-cols-2">
         {policyItems.map((item) => (
           <div key={item.n} className="border border-border rounded-sm p-5 bg-background">
-            <p className="font-mono text-xs text-primary font-bold mb-2">{item.n}</p>
+            <p className="mb-2"><span className="label-pill font-mono text-xs font-bold">{item.n}</span></p>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-2">
               {item.eyebrow}
             </p>
