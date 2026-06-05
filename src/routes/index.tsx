@@ -1330,7 +1330,7 @@ function Footer() {
               The Whitening Lab
             </span>
             <p className="mt-4 text-stone-400 max-w-[24ch] text-sm">
-              The definitive standard in modern teeth whitening. Operated by licensed
+              The definitive standard in modern teeth whitening. Operated by licensed / certified
               dental pros.
             </p>
             <div className="mt-6">
