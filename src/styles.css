@@ -117,3 +117,12 @@
     animation: marquee 40s linear infinite;
   }
 }
+
+/* Black outline on yellow text for readability against light backgrounds */
+.text-primary {
+  text-shadow:
+    -1px -1px 0 oklch(0.13 0 0),
+    1px -1px 0 oklch(0.13 0 0),
+    -1px 1px 0 oklch(0.13 0 0),
+    1px 1px 0 oklch(0.13 0 0);
+}
