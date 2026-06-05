@@ -1342,9 +1342,11 @@ function Footer() {
               Studio
             </h5>
             <ul className="space-y-2 text-sm uppercase font-bold">
-              <li>Appointments</li>
-              <li>Referrals</li>
-              <li>Wholesale</li>
+              <li><Link to="/welcome-packet" className="hover:text-primary transition-colors">Welcome Packet</Link></li>
+              <li><Link to="/aftercare" className="hover:text-primary transition-colors">Aftercare Instructions</Link></li>
+              <li><Link to="/referrals" className="hover:text-primary transition-colors">Referral Program</Link></li>
+              <li><Link to="/contact-us" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><a href="#process" className="hover:text-primary transition-colors">Team</a></li>
             </ul>
           </div>
           <div>
