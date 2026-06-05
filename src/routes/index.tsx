@@ -894,7 +894,7 @@ function NoFiltersGallery() {
             Tap an image to reveal after results.
           </span>
         </div>
-        <div className="grid grid-cols-1 min-[640px]:grid-cols-2 min-[900px]:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 min-[600px]:grid-cols-3 gap-4 sm:gap-6">
           {noFilters.map((n) => (
             <NoFilterCard key={n.patient} item={n} />
           ))}
