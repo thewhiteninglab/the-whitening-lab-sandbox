@@ -943,9 +943,9 @@ function Testimonials() {
               Verified Google Reviews
             </p>
             <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl uppercase tracking-tighter">
-              <span className="text-primary">Real words.</span>
+              Real <span className="text-primary">WORDS.</span>
               <br />
-              <span className="text-primary">Real clients.</span>
+              Real <span className="text-primary">CLIENTS.</span>
             </h2>
           </div>
           <a
