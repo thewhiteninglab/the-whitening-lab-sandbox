@@ -94,17 +94,8 @@
   }
 
   body {
-    background-color: oklch(0.92 0.005 95);
-    color: var(--color-foreground);
-  }
-
-  /* Frame the whole site at a phone-sized width on tablet/desktop so the
-     stacked mobile layout stays the intended composition instead of
-     stretching across the screen. */
-  body > * {
-    max-width: 480px;
-    margin-inline: auto;
     background-color: var(--color-background);
+    color: var(--color-foreground);
   }
 
   ::selection {
