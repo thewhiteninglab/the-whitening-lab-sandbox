@@ -9,15 +9,40 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WelcomePacketRouteImport } from './routes/welcome-packet'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as StriplikeaproRouteImport } from './routes/striplikeapro'
+import { Route as SouthernMaineLocationRouteImport } from './routes/southern-maine-location'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ReferralsRouteImport } from './routes/referrals'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as OurResultsRouteImport } from './routes/our-results'
+import { Route as GreaterPortlandLocationRouteImport } from './routes/greater-portland-location'
+import { Route as ContactUsRouteImport } from './routes/contact-us'
+import { Route as CancellationPolicyRouteImport } from './routes/cancellation-policy'
+import { Route as BookAnAppointmentRouteImport } from './routes/book-an-appointment'
+import { Route as AftercareRouteImport } from './routes/aftercare'
 import { Route as AccessibilityRouteImport } from './routes/accessibility'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WelcomePacketRoute = WelcomePacketRouteImport.update({
+  id: '/welcome-packet',
+  path: '/welcome-packet',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StriplikeaproRoute = StriplikeaproRouteImport.update({
+  id: '/striplikeapro',
+  path: '/striplikeapro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SouthernMaineLocationRoute = SouthernMaineLocationRouteImport.update({
+  id: '/southern-maine-location',
+  path: '/southern-maine-location',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -25,9 +50,44 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReferralsRoute = ReferralsRouteImport.update({
+  id: '/referrals',
+  path: '/referrals',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurResultsRoute = OurResultsRouteImport.update({
+  id: '/our-results',
+  path: '/our-results',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GreaterPortlandLocationRoute = GreaterPortlandLocationRouteImport.update({
+  id: '/greater-portland-location',
+  path: '/greater-portland-location',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactUsRoute = ContactUsRouteImport.update({
+  id: '/contact-us',
+  path: '/contact-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CancellationPolicyRoute = CancellationPolicyRouteImport.update({
+  id: '/cancellation-policy',
+  path: '/cancellation-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookAnAppointmentRoute = BookAnAppointmentRouteImport.update({
+  id: '/book-an-appointment',
+  path: '/book-an-appointment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AftercareRoute = AftercareRouteImport.update({
+  id: '/aftercare',
+  path: '/aftercare',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AccessibilityRoute = AccessibilityRouteImport.update({
@@ -44,54 +104,155 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/accessibility': typeof AccessibilityRoute
+  '/aftercare': typeof AftercareRoute
+  '/book-an-appointment': typeof BookAnAppointmentRoute
+  '/cancellation-policy': typeof CancellationPolicyRoute
+  '/contact-us': typeof ContactUsRoute
+  '/greater-portland-location': typeof GreaterPortlandLocationRoute
+  '/our-results': typeof OurResultsRoute
   '/privacy': typeof PrivacyRoute
+  '/referrals': typeof ReferralsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/southern-maine-location': typeof SouthernMaineLocationRoute
+  '/striplikeapro': typeof StriplikeaproRoute
   '/terms': typeof TermsRoute
+  '/welcome-packet': typeof WelcomePacketRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/accessibility': typeof AccessibilityRoute
+  '/aftercare': typeof AftercareRoute
+  '/book-an-appointment': typeof BookAnAppointmentRoute
+  '/cancellation-policy': typeof CancellationPolicyRoute
+  '/contact-us': typeof ContactUsRoute
+  '/greater-portland-location': typeof GreaterPortlandLocationRoute
+  '/our-results': typeof OurResultsRoute
   '/privacy': typeof PrivacyRoute
+  '/referrals': typeof ReferralsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/southern-maine-location': typeof SouthernMaineLocationRoute
+  '/striplikeapro': typeof StriplikeaproRoute
   '/terms': typeof TermsRoute
+  '/welcome-packet': typeof WelcomePacketRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/accessibility': typeof AccessibilityRoute
+  '/aftercare': typeof AftercareRoute
+  '/book-an-appointment': typeof BookAnAppointmentRoute
+  '/cancellation-policy': typeof CancellationPolicyRoute
+  '/contact-us': typeof ContactUsRoute
+  '/greater-portland-location': typeof GreaterPortlandLocationRoute
+  '/our-results': typeof OurResultsRoute
   '/privacy': typeof PrivacyRoute
+  '/referrals': typeof ReferralsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/southern-maine-location': typeof SouthernMaineLocationRoute
+  '/striplikeapro': typeof StriplikeaproRoute
   '/terms': typeof TermsRoute
+  '/welcome-packet': typeof WelcomePacketRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/accessibility' | '/privacy' | '/sitemap.xml' | '/terms'
+  fullPaths:
+    | '/'
+    | '/accessibility'
+    | '/aftercare'
+    | '/book-an-appointment'
+    | '/cancellation-policy'
+    | '/contact-us'
+    | '/greater-portland-location'
+    | '/our-results'
+    | '/privacy'
+    | '/referrals'
+    | '/sitemap.xml'
+    | '/southern-maine-location'
+    | '/striplikeapro'
+    | '/terms'
+    | '/welcome-packet'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/accessibility' | '/privacy' | '/sitemap.xml' | '/terms'
+  to:
+    | '/'
+    | '/accessibility'
+    | '/aftercare'
+    | '/book-an-appointment'
+    | '/cancellation-policy'
+    | '/contact-us'
+    | '/greater-portland-location'
+    | '/our-results'
+    | '/privacy'
+    | '/referrals'
+    | '/sitemap.xml'
+    | '/southern-maine-location'
+    | '/striplikeapro'
+    | '/terms'
+    | '/welcome-packet'
   id:
     | '__root__'
     | '/'
     | '/accessibility'
+    | '/aftercare'
+    | '/book-an-appointment'
+    | '/cancellation-policy'
+    | '/contact-us'
+    | '/greater-portland-location'
+    | '/our-results'
     | '/privacy'
+    | '/referrals'
     | '/sitemap.xml'
+    | '/southern-maine-location'
+    | '/striplikeapro'
     | '/terms'
+    | '/welcome-packet'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AccessibilityRoute: typeof AccessibilityRoute
+  AftercareRoute: typeof AftercareRoute
+  BookAnAppointmentRoute: typeof BookAnAppointmentRoute
+  CancellationPolicyRoute: typeof CancellationPolicyRoute
+  ContactUsRoute: typeof ContactUsRoute
+  GreaterPortlandLocationRoute: typeof GreaterPortlandLocationRoute
+  OurResultsRoute: typeof OurResultsRoute
   PrivacyRoute: typeof PrivacyRoute
+  ReferralsRoute: typeof ReferralsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SouthernMaineLocationRoute: typeof SouthernMaineLocationRoute
+  StriplikeaproRoute: typeof StriplikeaproRoute
   TermsRoute: typeof TermsRoute
+  WelcomePacketRoute: typeof WelcomePacketRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/welcome-packet': {
+      id: '/welcome-packet'
+      path: '/welcome-packet'
+      fullPath: '/welcome-packet'
+      preLoaderRoute: typeof WelcomePacketRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/terms': {
       id: '/terms'
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/striplikeapro': {
+      id: '/striplikeapro'
+      path: '/striplikeapro'
+      fullPath: '/striplikeapro'
+      preLoaderRoute: typeof StriplikeaproRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/southern-maine-location': {
+      id: '/southern-maine-location'
+      path: '/southern-maine-location'
+      fullPath: '/southern-maine-location'
+      preLoaderRoute: typeof SouthernMaineLocationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -101,11 +262,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/referrals': {
+      id: '/referrals'
+      path: '/referrals'
+      fullPath: '/referrals'
+      preLoaderRoute: typeof ReferralsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-results': {
+      id: '/our-results'
+      path: '/our-results'
+      fullPath: '/our-results'
+      preLoaderRoute: typeof OurResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/greater-portland-location': {
+      id: '/greater-portland-location'
+      path: '/greater-portland-location'
+      fullPath: '/greater-portland-location'
+      preLoaderRoute: typeof GreaterPortlandLocationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact-us': {
+      id: '/contact-us'
+      path: '/contact-us'
+      fullPath: '/contact-us'
+      preLoaderRoute: typeof ContactUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cancellation-policy': {
+      id: '/cancellation-policy'
+      path: '/cancellation-policy'
+      fullPath: '/cancellation-policy'
+      preLoaderRoute: typeof CancellationPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-an-appointment': {
+      id: '/book-an-appointment'
+      path: '/book-an-appointment'
+      fullPath: '/book-an-appointment'
+      preLoaderRoute: typeof BookAnAppointmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aftercare': {
+      id: '/aftercare'
+      path: '/aftercare'
+      fullPath: '/aftercare'
+      preLoaderRoute: typeof AftercareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/accessibility': {
@@ -128,9 +338,19 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccessibilityRoute: AccessibilityRoute,
+  AftercareRoute: AftercareRoute,
+  BookAnAppointmentRoute: BookAnAppointmentRoute,
+  CancellationPolicyRoute: CancellationPolicyRoute,
+  ContactUsRoute: ContactUsRoute,
+  GreaterPortlandLocationRoute: GreaterPortlandLocationRoute,
+  OurResultsRoute: OurResultsRoute,
   PrivacyRoute: PrivacyRoute,
+  ReferralsRoute: ReferralsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SouthernMaineLocationRoute: SouthernMaineLocationRoute,
+  StriplikeaproRoute: StriplikeaproRoute,
   TermsRoute: TermsRoute,
+  WelcomePacketRoute: WelcomePacketRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

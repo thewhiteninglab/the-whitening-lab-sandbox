@@ -382,6 +382,21 @@ function Nav() {
               {l.label}
             </DropdownMenuItem>
           ))}
+          <div className="my-1 border-t border-border" />
+          {[
+            { to: "/greater-portland-location", label: "Gray Location" },
+            { to: "/southern-maine-location", label: "Alfred Location" },
+            { to: "/our-results", label: "Our Results" },
+            { to: "/contact-us", label: "Contact Us" },
+            { to: "/book-an-appointment", label: "Book Appointment" },
+            { to: "/referrals", label: "Referrals" },
+            { to: "/welcome-packet", label: "Welcome Packet" },
+            { to: "/aftercare", label: "Aftercare" },
+          ].map((l) => (
+            <DropdownMenuItem key={l.to} asChild className="cursor-pointer rounded-sm px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest font-bold focus:bg-primary focus:text-primary-foreground">
+              <Link to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>
+            </DropdownMenuItem>
+          ))}
         </DropdownMenuContent>
       </DropdownMenu>
       </div>
