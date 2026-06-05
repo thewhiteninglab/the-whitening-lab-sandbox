@@ -305,10 +305,9 @@ function Nav() {
     { href: "#services", label: "Services" },
     { href: "#results", label: "Results" },
     { href: "#shop", label: "Shop" },
-    { href: "#process", label: "Team" },
     { href: "#faq", label: "FAQ" },
     { href: "#partner", label: "Partner" },
-    { href: "#book", label: "Book Treatment" },
+    { href: "#book", label: "BOOK NOW" },
   ];
   const goTo = (href: string) => {
     const id = href.replace("#", "");
@@ -383,15 +382,12 @@ function Nav() {
             </DropdownMenuItem>
           ))}
           <div className="my-1 border-t border-border" />
+          <div className="px-3 pt-2 pb-1 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            Locations
+          </div>
           {[
-            { to: "/greater-portland-location", label: "Gray Location" },
-            { to: "/southern-maine-location", label: "Alfred Location" },
-            { to: "/our-results", label: "Our Results" },
-            { to: "/contact-us", label: "Contact Us" },
-            { to: "/book-an-appointment", label: "Book Appointment" },
-            { to: "/referrals", label: "Referrals" },
-            { to: "/welcome-packet", label: "Welcome Packet" },
-            { to: "/aftercare", label: "Aftercare" },
+            { to: "/greater-portland-location", label: "Gray" },
+            { to: "/southern-maine-location", label: "Alfred" },
           ].map((l) => (
             <DropdownMenuItem key={l.to} asChild className="cursor-pointer rounded-sm px-3 py-2.5 font-mono text-[11px] uppercase tracking-widest font-bold focus:bg-primary focus:text-primary-foreground">
               <Link to={l.to} onClick={() => setOpen(false)}>{l.label}</Link>
@@ -1346,9 +1342,11 @@ function Footer() {
               Studio
             </h5>
             <ul className="space-y-2 text-sm uppercase font-bold">
-              <li>Appointments</li>
-              <li>Referrals</li>
-              <li>Wholesale</li>
+              <li><Link to="/welcome-packet" className="hover:text-primary transition-colors">Welcome Packet</Link></li>
+              <li><Link to="/aftercare" className="hover:text-primary transition-colors">Aftercare Instructions</Link></li>
+              <li><Link to="/referrals" className="hover:text-primary transition-colors">Referral Program</Link></li>
+              <li><Link to="/contact-us" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><a href="#process" className="hover:text-primary transition-colors">Team</a></li>
             </ul>
           </div>
           <div>
