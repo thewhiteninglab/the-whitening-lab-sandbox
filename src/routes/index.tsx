@@ -303,7 +303,7 @@ function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
     { href: "#services", label: "Services" },
-    { href: "#results", label: "Results" },
+    { href: "#no-filters", label: "Results" },
     { href: "#shop", label: "Shop" },
     { href: "#faq", label: "FAQ" },
     { href: "#partner", label: "Partner" },
