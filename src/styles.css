@@ -4,16 +4,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Force the mobile (stacked) layout at every viewport size.
-   Push all Tailwind responsive breakpoints past any real screen so
-   sm:/md:/lg:/xl:/2xl: utilities never activate — every visitor renders
-   the base (mobile) styles. */
+/* Tailwind breakpoints enabled for responsive design */
 @theme {
-  --breakpoint-sm: 99999px;
-  --breakpoint-md: 99999px;
-  --breakpoint-lg: 99999px;
-  --breakpoint-xl: 99999px;
-  --breakpoint-2xl: 99999px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }
 
 @theme inline {
