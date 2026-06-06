@@ -573,7 +573,7 @@ function Services() {
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Services / In-Lab Treatments
             </p>
-            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
+            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter leading-[0.9]">
               Pick Your <span className="text-primary">Treatment.</span>
             </h2>
           </div>
@@ -667,7 +667,7 @@ function ResultsGrid() {
     <section className="px-6 pt-12 pb-24">
       <div className="max-w-[1600px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
-          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
+          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter leading-[0.9]">
             <span className="whitespace-nowrap">Real teeth. Real treatments.</span>
             <br />
             Real results.
@@ -854,7 +854,7 @@ function Shop() {
     <section id="shop" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border">
       <div className="max-w-[1600px] mx-auto">
         <div className="flex justify-between items-end mb-16 gap-6 flex-wrap">
-          <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter">
             Maintain the Shade
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -890,7 +890,7 @@ function NoFiltersGallery() {
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
               No Filters / Lab Archive
             </p>
-            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-6xl md:text-7xl uppercase tracking-tighter">
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter">
               Real lab results.
               <br />
               No retouching.
@@ -959,7 +959,7 @@ function Testimonials() {
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-3 sm:mb-4">
               Verified Google Reviews
             </p>
-            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl uppercase tracking-tighter">
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter">
               Real <span className="text-primary">WORDS.</span>
               <br />
               Real <span className="text-primary">CLIENTS.</span>
@@ -1063,7 +1063,7 @@ function Manifesto() {
         <div className="font-mono text-xs uppercase tracking-[0.3em] mb-6">
           Our Promise
         </div>
-        <blockquote className="font-display text-3xl md:text-5xl uppercase leading-[0.95] tracking-tighter mb-8 text-balance">
+        <blockquote className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase leading-[0.95] tracking-tighter mb-8 text-balance">
           We don't fake results. We create them clinically.
         </blockquote>
         <a
@@ -1133,7 +1133,7 @@ function Partner() {
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Partner / Wholesale / Training
             </p>
-            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9] mb-6">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-tighter leading-[0.9] mb-6">
               Partner with <span className="text-primary">The Lab.</span>
             </h2>
             <p className="text-base md:text-lg lg:text-xl leading-snug text-pretty max-w-[38ch]">
@@ -1290,7 +1290,7 @@ function FAQ() {
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             FAQ / The Real Questions
           </p>
-          <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
+          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter leading-[0.9]">
             Asked. <span className="text-primary">Answered.</span>
           </h2>
         </div>
