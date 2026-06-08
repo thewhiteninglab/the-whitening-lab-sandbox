@@ -65,7 +65,7 @@ export const submitReferral = createServerFn({ method: "POST" })
           },
           body: JSON.stringify({
             from: "The Whitening Lab <onboarding@resend.dev>",
-            to: ["thewhiteninglabco@gmail.com"],
+            to: ["pethuelmutalenu@gmail.com"],
             subject: `New Referral: ${data.patient_name} (from ${data.practice_office})`,
             text: body,
           }),
