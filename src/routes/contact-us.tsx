@@ -30,6 +30,9 @@ export const Route = createFileRoute("/contact-us")({
 });
 
 function ContactUsPage() {
+  const send = useServerFn(submitContact);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
   return (
     <SubPageLayout
       eyebrow="Get In Touch"
