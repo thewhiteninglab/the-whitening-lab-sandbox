@@ -125,6 +125,17 @@
   .animate-marquee {
     animation: marquee 40s linear infinite;
   }
+
+  .manifesto-headline {
+    font-size: clamp(3rem, 12vw, 6rem);
+    line-height: 0.9;
+  }
+
+  @media (min-width: 768px) {
+    .manifesto-headline {
+      font-size: clamp(5rem, 7vw, 6.75rem);
+    }
+  }
 }
 
 /* Black outline on yellow text — ONLY for large display headlines.

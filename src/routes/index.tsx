@@ -301,6 +301,8 @@ const pros = [
   { role: "05 / Hygienist · RDH · Affiliate Office", name: "Britta Griffiths", location: "Bar Harbor" },
 ];
 
+const BOOKING_URL = "https://msha.ke/thewhiteninglab";
+
 function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
@@ -309,10 +311,14 @@ function Nav() {
     { href: "#shop", label: "Shop" },
     { href: "#faq", label: "FAQ" },
     { href: "#partner", label: "Partner" },
-    { href: "#book", label: "BOOK NOW" },
+    { href: BOOKING_URL, label: "BOOK NOW" },
   ];
   const goTo = (href: string) => {
     setOpen(false);
+    if (href.startsWith("http")) {
+      window.open(href, "_blank", "noopener,noreferrer");
+      return;
+    }
     if (href.startsWith("/")) {
       window.location.href = href;
       return;
@@ -422,7 +428,9 @@ function Hero() {
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="#book"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-foreground text-background px-6 py-3 text-xs font-mono uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all rounded-sm"
               >
                 Book a Treatment
@@ -974,7 +982,7 @@ function Testimonials() {
             Read all reviews on Google →
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {testimonials.map((t, i) => (
             <figure
               key={i}
@@ -1057,18 +1065,23 @@ function Manifesto() {
   return (
     <section
       id="book"
-      className="bg-background px-6 py-12 md:py-16"
+      className="bg-background py-12 md:py-16"
     >
-      <div className="max-w-[1280px] mx-auto bg-primary text-primary-foreground rounded-sm px-6 py-12 md:py-14 text-center">
-        <div className="font-mono text-xs uppercase tracking-[0.3em] mb-6">
+      <div className="w-full bg-primary text-primary-foreground px-5 py-16 sm:px-6 sm:py-20 md:py-24 text-center">
+        <div className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] mb-6">
           Our Promise
         </div>
-        <blockquote className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-7xl uppercase leading-[0.95] tracking-tighter mb-8 text-balance">
+        <blockquote
+          className="manifesto-headline mx-auto max-w-[1200px] font-display uppercase tracking-tighter mb-8 text-balance"
+          style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)", lineHeight: 0.9 }}
+        >
           We don't fake results. We create them clinically.
         </blockquote>
         <a
-          href="#book"
-          className="inline-block bg-foreground text-background px-8 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-foreground text-background px-8 py-4 font-mono text-xs md:text-sm uppercase tracking-widest font-bold hover:brightness-110 active:scale-95 transition-all"
         >
           Book a Treatment
         </a>
@@ -1079,9 +1092,9 @@ function Manifesto() {
 
 function Pros() {
   return (
-    <section id="process" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12">
+    <section id="process" className="px-5 pt-8 pb-10 sm:px-6 md:pt-10 md:pb-12">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 gap-8 sm:gap-12 md:gap-16 items-center">
           <img
             src={team}
             alt="The The Whitening Lab clinical team — three licensed / certified dental professionals in black scrubs"
@@ -1094,10 +1107,10 @@ function Pros() {
             <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-foreground font-bold mb-6 inline-block border-b-2 border-foreground pb-2">
               Meet the team
             </p>
-            <h3 className="font-sans text-2xl leading-snug tracking-normal mb-6 text-pretty font-semibold md:text-4xl lg:text-5xl">
+            <h3 className="font-sans text-3xl leading-snug tracking-normal mb-6 text-pretty font-semibold sm:text-4xl lg:text-5xl xl:text-6xl max-w-[26ch]">
               At The Whitening Lab, we do one thing and do it best: professional teeth whitening. Our expertise guarantees a safe, precise, and elevated experience.
             </h3>
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
+            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
               <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
               Built by dental pros, for the smile-obsessed. A dental lab tech and a hygienist — same question on repeat: <em>how are your teeth so white?</em> So we rewrote the playbook. The dental lab became <span className="font-semibold text-foreground">The Whitening Lab</span> — the new standard in professional teeth whitening, changing the world one smile at a time.
             </p>
@@ -1128,8 +1141,8 @@ function Partner() {
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          <div className="lg:col-span-5">
+        <div className="grid grid-cols-1 gap-10 lg:gap-16 items-start">
+          <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Partner / Wholesale / Training
             </p>
@@ -1169,7 +1182,7 @@ function Partner() {
               toast.success("Thanks! We'll be in touch soon.");
               form.reset();
             }}
-            className="lg:col-span-7 grid sm:grid-cols-2 gap-4"
+            className="grid sm:grid-cols-2 gap-4"
           >
             <input
               required
