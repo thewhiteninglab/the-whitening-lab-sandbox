@@ -415,9 +415,9 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative px-6 pt-10 md:pt-14 pb-12 md:pb-16 overflow-hidden">
-      <div className="max-w-[1600px] mx-auto">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
-          <div className="lg:col-span-8 animate-reveal">
+      <div className="max-w-[820px] mx-auto">
+        <div className="grid gap-10 items-end">
+          <div className="animate-reveal">
             <h1 className="font-display uppercase leading-[0.95] tracking-tighter text-balance mb-8 text-[clamp(3.5rem,12vw,11rem)]">
               We Hate <span className="text-primary">Yellow</span>
               <br />
@@ -443,7 +443,7 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div className="lg:col-span-4 animate-reveal [animation-delay:150ms]">
+          <div className="animate-reveal [animation-delay:150ms]">
             <img
               src={heroSmile}
               alt="Close-up of a bright, glossy, professionally whitened smile"
@@ -477,7 +477,7 @@ function TrustStrip() {
       aria-label="Trust signals"
       className="border-y border-border px-6 py-4"
     >
-      <div className="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
+      <div className="max-w-[820px] mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
         {items.map((t) => (
           <span key={t} className="flex items-center gap-2">
             <span className="size-1 rounded-full bg-muted-foreground/60" />
@@ -575,13 +575,13 @@ const services = [
 function Services() {
   return (
     <section id="services" className="px-6 pt-14 pb-6 md:pt-16 md:pb-8 border-t border-border">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Services / In-Lab Treatments
             </p>
-            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter leading-[0.9]">
+            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
               Pick Your <span className="text-primary">Treatment.</span>
             </h2>
           </div>
@@ -607,7 +607,7 @@ function Services() {
                     <span className="font-mono text-[10px] text-muted-foreground tabular-nums shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-tighter leading-none truncate group-hover:text-primary transition-colors">
+                    <h3 className="font-display text-xl sm:text-2xl md:text-3xl uppercase tracking-tighter leading-none truncate group-hover:text-primary transition-colors">
                       {s.name}
                     </h3>
                     {s.featured && (
@@ -620,7 +620,7 @@ function Services() {
                     <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                       {s.duration}
                     </span>
-                    <span className="font-display text-xl sm:text-2xl lg:text-3xl tracking-tighter">
+                    <span className="font-display text-xl sm:text-2xl tracking-tighter">
                       {s.price}
                     </span>
                   </div>
@@ -628,10 +628,10 @@ function Services() {
               </AccordionTrigger>
               <AccordionContent className="pb-8 pl-0 sm:pl-10">
                 <div className="grid md:grid-cols-3 gap-6 md:gap-10 items-start">
-                  <p className="md:col-span-2 text-base md:text-lg lg:text-xl leading-snug text-pretty">
+                  <p className="md:col-span-2 text-base md:text-lg leading-snug text-pretty">
                     {s.desc}
                   </p>
-                  <ul className="space-y-2 font-mono text-[11px] lg:text-[13px] uppercase tracking-wide text-muted-foreground">
+                  <ul className="space-y-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
                     {s.includes.map((inc) => (
                       <li key={inc} className="flex gap-2">
                         <span className="text-muted-foreground">+</span>
@@ -673,9 +673,9 @@ function TikTokIcon({ className, strokeWidth: _sw }: { className?: string; strok
 function ResultsGrid() {
   return (
     <section className="px-6 pt-12 pb-24">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
-          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter leading-[0.9]">
+          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
             <span className="whitespace-nowrap">Real teeth. Real treatments.</span>
             <br />
             Real results.
@@ -684,7 +684,7 @@ function ResultsGrid() {
             Documented daily / Lab archive
           </span>
         </div>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid gap-4">
           {results.map((r) => (
             <figure key={r.label} className="group">
               <div className="overflow-hidden bg-muted rounded-sm border border-border p-3">
@@ -860,9 +860,9 @@ function Shop() {
 
   return (
     <section id="shop" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-16 gap-6 flex-wrap">
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter">
+          <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
             Maintain the Shade
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -878,7 +878,7 @@ function Shop() {
             No products found
           </div>
         ) : (
-          <div className="grid grid-cols-1 min-[600px]:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 gap-8 md:gap-12">
             {data.map((p) => (
               <ShopProductCard key={p.node.id} product={p} />
             ))}
@@ -892,13 +892,13 @@ function Shop() {
 function NoFiltersGallery() {
   return (
     <section id="no-filters" className="px-5 py-12 sm:px-6 sm:py-16 md:py-20 bg-foreground text-background">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 gap-4 md:gap-6">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
               No Filters / Lab Archive
             </p>
-            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter">
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-6xl md:text-7xl uppercase tracking-tighter">
               Real lab results.
               <br />
               No retouching.
@@ -908,7 +908,7 @@ function NoFiltersGallery() {
             Tap an image to reveal after results.
           </span>
         </div>
-        <div className="grid grid-cols-1 min-[600px]:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6">
           {noFilters.map((n) => (
             <NoFilterCard key={n.patient} item={n} />
           ))}
@@ -961,13 +961,13 @@ function Testimonials() {
       aria-label="Client reviews"
       className="px-5 py-12 sm:px-6 sm:py-16 border-t border-border bg-background"
     >
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 md:gap-6 mb-10 sm:mb-12">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-3 sm:mb-4">
               Verified Google Reviews
             </p>
-            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter">
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl uppercase tracking-tighter">
               Real <span className="text-primary">WORDS.</span>
               <br />
               Real <span className="text-primary">CLIENTS.</span>
@@ -982,7 +982,7 @@ function Testimonials() {
             Read all reviews on Google →
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 gap-4 sm:gap-5">
           {testimonials.map((t, i) => (
             <figure
               key={i}
@@ -994,7 +994,7 @@ function Testimonials() {
               >
                 {"★".repeat(t.stars)}
               </div>
-              <blockquote className="text-sm lg:text-base xl:text-lg leading-relaxed text-foreground/90">
+              <blockquote className="text-sm leading-relaxed text-foreground/90">
                 "{t.quote}"
               </blockquote>
               <figcaption className="mt-auto font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -1072,7 +1072,7 @@ function Manifesto() {
           Our Promise
         </div>
         <blockquote
-          className="manifesto-headline mx-auto max-w-[1200px] font-display uppercase tracking-tighter mb-8 text-balance"
+          className="manifesto-headline mx-auto max-w-[820px] font-display uppercase tracking-tighter mb-8 text-balance"
           style={{ fontSize: "clamp(3rem, 7vw, 6.5rem)", lineHeight: 0.9 }}
         >
           We don't fake results. We create them clinically.
@@ -1093,8 +1093,8 @@ function Manifesto() {
 function Pros() {
   return (
     <section id="process" className="px-5 pt-8 pb-10 sm:px-6 md:pt-10 md:pb-12">
-      <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+      <div className="max-w-[820px] mx-auto">
+        <div className="grid grid-cols-1 gap-8 sm:gap-12 md:gap-16 items-center">
           <img
             src={team}
             alt="The The Whitening Lab clinical team — three licensed / certified dental professionals in black scrubs"
@@ -1107,10 +1107,10 @@ function Pros() {
             <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-foreground font-bold mb-6 inline-block border-b-2 border-foreground pb-2">
               Meet the team
             </p>
-            <h3 className="font-sans text-3xl leading-snug tracking-normal mb-6 text-pretty font-semibold sm:text-4xl lg:text-5xl xl:text-6xl max-w-[26ch]">
+            <h3 className="font-sans text-3xl leading-snug tracking-normal mb-6 text-pretty font-semibold sm:text-4xl max-w-[26ch]">
               At The Whitening Lab, we do one thing and do it best: professional teeth whitening. Our expertise guarantees a safe, precise, and elevated experience.
             </h3>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
+            <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
               <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
               Built by dental pros, for the smile-obsessed. A dental lab tech and a hygienist — same question on repeat: <em>how are your teeth so white?</em> So we rewrote the playbook. The dental lab became <span className="font-semibold text-foreground">The Whitening Lab</span> — the new standard in professional teeth whitening, changing the world one smile at a time.
             </p>
@@ -1121,7 +1121,7 @@ function Pros() {
                     {p.role}
                   </p>
                   <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                    <h4 className="text-xl lg:text-2xl font-bold uppercase tracking-wide">{p.name}</h4>
+                    <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
                     <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                       {p.location}, ME
                     </span>
@@ -1140,16 +1140,16 @@ function Partner() {
   const [submitting, setSubmitting] = useState(false);
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <div className="max-w-[820px] mx-auto">
+        <div className="grid grid-cols-1 gap-10 items-start">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Partner / Wholesale / Training
             </p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-tighter leading-[0.9] mb-6">
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9] mb-6">
               Partner with <span className="text-primary">The Lab.</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl leading-snug text-pretty max-w-[38ch]">
+            <p className="text-base md:text-lg leading-snug text-pretty max-w-[38ch]">
               The demand for professional teeth whitening has never been higher.
               Expand your practice, diversify your revenue, or build your own
               business — with training designed for growth.
@@ -1298,12 +1298,12 @@ const faqs = [
 function FAQ() {
   return (
     <section id="faq" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border bg-background">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="mb-12 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             FAQ / The Real Questions
           </p>
-          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter leading-[0.9]">
+          <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
             Asked. <span className="text-primary">Answered.</span>
           </h2>
         </div>
@@ -1336,8 +1336,8 @@ function FAQ() {
 function Footer() {
   return (
     <footer className="bg-foreground text-background pt-16 pb-10 px-6">
-      <div className="max-w-[1600px] mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
+      <div className="max-w-[820px] mx-auto">
+        <div className="grid gap-12 mb-24">
           <div>
             <span className="font-display text-4xl uppercase tracking-tighter">
               The Whitening Lab
