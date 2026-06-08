@@ -982,7 +982,7 @@ function Testimonials() {
             Read all reviews on Google →
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {testimonials.map((t, i) => (
             <figure
               key={i}
