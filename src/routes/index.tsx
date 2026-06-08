@@ -908,7 +908,7 @@ function NoFiltersGallery() {
             Tap an image to reveal after results.
           </span>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10">
           {noFilters.map((n) => (
             <NoFilterCard key={n.patient} item={n} />
           ))}
@@ -1023,7 +1023,7 @@ function NoFilterCard({
         onPointerLeave={(e) => { if (e.pointerType === "mouse") setShowAfter(false); }}
         aria-label={`Toggle before and after for ${item.patient}`}
         aria-pressed={showAfter}
-        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-black outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-black outline-none focus-visible:ring-2 focus-visible:ring-primary/40 md:hidden"
       >
         <img
           src={item.before}
@@ -1051,6 +1051,37 @@ function NoFilterCard({
           {item.shades}
         </span>
       </button>
+      <div className="hidden md:grid md:grid-cols-2 md:gap-3" aria-hidden="true">
+        <div className="relative overflow-hidden rounded-sm border border-background/15 bg-black">
+          <img
+            src={item.before}
+            alt=""
+            loading="lazy"
+            width={800}
+            height={1024}
+            className="w-full aspect-[4/5] object-contain"
+          />
+          <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest">
+            Before
+          </span>
+        </div>
+        <div className="relative overflow-hidden rounded-sm border border-background/15 bg-black">
+          <img
+            src={item.after}
+            alt=""
+            loading="lazy"
+            width={800}
+            height={1024}
+            className="w-full aspect-[4/5] object-contain"
+          />
+          <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest">
+            After
+          </span>
+          <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+            {item.shades}
+          </span>
+        </div>
+      </div>
       <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
         <span className="truncate">
           {item.patient} / {item.treatment}
