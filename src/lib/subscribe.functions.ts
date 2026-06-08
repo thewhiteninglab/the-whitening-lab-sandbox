@@ -5,7 +5,7 @@ const SubscribeSchema = z.object({
   email: z.string().trim().toLowerCase().email().max(254),
 });
 
-const AUDIENCE_ID = "f9a8f5b9-89a5-41b2-8167-3f3600a5d40d";
+const AUDIENCE_ID = "cc527d4f-f01d-414f-8297-9fb270ab7bca";
 
 export const subscribeEmail = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => SubscribeSchema.parse(input))
