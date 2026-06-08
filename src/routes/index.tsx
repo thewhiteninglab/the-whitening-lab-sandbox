@@ -982,7 +982,7 @@ function Testimonials() {
             Read all reviews on Google →
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {testimonials.map((t, i) => (
             <figure
               key={i}
@@ -1094,7 +1094,7 @@ function Pros() {
   return (
     <section id="process" className="px-5 pt-8 pb-10 sm:px-6 md:pt-10 md:pb-12">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 gap-8 sm:gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           <img
             src={team}
             alt="The The Whitening Lab clinical team — three licensed / certified dental professionals in black scrubs"
@@ -1141,7 +1141,7 @@ function Partner() {
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Partner / Wholesale / Training
