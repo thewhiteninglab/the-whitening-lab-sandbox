@@ -1141,15 +1141,15 @@ function Partner() {
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 gap-10 items-start">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Partner / Wholesale / Training
             </p>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-tighter leading-[0.9] mb-6">
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9] mb-6">
               Partner with <span className="text-primary">The Lab.</span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl leading-snug text-pretty max-w-[38ch]">
+            <p className="text-base md:text-lg leading-snug text-pretty max-w-[38ch]">
               The demand for professional teeth whitening has never been higher.
               Expand your practice, diversify your revenue, or build your own
               business — with training designed for growth.
@@ -1303,7 +1303,7 @@ function FAQ() {
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             FAQ / The Real Questions
           </p>
-          <h2 className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter leading-[0.9]">
+          <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tighter leading-[0.9]">
             Asked. <span className="text-primary">Answered.</span>
           </h2>
         </div>
@@ -1337,7 +1337,7 @@ function Footer() {
   return (
     <footer className="bg-foreground text-background pt-16 pb-10 px-6">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
+        <div className="grid gap-12 mb-24">
           <div>
             <span className="font-display text-4xl uppercase tracking-tighter">
               The Whitening Lab
