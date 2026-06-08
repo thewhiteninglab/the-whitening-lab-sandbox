@@ -415,7 +415,7 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative px-6 pt-10 md:pt-14 pb-12 md:pb-16 overflow-hidden">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="grid gap-10 items-end">
           <div className="animate-reveal">
             <h1 className="font-display uppercase leading-[0.95] tracking-tighter text-balance mb-8 text-[clamp(3.5rem,12vw,11rem)]">
@@ -477,7 +477,7 @@ function TrustStrip() {
       aria-label="Trust signals"
       className="border-y border-border px-6 py-4"
     >
-      <div className="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
+      <div className="max-w-[820px] mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
         {items.map((t) => (
           <span key={t} className="flex items-center gap-2">
             <span className="size-1 rounded-full bg-muted-foreground/60" />
@@ -575,7 +575,7 @@ const services = [
 function Services() {
   return (
     <section id="services" className="px-6 pt-14 pb-6 md:pt-16 md:pb-8 border-t border-border">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
