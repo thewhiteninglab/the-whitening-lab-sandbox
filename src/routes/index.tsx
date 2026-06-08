@@ -1023,38 +1023,65 @@ function NoFilterCard({
         onPointerLeave={(e) => { if (e.pointerType === "mouse") setShowAfter(false); }}
         aria-label={`Toggle before and after for ${item.patient}`}
         aria-pressed={showAfter}
-        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-black outline-none focus-visible:ring-2 focus-visible:ring-primary/40 md:aspect-auto md:grid md:grid-cols-2 md:gap-3 md:border-0 md:bg-transparent md:overflow-visible"
+        className="relative block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-black outline-none focus-visible:ring-2 focus-visible:ring-primary/40 md:hidden"
       >
-        <span className="relative block h-full md:h-auto md:overflow-hidden md:rounded-sm md:border md:border-background/15 md:bg-black">
-          <img
-            src={item.before}
-            alt={`${item.patient} before whitening`}
-            loading="lazy"
-            width={800}
-            height={1024}
-            className="absolute inset-0 w-full h-full object-contain md:static md:aspect-[4/5] md:h-auto"
-          />
-          <span className={`absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "opacity-0" : "opacity-100"} md:opacity-100`}>
-            Before
-          </span>
+        <img
+          src={item.before}
+          alt={`${item.patient} before whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className="absolute inset-0 w-full h-full object-contain"
+        />
+        <img
+          src={item.after}
+          alt={`${item.patient} after whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"}`}
+        />
+        <span className={`absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "opacity-0" : "opacity-100"}`}>
+          Before
         </span>
-        <span className="absolute inset-0 block md:static md:overflow-hidden md:rounded-sm md:border md:border-background/15 md:bg-black">
-          <img
-            src={item.after}
-            alt={`${item.patient} after whitening`}
-            loading="lazy"
-            width={800}
-            height={1024}
-            className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"} md:static md:aspect-[4/5] md:h-auto md:opacity-100`}
-          />
-          <span className={`absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "opacity-100" : "opacity-0"} md:opacity-100`}>
-            After
-          </span>
+        <span className={`absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity ${showAfter ? "opacity-100" : "opacity-0"}`}>
+          After
         </span>
         <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
           {item.shades}
         </span>
       </button>
+      <div className="hidden md:grid md:grid-cols-2 md:gap-3" aria-hidden="true">
+        <div className="relative overflow-hidden rounded-sm border border-background/15 bg-black">
+          <img
+            src={item.before}
+            alt=""
+            loading="lazy"
+            width={800}
+            height={1024}
+            className="w-full aspect-[4/5] object-contain"
+          />
+          <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest">
+            Before
+          </span>
+        </div>
+        <div className="relative overflow-hidden rounded-sm border border-background/15 bg-black">
+          <img
+            src={item.after}
+            alt=""
+            loading="lazy"
+            width={800}
+            height={1024}
+            className="w-full aspect-[4/5] object-contain"
+          />
+          <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest">
+            After
+          </span>
+          <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+            {item.shades}
+          </span>
+        </div>
+      </div>
       <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
         <span className="truncate">
           {item.patient} / {item.treatment}
