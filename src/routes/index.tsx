@@ -892,7 +892,7 @@ function Shop() {
 function NoFiltersGallery() {
   return (
     <section id="no-filters" className="px-5 py-12 sm:px-6 sm:py-16 md:py-20 bg-foreground text-background">
-      <div className="max-w-[820px] mx-auto">
+      <div className="max-w-[820px] lg:max-w-[1180px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 gap-4 md:gap-6">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
@@ -905,10 +905,10 @@ function NoFiltersGallery() {
             </h2>
           </div>
           <span className="font-mono text-[10px] uppercase tracking-widest text-background/60 max-w-[28ch]">
-            Tap an image to reveal after results.
+            Tap or hover an image to reveal after results.
           </span>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:gap-10">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-4">
           {noFilters.map((n) => (
             <NoFilterCard key={n.patient} item={n} />
           ))}
@@ -1051,36 +1051,32 @@ function NoFilterCard({
           {item.shades}
         </span>
       </button>
-      <div className="hidden md:grid md:grid-cols-2 md:gap-3" aria-hidden="true">
-        <div className="relative overflow-hidden rounded-sm border border-background/15 bg-black">
-          <img
-            src={item.before}
-            alt=""
-            loading="lazy"
-            width={800}
-            height={1024}
-            className="w-full aspect-[4/5] object-contain"
-          />
-          <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest">
-            Before
-          </span>
-        </div>
-        <div className="relative overflow-hidden rounded-sm border border-background/15 bg-black">
-          <img
-            src={item.after}
-            alt=""
-            loading="lazy"
-            width={800}
-            height={1024}
-            className="w-full aspect-[4/5] object-contain"
-          />
-          <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest">
-            After
-          </span>
-          <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
-            {item.shades}
-          </span>
-        </div>
+      <div className="group/desktop relative hidden md:block w-full overflow-hidden rounded-sm border border-background/15 aspect-[4/5] bg-black">
+        <img
+          src={item.before}
+          alt={`${item.patient} before whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className="absolute inset-0 w-full h-full object-contain"
+        />
+        <img
+          src={item.after}
+          alt={`${item.patient} after whitening`}
+          loading="lazy"
+          width={800}
+          height={1024}
+          className="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-500 group-hover/desktop:opacity-100"
+        />
+        <span className="absolute top-3 left-3 px-2 py-1 bg-background text-foreground font-mono text-[9px] uppercase tracking-widest transition-opacity group-hover/desktop:opacity-0">
+          Before
+        </span>
+        <span className="absolute top-3 left-3 px-2 py-1 bg-primary text-primary-foreground font-mono text-[9px] uppercase tracking-widest opacity-0 transition-opacity group-hover/desktop:opacity-100">
+          After
+        </span>
+        <span className="absolute bottom-3 right-3 px-2 py-1 bg-background/90 text-foreground font-mono text-[9px] uppercase tracking-widest">
+          {item.shades}
+        </span>
       </div>
       <figcaption className="mt-3 flex justify-between items-baseline font-mono text-[10px] uppercase tracking-widest text-background/70 gap-3">
         <span className="truncate">
