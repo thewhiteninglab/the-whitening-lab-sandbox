@@ -39,7 +39,7 @@ export const subscribeEmail = createServerFn({ method: "POST" })
         },
         body: JSON.stringify({
           from: "The Whitening Lab <onboarding@resend.dev>",
-          to: ["pethuelmutalenu@gmail.com"],
+          to: ["thewhiteninglabco@gmail.com"],
           subject: `New newsletter signup: ${data.email}`,
           text: `New subscriber: ${data.email}`,
         }),

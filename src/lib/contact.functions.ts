@@ -35,7 +35,7 @@ export const submitContact = createServerFn({ method: "POST" })
       },
       body: JSON.stringify({
         from: "The Whitening Lab <onboarding@resend.dev>",
-        to: ["pethuelmutalenu@gmail.com"],
+        to: ["thewhiteninglabco@gmail.com"],
         reply_to: data.email,
         subject: `New Contact: ${data.name}`,
         text,
