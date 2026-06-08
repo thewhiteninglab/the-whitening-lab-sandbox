@@ -967,7 +967,7 @@ function Testimonials() {
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-3 sm:mb-4">
               Verified Google Reviews
             </p>
-            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter">
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-5xl md:text-6xl uppercase tracking-tighter">
               Real <span className="text-primary">WORDS.</span>
               <br />
               Real <span className="text-primary">CLIENTS.</span>
@@ -982,7 +982,7 @@ function Testimonials() {
             Read all reviews on Google →
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 gap-4 sm:gap-5">
           {testimonials.map((t, i) => (
             <figure
               key={i}
@@ -994,7 +994,7 @@ function Testimonials() {
               >
                 {"★".repeat(t.stars)}
               </div>
-              <blockquote className="text-sm lg:text-base xl:text-lg leading-relaxed text-foreground/90">
+              <blockquote className="text-sm leading-relaxed text-foreground/90">
                 "{t.quote}"
               </blockquote>
               <figcaption className="mt-auto font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
