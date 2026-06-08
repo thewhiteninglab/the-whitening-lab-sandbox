@@ -892,7 +892,7 @@ function Shop() {
 function NoFiltersGallery() {
   return (
     <section id="no-filters" className="px-5 py-12 sm:px-6 sm:py-16 md:py-20 bg-foreground text-background">
-      <div className="max-w-[820px] lg:max-w-[1180px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 gap-4 md:gap-6">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
@@ -908,7 +908,7 @@ function NoFiltersGallery() {
             Tap or hover an image to reveal after results.
           </span>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-4">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-3 md:gap-3">
           {noFilters.map((n) => (
             <NoFilterCard key={n.patient} item={n} />
           ))}
