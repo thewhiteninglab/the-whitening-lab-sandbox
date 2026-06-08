@@ -416,8 +416,8 @@ function Hero() {
   return (
     <section className="relative px-6 pt-10 md:pt-14 pb-12 md:pb-16 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
-          <div className="lg:col-span-8 animate-reveal">
+        <div className="grid gap-10 items-end">
+          <div className="animate-reveal">
             <h1 className="font-display uppercase leading-[0.95] tracking-tighter text-balance mb-8 text-[clamp(3.5rem,12vw,11rem)]">
               We Hate <span className="text-primary">Yellow</span>
               <br />
@@ -443,7 +443,7 @@ function Hero() {
               </a>
             </div>
           </div>
-          <div className="lg:col-span-4 animate-reveal [animation-delay:150ms]">
+          <div className="animate-reveal [animation-delay:150ms]">
             <img
               src={heroSmile}
               alt="Close-up of a bright, glossy, professionally whitened smile"
@@ -581,7 +581,7 @@ function Services() {
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Services / In-Lab Treatments
             </p>
-            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter leading-[0.9]">
+            <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
               Pick Your <span className="text-primary">Treatment.</span>
             </h2>
           </div>
@@ -607,7 +607,7 @@ function Services() {
                     <span className="font-mono text-[10px] text-muted-foreground tabular-nums shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl uppercase tracking-tighter leading-none truncate group-hover:text-primary transition-colors">
+                    <h3 className="font-display text-xl sm:text-2xl md:text-3xl uppercase tracking-tighter leading-none truncate group-hover:text-primary transition-colors">
                       {s.name}
                     </h3>
                     {s.featured && (
@@ -620,7 +620,7 @@ function Services() {
                     <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                       {s.duration}
                     </span>
-                    <span className="font-display text-xl sm:text-2xl lg:text-3xl tracking-tighter">
+                    <span className="font-display text-xl sm:text-2xl tracking-tighter">
                       {s.price}
                     </span>
                   </div>
