@@ -1140,7 +1140,7 @@ function Partner() {
   const [submitting, setSubmitting] = useState(false);
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
-      <div className="max-w-[1280px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="grid grid-cols-1 gap-10 items-start">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
@@ -1298,7 +1298,7 @@ const faqs = [
 function FAQ() {
   return (
     <section id="faq" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border bg-background">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="mb-12 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             FAQ / The Real Questions
@@ -1336,7 +1336,7 @@ function FAQ() {
 function Footer() {
   return (
     <footer className="bg-foreground text-background pt-16 pb-10 px-6">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="grid gap-12 mb-24">
           <div>
             <span className="font-display text-4xl uppercase tracking-tighter">
