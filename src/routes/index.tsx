@@ -1094,7 +1094,7 @@ function Pros() {
   return (
     <section id="process" className="px-5 pt-8 pb-10 sm:px-6 md:pt-10 md:pb-12">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 gap-8 sm:gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
           <img
             src={team}
             alt="The The Whitening Lab clinical team — three licensed / certified dental professionals in black scrubs"
