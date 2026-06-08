@@ -628,10 +628,10 @@ function Services() {
               </AccordionTrigger>
               <AccordionContent className="pb-8 pl-0 sm:pl-10">
                 <div className="grid md:grid-cols-3 gap-6 md:gap-10 items-start">
-                  <p className="md:col-span-2 text-base md:text-lg lg:text-xl leading-snug text-pretty">
+                  <p className="md:col-span-2 text-base md:text-lg leading-snug text-pretty">
                     {s.desc}
                   </p>
-                  <ul className="space-y-2 font-mono text-[11px] lg:text-[13px] uppercase tracking-wide text-muted-foreground">
+                  <ul className="space-y-2 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
                     {s.includes.map((inc) => (
                       <li key={inc} className="flex gap-2">
                         <span className="text-muted-foreground">+</span>
@@ -675,7 +675,7 @@ function ResultsGrid() {
     <section className="px-6 pt-12 pb-24">
       <div className="max-w-[1600px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
-          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter leading-[0.9]">
+          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
             <span className="whitespace-nowrap">Real teeth. Real treatments.</span>
             <br />
             Real results.
@@ -684,7 +684,7 @@ function ResultsGrid() {
             Documented daily / Lab archive
           </span>
         </div>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid gap-4">
           {results.map((r) => (
             <figure key={r.label} className="group">
               <div className="overflow-hidden bg-muted rounded-sm border border-border p-3">
