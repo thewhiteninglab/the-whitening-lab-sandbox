@@ -1094,7 +1094,7 @@ function Pros() {
   return (
     <section id="process" className="px-5 pt-8 pb-10 sm:px-6 md:pt-10 md:pb-12">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 gap-8 sm:gap-12 md:gap-16 items-center">
           <img
             src={team}
             alt="The The Whitening Lab clinical team — three licensed / certified dental professionals in black scrubs"
@@ -1107,10 +1107,10 @@ function Pros() {
             <p className="font-mono text-sm md:text-base uppercase tracking-[0.4em] text-foreground font-bold mb-6 inline-block border-b-2 border-foreground pb-2">
               Meet the team
             </p>
-            <h3 className="font-sans text-3xl leading-snug tracking-normal mb-6 text-pretty font-semibold sm:text-4xl lg:text-5xl xl:text-6xl max-w-[26ch]">
+            <h3 className="font-sans text-3xl leading-snug tracking-normal mb-6 text-pretty font-semibold sm:text-4xl max-w-[26ch]">
               At The Whitening Lab, we do one thing and do it best: professional teeth whitening. Our expertise guarantees a safe, precise, and elevated experience.
             </h3>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
+            <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-10 text-pretty max-w-[55ch]">
               <span className="font-mono text-[10px] uppercase tracking-widest text-foreground font-bold mr-2">Est. 2022</span>
               Built by dental pros, for the smile-obsessed. A dental lab tech and a hygienist — same question on repeat: <em>how are your teeth so white?</em> So we rewrote the playbook. The dental lab became <span className="font-semibold text-foreground">The Whitening Lab</span> — the new standard in professional teeth whitening, changing the world one smile at a time.
             </p>
@@ -1121,7 +1121,7 @@ function Pros() {
                     {p.role}
                   </p>
                   <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                    <h4 className="text-xl lg:text-2xl font-bold uppercase tracking-wide">{p.name}</h4>
+                    <h4 className="text-xl font-bold uppercase tracking-wide">{p.name}</h4>
                     <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                       {p.location}, ME
                     </span>
