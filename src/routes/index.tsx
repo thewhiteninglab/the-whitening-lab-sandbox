@@ -673,7 +673,7 @@ function TikTokIcon({ className, strokeWidth: _sw }: { className?: string; strok
 function ResultsGrid() {
   return (
     <section className="px-6 pt-12 pb-24">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
             <span className="whitespace-nowrap">Real teeth. Real treatments.</span>
@@ -860,7 +860,7 @@ function Shop() {
 
   return (
     <section id="shop" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-16 gap-6 flex-wrap">
           <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
             Maintain the Shade
@@ -892,7 +892,7 @@ function Shop() {
 function NoFiltersGallery() {
   return (
     <section id="no-filters" className="px-5 py-12 sm:px-6 sm:py-16 md:py-20 bg-foreground text-background">
-      <div className="max-w-[1600px] mx-auto">
+      <div className="max-w-[820px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 gap-4 md:gap-6">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
