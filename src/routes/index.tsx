@@ -1363,6 +1363,9 @@ function FAQ() {
 }
 
 function Footer() {
+  const subscribe = useServerFn(subscribeEmail);
+  const [subEmail, setSubEmail] = useState("");
+  const [subState, setSubState] = useState<"idle" | "loading" | "done">("idle");
   return (
     <footer className="bg-foreground text-background pt-16 pb-10 px-6">
       <div className="max-w-[820px] mx-auto">
