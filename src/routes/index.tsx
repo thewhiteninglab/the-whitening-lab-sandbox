@@ -1141,7 +1141,7 @@ function Partner() {
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
               Partner / Wholesale / Training
