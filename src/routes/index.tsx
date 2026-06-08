@@ -1445,17 +1445,37 @@ function Footer() {
               Drops, deals, and shade-keeping tips — straight to your inbox.
             </p>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={async (e) => {
+                e.preventDefault();
+                if (!subEmail || subState === "loading") return;
+                setSubState("loading");
+                try {
+                  await subscribe({ data: { email: subEmail } });
+                  setSubState("done");
+                  setSubEmail("");
+                  toast.success("You're on the list — talk soon.");
+                } catch (err) {
+                  setSubState("idle");
+                  toast.error(err instanceof Error ? err.message : "Could not subscribe. Try again.");
+                }
+              }}
               className="flex border-b border-stone-700 pb-2"
             >
               <input
                 type="email"
+                required
+                value={subEmail}
+                onChange={(e) => setSubEmail(e.target.value)}
                 placeholder="EMAIL@PRO.COM"
                 aria-label="Email address"
                 className="bg-transparent w-full text-xs font-mono uppercase outline-none placeholder:text-stone-600"
               />
-              <button className="text-primary font-mono text-xs font-bold tracking-widest whitespace-nowrap pl-3">
-                COUNT ME IN
+              <button
+                type="submit"
+                disabled={subState === "loading"}
+                className="text-primary font-mono text-xs font-bold tracking-widest whitespace-nowrap pl-3 disabled:opacity-60"
+              >
+                {subState === "loading" ? "…" : subState === "done" ? "THANKS!" : "COUNT ME IN"}
               </button>
             </form>
           </div>
