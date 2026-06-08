@@ -862,7 +862,7 @@ function Shop() {
     <section id="shop" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border">
       <div className="max-w-[1600px] mx-auto">
         <div className="flex justify-between items-end mb-16 gap-6 flex-wrap">
-          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase tracking-tighter">
+          <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
             Maintain the Shade
           </h2>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -878,7 +878,7 @@ function Shop() {
             No products found
           </div>
         ) : (
-          <div className="grid grid-cols-1 min-[600px]:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 gap-8 md:gap-12">
             {data.map((p) => (
               <ShopProductCard key={p.node.id} product={p} />
             ))}
@@ -898,7 +898,7 @@ function NoFiltersGallery() {
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
               No Filters / Lab Archive
             </p>
-            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase tracking-tighter">
+            <h2 className="font-display text-[2.25rem] leading-[0.95] sm:text-6xl md:text-7xl uppercase tracking-tighter">
               Real lab results.
               <br />
               No retouching.
@@ -908,7 +908,7 @@ function NoFiltersGallery() {
             Tap an image to reveal after results.
           </span>
         </div>
-        <div className="grid grid-cols-1 min-[600px]:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:gap-6">
           {noFilters.map((n) => (
             <NoFilterCard key={n.patient} item={n} />
           ))}
