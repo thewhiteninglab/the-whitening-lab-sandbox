@@ -417,7 +417,6 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative px-6 pt-10 md:pt-14 pb-12 md:pb-16 overflow-hidden">
-      <div className="max-w-[820px] mx-auto">
         <div className="grid gap-10 items-end">
           <div className="animate-reveal">
             <h1 className="font-display uppercase leading-[0.95] tracking-tighter text-balance mb-8 text-[clamp(3.5rem,12vw,11rem)]">
@@ -463,7 +462,6 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
@@ -479,7 +477,7 @@ function TrustStrip() {
       aria-label="Trust signals"
       className="border-y border-border px-6 py-4"
     >
-      <div className="max-w-[820px] mx-auto flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
+      <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-2 font-mono text-xs text-muted-foreground">
         {items.map((t) => (
           <span key={t} className="flex items-center gap-2">
             <span className="size-1 rounded-full bg-muted-foreground/60" />
@@ -577,7 +575,6 @@ const services = [
 function Services() {
   return (
     <section id="services" className="px-6 pt-14 pb-6 md:pt-16 md:pb-8 border-t border-border">
-      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
@@ -659,7 +656,6 @@ function Services() {
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
     </section>
   );
 }
@@ -675,7 +671,6 @@ function TikTokIcon({ className, strokeWidth: _sw }: { className?: string; strok
 function ResultsGrid() {
   return (
     <section className="px-6 pt-12 pb-24">
-      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-12 gap-6 flex-wrap">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
             <span className="whitespace-nowrap">Real teeth. Real treatments.</span>
@@ -706,7 +701,6 @@ function ResultsGrid() {
             </figure>
           ))}
         </div>
-      </div>
     </section>
   );
 }
@@ -862,7 +856,6 @@ function Shop() {
 
   return (
     <section id="shop" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border">
-      <div className="max-w-[820px] mx-auto">
         <div className="flex justify-between items-end mb-16 gap-6 flex-wrap">
           <h2 className="font-display text-5xl md:text-6xl uppercase tracking-tighter">
             Maintain the Shade
@@ -886,7 +879,6 @@ function Shop() {
             ))}
           </div>
         )}
-      </div>
     </section>
   );
 }
@@ -894,7 +886,6 @@ function Shop() {
 function NoFiltersGallery() {
   return (
     <section id="no-filters" className="px-5 py-12 sm:px-6 sm:py-16 md:py-20 bg-foreground text-background">
-      <div className="max-w-[820px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-10 sm:mb-12 gap-4 md:gap-6">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-background/60 mb-3 sm:mb-4">
@@ -929,7 +920,6 @@ function NoFiltersGallery() {
             <span aria-hidden="true" className="transition-transform group-hover/ig:translate-x-1">→</span>
           </a>
         </div>
-      </div>
     </section>
   );
 }
@@ -963,7 +953,6 @@ function Testimonials() {
       aria-label="Client reviews"
       className="px-5 py-12 sm:px-6 sm:py-16 border-t border-border bg-background"
     >
-      <div className="max-w-[820px] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 md:gap-6 mb-10 sm:mb-12">
           <div>
             <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-3 sm:mb-4">
@@ -1005,7 +994,6 @@ function Testimonials() {
             </figure>
           ))}
         </div>
-      </div>
     </section>
   );
 }
@@ -1122,7 +1110,6 @@ function Manifesto() {
 function Pros() {
   return (
     <section id="process" className="px-5 pt-8 pb-10 sm:px-6 md:pt-10 md:pb-12">
-      <div className="max-w-[820px] mx-auto">
         <div className="grid grid-cols-1 gap-8 sm:gap-12 md:gap-16 items-center">
           <img
             src={team}
@@ -1160,7 +1147,6 @@ function Pros() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
@@ -1169,7 +1155,6 @@ function Partner() {
   const [submitting, setSubmitting] = useState(false);
   return (
     <section id="partner" className="px-6 pt-4 pb-10 md:pt-6 md:pb-12 bg-background">
-      <div className="max-w-[820px] mx-auto">
         <div className="grid grid-cols-1 gap-10 items-start">
           <div>
             <p className="font-mono text-xs font-bold uppercase tracking-widest text-foreground mb-5">
@@ -1296,7 +1281,6 @@ function Partner() {
             </button>
           </form>
         </div>
-      </div>
     </section>
   );
 }
@@ -1327,7 +1311,7 @@ const faqs = [
 function FAQ() {
   return (
     <section id="faq" className="px-6 pt-10 pb-14 md:pt-12 md:pb-16 border-t border-border bg-background">
-      <div className="max-w-[820px] mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
             FAQ / The Real Questions
@@ -1368,8 +1352,7 @@ function Footer() {
   const [subState, setSubState] = useState<"idle" | "loading" | "done">("idle");
   return (
     <footer className="bg-foreground text-background pt-16 pb-10 px-6">
-      <div className="max-w-[820px] mx-auto">
-        <div className="grid gap-12 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-24">
           <div>
             <span className="font-display text-4xl uppercase tracking-tighter">
               The Whitening Lab
@@ -1494,7 +1477,6 @@ function Footer() {
           </div>
           <span>No AI was used in these results</span>
         </div>
-      </div>
     </footer>
   );
 }
