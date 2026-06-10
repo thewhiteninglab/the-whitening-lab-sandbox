@@ -6,9 +6,10 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-// @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
+// Use Nitro's Netlify preset so the build produces a Netlify Function for SSR
+// and places static assets in dist/ for Netlify to serve.
 export default defineConfig({
+  nitro: { preset: "netlify" },
   tanstackStart: {
     server: { entry: "server" },
   },
